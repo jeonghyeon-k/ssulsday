@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Comment from './components/CommentComponets/Comment';
+import Create from './components/CommentComponets/commentCreate';
+import CardView from './components/CardComponents/CardView';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CardView type="main-card"/>
+      <CardView/>
+      <Comment/>
+      <Comment type="recomment"/>
+      <Create/>
+     
+    
     </div>
   );
 }
