@@ -1,0 +1,96 @@
+@import "../../../style/index.scss";
+
+
+.loginpage{
+    margin: 7em 2rem;
+}
+
+
+.loginpage__logo{
+    display: inline-block;
+    width: 134pt;
+    height: 48pt;
+    margin: 0 60pt;
+    margin-bottom: 16pt;
+    border: 1px solid #2e2514;
+    text-align: center;
+}
+
+.loginpage__input{
+  
+}
+.loginpage__input__email{
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    border: 0;
+    font-size: 1rem;
+    width: 90%;
+    padding: 1rem 1rem;
+    margin: 1rem auto;
+    display: block;
+    outline: none;
+}
+
+.loginpage__input__password{
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    border: 0;
+    font-size: 1rem;
+    width: 90%;
+    padding: 1rem 1rem;
+    margin: 1rem auto;
+    display: block;
+    outline: none;
+}
+
+.loginpage__loginbutton{
+    background-color: #fbb33b;
+    color:#f5f5f5;
+    border-radius: 30px;
+    border: 0;
+    font-size: 1rem;
+    width: 100%;
+    padding: 1rem 1rem;
+    margin: 1.5rem auto;
+    display: block;
+    outline: none;
+    
+}
+.loginpage__Autologin{
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.loginpage__Autologin__checkbox + label{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fbb33b;
+    cursor: pointer;
+}
+.loginpage__Autologin__checkbox:checked + label{
+    background-color: #fbb33b;
+    color: #f5f5f5;
+}
+
+.loginpage__Autologin__checkbox{
+    display: none;
+}
+.loginpage__forgotpassword{
+    float: right;
+}
+.loginpage__Autologin_span{
+    margin-left: 0.5rem;
+}
+.loginpage__signupbutton{
+    background-color:#ffffff; 
+    border: 1px solid #fbb33b;
+    color:#fbb33b;
+    border-radius: 30px;
+    font-size: 1rem;
+    width: 100%;
+    padding: 1rem;
+    margin: 10rem 0 auto;
+    display: block;
+    outline: none;
+}

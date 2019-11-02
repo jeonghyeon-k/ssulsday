@@ -1,0 +1,19 @@
+@import "../../style/index.scss";
+
+
+
+.Authenticationbutton{
+    background-color: #ffffff;
+    border: 2px solid rgb(156, 156, 156);
+    border-radius: 30px;
+    font-size: 1rem;
+    width: 90%;
+    padding: 1rem 1rem;
+    margin: 1rem auto;
+    display: block;
+    outline: none;
+    text-align: center;
+}
+::placeholder{
+    color:rgb(156, 156, 156);
+ }

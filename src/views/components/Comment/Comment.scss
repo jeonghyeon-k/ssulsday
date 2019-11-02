@@ -1,0 +1,50 @@
+@import "../../style/index.scss";
+
+//======댓글 표시=================================
+
+.comment {
+  display: inline-block;
+  width: 90%;
+  margin: 0.5rem 0;
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+}
+
+.comment__head__icon{
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 0.1px solid black;
+}
+.comment__head__nickname{
+  display: inline-block;
+  color: rgb(51,51,51);
+  font-size:0.8rem;
+  font-weight: bold;
+  margin-left: 0.2rem;
+}
+.comment__head__time{
+  display: inline-block;
+  color: rgb(156,156,156);
+  font-size:0.8rem;
+  margin-left: 0.6rem;
+}
+.comment__head__menu{
+  float: right;
+}
+.comment__content{
+  border-radius: 8px;
+  display: inline-block;
+  width: 95%;
+  background-color: rgb(247,247,250);
+  color: #616161;
+  font-size:0.8rem;
+  padding: 1rem 0.5rem;
+}
+
+
+
+
+
+
+
