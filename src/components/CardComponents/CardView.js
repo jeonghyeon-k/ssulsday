@@ -1,51 +1,80 @@
-import React, { useState } from 'react';
-import { MdFavorite,MdFavoriteBorder,MdVisibility, MdSms} from 'react-icons/md';
-import classNames from 'classnames';
-import './Card.scss'
+import React from "react";
+import {
+  MdFavorite,
+  MdFavoriteBorder,
+  MdVisibility,
+  MdSms
+} from "react-icons/md";
+import styles from "./Card.scss";
+import classNames from "classnames/bind";
+import PropTypes from "prop-types";
 
-function CardView ({type}){
-    
-    const [done, setDone] = useState(true);
-    const onClick = () => setDone(!done);
+function CardView({
+  type,
+  done,
+  title,
+  commentCount,
+  Hashtag,
+  carddate,
+  Viewcount,
+  Likecount,
+  Contents
+}) {
+  const cx = classNames.bind(styles);
 
-    return(
-    <div className="card_container">
-        <div className="card_head">
-            <div className="card_title">첫번째 고백썰</div>
-            <div className="card_commentcount">10</div>
-            <button className="card_commentbutton">
-                <MdSms size="1.5em"/>
-            </button>
-        </div>
-        {type ?
-            null : <div className="card_content">
-            고민 많이 했는데. 결국 고백했다. 고백 장소 결과는 기록하고 싶어서 몇자 남긴다~~ 다른 사람들에게 고민 많이 했는데. 결국 고백했다. 
-        </div>
-        }
+  return (
+    <div className={cx("card_container")}>
+      <div className={cx("card_head")}>
+        <div className={cx("card_title")}>{title}</div>
+        <div className={cx("card_commentcount")}>{commentCount}</div>
+        <button className={cx("card_commentbutton")}>
+          <MdSms />
+        </button>
+      </div>
+      {type ? null : <div className={cx("card_content")}>{Contents}</div>}
 
-        <div className={classNames("card_hashtag",type)}>#우울#고백실패#그래도추억#괜찮아</div>
-        
-        <div className={classNames("card_bottom", type)}>
-            {type ?
-                <hr className="hr"/> : null
-            }
-            <div className="card_date">2019.09.08</div>
-            <div className="card_bottom_box">
-                <div className="card_conut">256</div>
-                <div className="card_button">  
-                    <MdVisibility />
-                </div> 
-                <div className="card_conut">428</div>  
-                <button className={classNames("card_button", done)} onClick={onClick}>
-                    {done ? (
-                    <MdFavoriteBorder />
-                    ):
-                    <MdFavorite color="red"/>}
-                </button>
-            </div>
+      <div className={cx("card_hashtag", type)}>{Hashtag}</div>
+
+      <div className={cx("card_bottom", type)}>
+        {type ? <hr className={cx("hr")} /> : null}
+        <div className={cx("card_date")}>{carddate}</div>
+        <div className={cx("card_bottom_box")}>
+          <div className={cx("card_conut")}>{Viewcount}</div>
+          <div className={cx("card_button")}>
+            <MdVisibility />
+          </div>
+          <div className={cx("card_conut")}>{Likecount}</div>
+          <button className={cx("card_button")}>
+            {done ? <MdFavorite color='red' /> : <MdFavoriteBorder />}
+          </button>
         </div>
+      </div>
     </div>
-    )
+  );
 }
+
+CardView.prototype = {
+  type: PropTypes.string,
+  done: PropTypes.bool,
+  title: PropTypes.string,
+  Hashtag: PropTypes.string,
+  carddate: PropTypes.instanceOf(),
+  Contents: PropTypes.string,
+  Viewcount: PropTypes.number,
+  Likecount: PropTypes.number,
+  commentCount: PropTypes.number
+};
+
+CardView.defaultProps = {
+  type: "",
+  done: false,
+  title: "Null",
+  Hashtag: "Null",
+  carddate: "Null",
+  Contents: "Null",
+  Viewcount: 0,
+  Likecount: 0,
+  commentCount: 0
+};
 
 export default CardView;
