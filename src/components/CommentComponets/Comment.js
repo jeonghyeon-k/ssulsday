@@ -1,24 +1,35 @@
-import React from 'react';
-import classNames from 'classnames';
-import './Comment.scss';
+import React from "react";
+import classNames from "classnames";
+import styles from "./Comment.scss";
+import PropTypes from "prop-types";
 
-function Comment ({type}){
+const Comment = ({ Nickname, comment, time }) => {
+  const cx = classNames.bind(styles);
 
-    return(
-
-    <div className={classNames("comment_container",type)}>
-        <div className="comment_head">익명이</div>
-        <div className ="content_container">
-                <div className={classNames("comment",type)}>고백을 하셨네요</div>
-        </div>
-        <div className="comment_bottom">
-            <div className="comment_time">1시간</div>
-            <button className="comment_button">답글달기</button>
-        </div>
+  return (
+    <div className={cx("comment_container")}>
+      <div className={cx("comment_head")}>{Nickname}</div>
+      <div className={cx("content_container")}>
+        <div className={cx("comment")}>{comment}</div>
+      </div>
+      <div className={cx("comment_bottom")}>
+        <div className={cx("comment_time")}>{time}</div>
+        <button className={cx("comment_button")}>답글달기</button>
+      </div>
     </div>
+  );
+};
 
-
-    )
-}
+Comment.prototype = {
+  type: PropTypes.string,
+  Nickname: PropTypes.string,
+  comment: PropTypes.string,
+  time: PropTypes.instanceOf()
+};
+Comment.defaultProps = {
+  Nickname: "Null NickName",
+  comment: "Null Comment",
+  time: "Null"
+};
 
 export default Comment;
