@@ -1,0 +1,45 @@
+@import "../../style/index.scss";
+
+.inputbox {
+  width: 85%;
+  height: auto;
+  margin: auto;
+  background: white;
+  &__input {
+    border-bottom: 1px solid;
+    color: $main-black-3;
+    & input {
+      width: 90%;
+      padding-top: 5pt;
+      padding-bottom: 5pt;
+      border: none;
+      outline: none;
+      color: $main-black-3;
+    }
+    & input:focus {
+      color: $main-black-1;
+    }
+
+    &-focus {
+      color: $main-black-1;
+    }
+
+    &-notemail {
+      border-color: $main-paleRed;
+    }
+  }
+
+  &__removebtn {
+    display: inline-block;
+    width: 4%;
+    text-align: center;
+  }
+  // 오른쪽 정렬 필요
+  &__icon {
+  }
+
+  &__text {
+    color: $main-paleRed;
+    font-weight: 200;
+  }
+}
