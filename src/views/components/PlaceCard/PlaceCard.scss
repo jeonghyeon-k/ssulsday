@@ -5,8 +5,8 @@
   box-sizing: border-box;
   width: 235pt;
   margin: 5pt;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px 5px $main-black-4;
+  border-radius: 10pt;
+  box-shadow: 0pt 4pt 8pt 5pt $main-black-4;
   font-size: 0;
 
   &__image {
@@ -28,7 +28,7 @@
 
   &__text {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 17pt;
   }
 }
 
@@ -38,11 +38,11 @@
   margin-top: 18pt;
   margin-right: 5pt;
   text-align: right;
-  font-size: 1.2rem;
+  font-size: 15pt;
 }
 
 .hashtags {
   margin-left: 15pt;
   color: $main-black-3;
-  font-size: 1.1rem;
+  font-size: 13pt;
 }

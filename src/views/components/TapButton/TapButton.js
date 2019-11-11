@@ -5,14 +5,14 @@ import PropTypes from "prop-types";
 
 const cx = classNames.bind(styles);
 
-const TapButton = ({ children, isToggle }) => {
+const TapButton = ({ children, ...props }) => {
   // const [isToggle, setIsToggle] = useState(true);
   // const toggle = isToggle => {
   //   return setIsToggle(!isToggle);
   // };
   return (
-    <div className={cx("tapbutton", isToggle ? "tapbutton-toggle" : "")}>
-      <div className={"tapbutton__text"}>{children}</div>
+    <div className={cx("tap-btn", props.isToggle && "tap-btn-toggle")}>
+      <div className={"tap-btn__text"}>{children}</div>
     </div>
   );
 };

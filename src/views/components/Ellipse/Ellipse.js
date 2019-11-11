@@ -5,20 +5,20 @@ import PropTypes from "prop-types";
 
 const cx = classNames.bind(styles);
 
-const Ellipse = ({ children, isToggle }) => {
+const Ellipse = ({ children, ...props }) => {
   // const [isToggle, setIsToggle] = useState(true);
   // const toggle = isToggle => {
   //   return setIsToggle(!isToggle);
   // };
   return (
-    <div className={cx("ellipse", isToggle ? "ellipse-toggle" : "")}>
-      <div className={cx("ellipse__text")}>{children}</div>
+    <div className={cx("ellipse", props.isToggle && "ellipse-toggle")}>
+      <span className={cx("ellipse__text")}>{children}</span>
     </div>
   );
 };
 
 Ellipse.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.string.isRequired,
   isToggle: PropTypes.bool
 };
 

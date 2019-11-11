@@ -8,7 +8,7 @@ import Icon from "../Icon/Icon";
 
 const cx = classNames.bind(styles);
 
-const PlaceCard = ({ spot, stories, hashtags }) => {
+const PlaceCard = ({ ...props }) => {
   return (
     <div>
       <div className={cx("placecard")}>
@@ -16,18 +16,18 @@ const PlaceCard = ({ spot, stories, hashtags }) => {
         <div className={cx("info")}>
           <div className={cx("spot")}>
             <Icon type='test' size='md' />
-            <div className={cx("spot__text")}>{spot}</div>
+            <div className={cx("spot__text")}>{props.spot}</div>
           </div>
-          <div className={cx("stories")}>{stories}개</div>
+          <div className={cx("stories")}>{props.stories}개</div>
         </div>
-        {hashtags ? <div className={cx("hashtags")}>{hashtags}</div> : ""}
+        {props.hashtags && <div className={cx("hashtags")}>{props.hashtags}</div>}
       </div>
     </div>
   );
 };
 
 PlaceCard.propTypes = {
-  spot: PropTypes.string,
+  spot: PropTypes.string.isRequired,
   stories: PropTypes.number,
   hashtags: PropTypes.string
 };

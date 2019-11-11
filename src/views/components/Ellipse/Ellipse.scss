@@ -10,14 +10,14 @@
   text-align: center;
 
   &-toggle {
-    box-shadow: 1px 1px 1px $main-black-4;
-    background: white;
+    box-shadow: 1pt 1pt 1pt $main-black-4;
+    background: $main-white;
     color: $main-black-3;
   }
 
   &__text {
     display: inline-block;
     padding: 4pt;
-    font-size: 0.95rem;
+    font-size: 12pt;
   }
 }

@@ -1,10 +1,10 @@
 @import "../../style/index.scss";
 
-.inputbox {
+.input-box {
   width: 85%;
   height: auto;
   margin: auto;
-  background: white;
+  background: $main-white;
   &__input {
     border-bottom: 1px solid;
     color: $main-black-3;
@@ -29,7 +29,7 @@
     }
   }
 
-  &__removebtn {
+  &__remove-btn {
     display: inline-block;
     width: 4%;
     text-align: center;

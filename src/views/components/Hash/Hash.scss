@@ -3,9 +3,9 @@
   display: inline-block;
   width: auto;
   min-width: 5%;
-  border-radius: 12pt;
   margin: 5pt;
   border: 1pt solid;
+  border-radius: 12pt;
   border-color: $main_butterscotch;
   color: $main-black-3;
   text-align: center;
@@ -13,6 +13,6 @@
   &__text {
     display: inline-block;
     padding: 4pt;
-    font-size: 0.95rem;
+    font-size: 12pt;
   }
 }

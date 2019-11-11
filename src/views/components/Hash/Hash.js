@@ -8,17 +8,17 @@ const cx = classNames.bind(styles);
 const Hash = ({ children }) => {
   return (
     <div className={cx("hash")}>
-      <div className={cx("hash__text")}>#{children}</div>
+      <span className={cx("hash__text")}>#{children}</span>
     </div>
   );
 };
 
 Hash.propTypes = {
-  children: PropTypes.string
+  children: PropTypes.string.isRequired
 };
 
 Hash.defaultProps = {
-  children: "null"
+  children: "null hash"
 };
 
 export default Hash;
