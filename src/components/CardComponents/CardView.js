@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD:src/components/CardComponents/CardView.js
 import {
   MdFavorite,
   MdFavoriteBorder,
@@ -6,8 +7,14 @@ import {
   MdSms
 } from "react-icons/md";
 import styles from "./Card.scss";
+=======
+
+import styles from "./CardView.scss";
+>>>>>>> b5bd9fe... no message:src/views/components/Card/CardView.js
 import classNames from "classnames/bind";
+import Icon from "../Icon/Icon";
 import PropTypes from "prop-types";
+const cx = classNames.bind(styles);
 
 function CardView({
   type,
@@ -20,7 +27,7 @@ function CardView({
   Likecount,
   Contents
 }) {
-  const cx = classNames.bind(styles);
+
 
   return (
     <div className={cx("card_container")}>
@@ -28,24 +35,24 @@ function CardView({
         <div className={cx("card_title")}>{title}</div>
         <div className={cx("card_commentcount")}>{commentCount}</div>
         <button className={cx("card_commentbutton")}>
-          <MdSms />
+          <Icon type="test"/>
         </button>
       </div>
-      {type ? null : <div className={cx("card_content")}>{Contents}</div>}
+      {type ? false : <div className={cx("card_content")}>{Contents}</div>}
 
       <div className={cx("card_hashtag", type)}>{Hashtag}</div>
 
       <div className={cx("card_bottom", type)}>
-        {type ? <hr className={cx("hr")} /> : null}
+        {type ? <hr className={cx("hr")} /> : false}
         <div className={cx("card_date")}>{carddate}</div>
         <div className={cx("card_bottom_box")}>
           <div className={cx("card_conut")}>{Viewcount}</div>
           <div className={cx("card_button")}>
-            <MdVisibility />
+            <Icon type="test" />
           </div>
           <div className={cx("card_conut")}>{Likecount}</div>
           <button className={cx("card_button")}>
-            {done ? <MdFavorite color='red' /> : <MdFavoriteBorder />}
+            {done ? <Icon type="test"  /> : <Icon />}
           </button>
         </div>
       </div>
@@ -68,10 +75,9 @@ CardView.prototype = {
 CardView.defaultProps = {
   type: "",
   done: false,
-  title: "Null",
-  Hashtag: "Null",
-  carddate: "Null",
-  Contents: "Null",
+  title: "제목 없음",
+  carddate: "00시간 전",
+  Contents: "내용 없음",
   Viewcount: 0,
   Likecount: 0,
   commentCount: 0
