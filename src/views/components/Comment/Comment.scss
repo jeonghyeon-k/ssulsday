@@ -1,0 +1,47 @@
+@import "../../style/index.scss";
+@import "../../style//variable.scss";
+
+$font-size: 14px;
+
+.comment {
+  margin: 0.5rem 0;
+  padding: 0 16px;
+  margin-top: 16px;
+}
+
+.head__icon{ 
+  display: inline-block;
+}
+.head__nickname{
+  display: inline-block;
+  margin-left: 8px;
+  color: $main-black-1;
+  font-size:$font-size;
+  font-weight: bold;
+}
+.head__time{
+  display: inline-block;
+  margin-left: 0.6rem;
+  color: $main-black-3;
+  font-size:$font-size;
+}
+.head__menu{
+  float: right;
+}
+.content{
+  display: inline-block;
+  width: 343px - 16px;
+  margin-top: 6px;
+  padding: 16px 8px;
+  border-radius: 8px;
+  background-color: $main-black-5;
+  color: #616161;
+  font-size:$font-size;
+}
+
+
+
+
+
+
+
