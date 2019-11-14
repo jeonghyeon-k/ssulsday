@@ -1,0 +1,48 @@
+@import "../../style/index.scss";
+
+.placecard {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 235pt;
+  margin: 5pt;
+  border-radius: 10pt;
+  box-shadow: 0pt 4pt 8pt 5pt $main-black-4;
+  font-size: 0;
+
+  &__image {
+    width: 100%;
+    height: 130.7pt;
+  }
+}
+
+.info {
+  display: flex;
+}
+
+.spot {
+  flex: 7;
+  height: 30pt;
+  margin-top: 15pt;
+  margin-left: 5pt;
+  overflow: hidden;
+
+  &__text {
+    display: inline-block;
+    font-size: 17pt;
+  }
+}
+
+.stories {
+  flex: 3;
+  height: 20pt;
+  margin-top: 18pt;
+  margin-right: 5pt;
+  text-align: right;
+  font-size: 15pt;
+}
+
+.hashtags {
+  margin-left: 15pt;
+  color: $main-black-3;
+  font-size: 13pt;
+}
