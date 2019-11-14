@@ -1,8 +1,16 @@
 import React from "react";
-import img from "./assets/images/main.png";
-export default function App (props) {
-  return (<div>
-<img src={img} alt={""} width={"100%"}/>
-  </div>
+import InputBox from "./views/components/InputBox/InputBox";
+import Ellipse from "./views/components/Ellipse/Ellipse";
+import PlaceCard from "./views/components/PlaceCard/PlaceCard";
+import TapButton from "./views/components/TapButton/TapButton";
+
+export default function App(props) {
+  return (
+    <div>
+      <InputBox />
+      <Ellipse />
+      <PlaceCard spot='강남역' />
+      <TapButton />
+    </div>
   );
 };
