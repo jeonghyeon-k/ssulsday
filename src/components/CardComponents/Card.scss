@@ -1,36 +1,47 @@
+<<<<<<< HEAD:src/components/CardComponents/Card.scss
 //=============카드 뷰==================
+=======
+@import "../../style/index.scss";
+@import "../../style//variable.scss";
 
-.card_container {
-  border-radius: 10px;
-  display: block;
-  border: 3px solid #e9ecef;
-  width: 80%;
-  margin: 5% auto;
-  text-align: left;
+<<<<<<< HEAD:src/components/CardComponents/Card.scss
+>>>>>>> 3cb7984... style. 사이즈 px 변경, 색상 변경 docs. 최종으로 변경된 디자인으로 수정:src/views/components/Card/CardView.scss
+=======
+$font-size: 14px;
+>>>>>>> 343b0ff... feat. 카드 상세보기 페이지:src/views/components/Card/CardView.scss
+
+.padding {
+  padding-left: 20px;
+  padding-right: 20px;
 }
+<<<<<<< HEAD:src/components/CardComponents/Card.scss
+.card{
 
-.card_head {
-  display: block;
-  margin: 0.5rem;
-  font-size: 1.1rem;
-}
-
+<<<<<<< HEAD:src/components/CardComponents/Card.scss
 .card_title {
   display: inline-block;
   font-weight: bold;
+=======
+  border-radius: 10px;
+=======
+.card {
+>>>>>>> 343b0ff... feat. 카드 상세보기 페이지:src/views/components/Card/CardView.scss
+  margin: 20px 16px;
+  border-radius: 10px;
+  box-shadow: 1pt 1pt 5pt 0pt $main-black-4;
+>>>>>>> 3cb7984... style. 사이즈 px 변경, 색상 변경 docs. 최종으로 변경된 디자인으로 수정:src/views/components/Card/CardView.scss
 }
-
-.card_commentcount {
-  margin-left: 0.5rem;
+.header {
+  @extend .padding;
+  padding-top: 28px;
+}
+.header__title {
   display: inline-block;
+  font-size: 18px;
+  color: $main-black-1;
 }
-
-.card_commentbutton {
-  display: inline-block;
-  border: none;
-  background: none;
-  font-size: 1rem;
-}
+<<<<<<< HEAD:src/components/CardComponents/Card.scss
+<<<<<<< HEAD:src/components/CardComponents/Card.scss
 
 .card_content {
   margin: auto 1rem;
@@ -55,29 +66,66 @@
   &.main-card {
     background-color: white;
   }
-}
-
-.card_bottom_box {
+=======
+.header__hash{
+=======
+.header__hash {
+>>>>>>> 343b0ff... feat. 카드 상세보기 페이지:src/views/components/Card/CardView.scss
   float: right;
 }
-
-.card_date {
+.contents {
+  @extend .padding;
+  max-height: 64px;
+  margin-top: 20px;
+  font-size: $font-size;
+  color: $main-black-1;
+}
+.hash {
+  @extend .padding;
+<<<<<<< HEAD:src/components/CardComponents/Card.scss
+  font-size:$font-size;
+  color:$main-black-3;
+  margin-top:4px;
+>>>>>>> 3cb7984... style. 사이즈 px 변경, 색상 변경 docs. 최종으로 변경된 디자인으로 수정:src/views/components/Card/CardView.scss
+=======
+  margin-top: 4px;
+  font-size: $font-size;
+  color: $main-black-3;
+>>>>>>> 343b0ff... feat. 카드 상세보기 페이지:src/views/components/Card/CardView.scss
+}
+.info {
+  @extend .padding;
+  height: 20px;
+  margin-top: 18px;
+}
+.info__place {
   display: inline-block;
-  color: #616161;
+  font-size: $font-size;
+  color: $main-black-1;
+}
+.info__date {
+  float: right;
+  margin-top: 7px;
+  font-size: $font-size;
+  color: $main-black-1;
 }
 
-.card_button {
-  display: inline-block;
-  border: none;
-  background: none;
-  padding: 0.5rem;
-  font-size: 1rem;
-
-  &.true {
-    color: red;
-  }
+.bottom {
+  @extend .padding;
+  height: 40px;
+  margin-top: 18px;
+  border-radius: 0 0 10px 10px;
+  background-color: $main-black-5;
+  font-size: $font-size;
 }
 
+.bottom__icon {
+  margin-left: 4px;
+  margin-top: 8px;
+}
+
+<<<<<<< HEAD:src/components/CardComponents/Card.scss
+<<<<<<< HEAD:src/components/CardComponents/Card.scss
 .card_conut {
   display: inline-block;
   color: #616161;
@@ -88,4 +136,34 @@
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: #616161;
+=======
+.bottom__comentcount{
+=======
+.bottom__comentcount {
+>>>>>>> 343b0ff... feat. 카드 상세보기 페이지:src/views/components/Card/CardView.scss
+  float: left;
+  margin-top: 8px;
+}
+.bottom__commenticon {
+  @extend .bottom__icon;
+  float: left;
+  margin-top: 8px;
+>>>>>>> 3cb7984... style. 사이즈 px 변경, 색상 변경 docs. 최종으로 변경된 디자인으로 수정:src/views/components/Card/CardView.scss
+}
+.bottom__viewcount {
+  float: right;
+  margin-top: 8px;
+}
+.bottom__viewicon {
+  @extend .bottom__icon;
+  float: right;
+  margin-right: 20px;
+}
+.bottom__likecount {
+  float: right;
+  margin-top: 8px;
+}
+.bottom__likeicon {
+  @extend .bottom__icon;
+  float: right;
 }
