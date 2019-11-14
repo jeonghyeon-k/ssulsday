@@ -1,6 +1,15 @@
     const FILES_TO_CACHE = [
-        './../public/notFound.html'
+        `${process.env.PUBLIC_URL}/notFound.html`
     ];
+    const CACHE_NAME = `ssulsday`;
+    let deferredPrompt = {};
+    window.addEventListener('beforeinstallprompt', (e) => {
+        // Stash the event so it can be triggered later.
+        e.preventDefault();
+
+        deferredPrompt = e || {};
+    
+        });
     export function register(config) {
         if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -8,19 +17,19 @@
             navigator.serviceWorker
                         .register(swUrl)
                         .then((reg) => {
-                            console.log("ㅉㄷㄱ퍛ㄷ 재갇ㄱ ㄱㄷ햔ㅅㄷㄱㄷㅇ", reg)
+                            console.log("load");
                         });
         });
         }
     }
+ 
     window.self.addEventListener('install', (evt) => {
         console.log('[ServiceWorker] Install');
-        // CODELAB: Precache static resources here.
         evt.waitUntil(
-            // caches.open(CACHE_NAME).then((cache) => {
-            //   console.log('[ServiceWorker] Pre-caching offline page');
-            //   return cache.addAll(FILES_TO_CACHE);
-            // })
+            caches.open(CACHE_NAME).then((cache) => {
+              console.log('[ServiceWorker] Pre-caching offline page');
+              return cache.addAll(FILES_TO_CACHE);
+            })
         );
         window.self.skipWaiting();
       });
@@ -33,3 +42,15 @@
         }
     }
     
+export function showPrompt(){
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice
+    .then((choiceResult) => {
+    if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+    } else {
+        console.log('User dismissed the A2HS prompt');
+    }
+        deferredPrompt = null;
+    });
+}
