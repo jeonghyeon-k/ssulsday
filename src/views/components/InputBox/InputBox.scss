@@ -6,7 +6,7 @@
   margin: auto;
   background: $main-white;
   &__input {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid $main-black-3;
     color: $main-black-3;
     & input {
       width: 90%;
@@ -21,6 +21,7 @@
     }
 
     &-focus {
+      border-color: $main-black-1;
       color: $main-black-1;
     }
 
@@ -39,7 +40,8 @@
   }
 
   &__text {
-    color: $main-paleRed;
+    font-size: 8pt;
     font-weight: 200;
+    color: $main-paleRed;
   }
 }
