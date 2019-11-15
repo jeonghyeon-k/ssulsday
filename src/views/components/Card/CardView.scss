@@ -1,94 +1,100 @@
 @import "../../style/index.scss";
+@import "../../style//variable.scss";
 
-//=============카드 뷰==================
 
-.card_container {
+
+$font-size : 14px;
+.padding{
+  padding-left:20px;
+  padding-right: 20px;
+}
+.card{
+
   border-radius: 10px;
-  display: block;
-  border: 3px solid #e9ecef;
-  width: 80%;
-  margin: 5% auto;
-  text-align: left;
+  margin: 20px 16px;
+  box-shadow: 1pt 1pt 5pt 0pt $main-black-4;
 }
-
-.card_head {
-  display: block;
-  margin: 0.5rem;
-  font-size: 1.1rem;
+.header{
+  @extend .padding;
+  padding-top:28px;
 }
-
-.card_title {
-  color:rgb(51,51,51);
+.header__title{
   display: inline-block;
-  //font-weight: bold;
+  font-size: 18px;
+  color: $main-black-1
 }
-
-.card_commentcount {
-  margin-left: 0.5rem;
-  display: inline-block;
-}
-
-.card_commentbutton {
-  display: inline-block;
-  border: none;
-  background: none;
-  font-size: 1rem;
-}
-
-.card_content {
-  margin: auto 1rem;
-  color: rgb(51,51,51);
-  text-align: left;
-  font-size: 1rem;
-}
-
-.card_hashtag {
-  margin: 1.5rem 0 1rem 1rem;
-  color: rgb(156,156,156);
-  text-align: left;
-  &.main-card {
-    margin-bottom: 0;
-  }
-}
-
-.card_bottom {
-  display: block;
-  background-color: rgb(247,247,250);
-  padding: 1.5rem;
-  &.main-card {
-    background-color: white;
-  }
-}
-
-.card_bottom_box {
+.header__hash{
   float: right;
 }
-
-.card_date {
+.contents{
+  @extend .padding;
+  max-height: 64px;
+  margin-top:20px;
+  font-size: $font-size;
+  color: $main-black-1
+}
+.hash{
+  @extend .padding;
+  font-size:$font-size;
+  color:$main-black-3;
+  margin-top:4px;
+}
+.info{
+  @extend .padding;
+  margin-top:18px;
+  height: 20px;
+}
+.info__place{
   display: inline-block;
-  color: #616161;
+  font-size:$font-size;
+  color: $main-black-1
+}
+.info__date{
+  font-size:$font-size;
+  float: right;
+  margin-top:7px;
+  color: $main-black-1
 }
 
-.card_button {
-  display: inline-block;
-  border: none;
-  background: none;
-  padding: 0.5rem;
-  font-size: 1rem;
-
-  &.true {
-    color: red;
-  }
+.bottom{
+  @extend .padding;
+  margin-top:18px;
+  height: 40px;
+  border-radius: 0 0 10px 10px;
+  font-size:$font-size;
+  background-color:$main-black-5; 
 }
 
-.card_conut {
-  display: inline-block;
-  color: rgb(51,51,51);
-  font-size: 1rem;
+
+.bottom__icon{
+  margin-left: 4px; 
+  margin-top: 8px;
 }
 
-.hr {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: rgb(51,51,51);
+.bottom__comentcount{
+  float: left;
+  margin-top: 8px;
+}
+.bottom__commenticon{
+  @extend .bottom__icon;
+  float: left;
+  margin-top: 8px;
+}
+.bottom__viewcount{
+  float: right;
+  margin-top: 8px;
+}
+.bottom__viewicon{
+  @extend .bottom__icon;
+  float: right;
+  margin-right: 20px;
+}
+.bottom__likecount{
+  float: right;
+  margin-top: 8px;
+ 
+}
+.bottom__likeicon{
+  @extend .bottom__icon;
+  float: right;
 }

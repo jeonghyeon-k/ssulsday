@@ -1,76 +1,61 @@
 import React from "react";
-
 import styles from "./CardView.scss";
 import classNames from "classnames/bind";
 import Icon from "../Icon/Icon";
 import PropTypes from "prop-types";
+
 const cx = classNames.bind(styles);
 
-function CardView({
-  type,
-  done,
-  title,
-  commentCount,
-  Hashtag,
-  carddate,
-  Viewcount,
-  Likecount,
-  Contents
-}) {
-
-
+function CardView({ ...props }) {
   return (
-    <div className={cx("card_container")}>
-      <div className={cx("card_head")}>
-        <div className={cx("card_title")}>{title}</div>
-        <div className={cx("card_commentcount")}>{commentCount}</div>
-        <button className={cx("card_commentbutton")}>
-          <Icon type="test"/>
-        </button>
-      </div>
-      {type ? false : <div className={cx("card_content")}>{Contents}</div>}
-
-      <div className={cx("card_hashtag", type)}>{Hashtag}</div>
-
-      <div className={cx("card_bottom", type)}>
-        {type ? <hr className={cx("hr")} /> : false}
-        <div className={cx("card_date")}>{carddate}</div>
-        <div className={cx("card_bottom_box")}>
-          <div className={cx("card_conut")}>{Viewcount}</div>
-          <div className={cx("card_button")}>
-            <Icon type="test" />
-          </div>
-          <div className={cx("card_conut")}>{Likecount}</div>
-          <button className={cx("card_button")}>
-            {done ? <Icon type="test"  /> : <Icon />}
-          </button>
+    <div className={cx("card")}>
+      <div className={cx("header")}>
+        <div className={cx("header__title")}>{props.title}</div>
+        <div className={cx("header__hash")}>
+          <Icon type='test' />
         </div>
+      </div>
+      <div className={cx("contents")}>{props.contents} </div>
+      <div className={cx("hash")}>{props.hashtags}</div>
+      <div className={cx("info")}>
+        <Icon type='test' />
+        {props.hashtags && (
+          <div className={cx("info__place")}>{props.spot}</div>
+        )}
+        <div className={cx("info__date")}>{props.date}</div>
+      </div>
+      <div className={cx("bottom")}>
+        <div className={cx("bottom__comentcount")}>{props.comentcounte}</div>
+        <div className={cx("bottom__commenticon")}> <Icon type='test' /></div>
+        <div className={cx("bottom__likeicon")}> <Icon type='test' /></div>
+        <div className={cx("bottom__likecount")}>{props.likecount}</div>
+        <div className={cx("bottom__viewicon")}> <Icon type='test' /></div>
+        <div className={cx("bottom__viewcount")}>{props.viewcount}</div>
       </div>
     </div>
   );
 }
 
 CardView.prototype = {
-  type: PropTypes.string,
-  done: PropTypes.bool,
   title: PropTypes.string,
-  Hashtag: PropTypes.string,
-  carddate: PropTypes.instanceOf(),
-  Contents: PropTypes.string,
-  Viewcount: PropTypes.number,
-  Likecount: PropTypes.number,
-  commentCount: PropTypes.number
+  contents:PropTypes.string,
+  spot: PropTypes.string.isRequired,
+  hashtags: PropTypes.string,
+  date:PropTypes.string,
+  comentcounte:PropTypes.string,
+  viewcount:PropTypes.string,
+  likecount:PropTypes.string
 };
 
 CardView.defaultProps = {
-  type: "",
-  done: false,
   title: "제목 없음",
-  carddate: "00시간 전",
-  Contents: "내용 없음",
-  Viewcount: 0,
-  Likecount: 0,
-  commentCount: 0
+  contents:"내용 없음",
+  spot: "null spot",
+  hashtags: "null hashtags",
+  date:"0시간 전",
+  comentcounte:"0",
+  viewcount:"0",
+  likecount:"0"
 };
 
 export default CardView;
