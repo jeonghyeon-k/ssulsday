@@ -1,96 +1,108 @@
 @import "../../../style/index.scss";
 
+$input-fontsize : 14px; 
+$button-fontsize : 18px;
+$button-radius : 25px;
+$box-width: 300px;
+$box-hegith:48px;
+
 
 .loginpage{
-    margin: 7em 2rem;
+    margin-left:38px;
+    margin-right: 37px;
+    margin-top: 139px;
+    padding: 0;
 }
 
-
-.loginpage__logo{
-    display: inline-block;
-    width: 134pt;
-    height: 48pt;
-    margin: 0 60pt;
-    margin-bottom: 16pt;
-    border: 1px solid #2e2514;
+.header{
     text-align: center;
+    margin-bottom:  48px;
 }
 
-.loginpage__input{
-  
+.header__logo{
+    display: inline-block;
+    width: 134px;
+    height: 48px;
+    border: 1px solid #2e2514;
+    
 }
-.loginpage__input__email{
+
+.input__email{
     background-color: #f5f5f5;
-    border-radius: 30px;
+    color:#616161;
+    border-radius: $button-radius;
     border: 0;
-    font-size: 1rem;
-    width: 90%;
-    padding: 1rem 1rem;
-    margin: 1rem auto;
-    display: block;
+    font-size: $input-fontsize;
+    width: $box-width - 56px;
+    height: $box-hegith;
+    padding-left: 28px;
+    padding-right: 28px;
+
+    display: inline-block;
     outline: none;
 }
 
-.loginpage__input__password{
-    background-color: #f5f5f5;
-    border-radius: 30px;
-    border: 0;
-    font-size: 1rem;
-    width: 90%;
-    padding: 1rem 1rem;
-    margin: 1rem auto;
-    display: block;
-    outline: none;
+.input__password{
+   @extend .input__email;
+   margin-top: 24px
+   
 }
 
-.loginpage__loginbutton{
+.bottom__loginbutton{
     background-color: #fbb33b;
     color:#f5f5f5;
-    border-radius: 30px;
+    border-radius: $button-radius;
     border: 0;
-    font-size: 1rem;
-    width: 100%;
-    padding: 1rem 1rem;
-    margin: 1.5rem auto;
+    font-size: $button-fontsize;
+    width: $box-width;
+    height: $box-hegith;
+    padding-top:11px;
+    padding-bottom: 10px;
+    margin-top: 40px;
     display: block;
     outline: none;
     
 }
-.loginpage__Autologin{
+.bottom__Autologin{
     display: inline-block;
-    margin-left: 1rem;
+    margin-left: 7px;
+    margin-top:20px;
 }
 
-.loginpage__Autologin__checkbox + label{
+.bottom__Autologin--checkbox + label{
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border: 2px solid #fbb33b;
     cursor: pointer;
 }
-.loginpage__Autologin__checkbox:checked + label{
+.bottom__Autologin--scheckbox:checked + label{
     background-color: #fbb33b;
     color: #f5f5f5;
 }
 
-.loginpage__Autologin__checkbox{
+.bottom__Autologin--checkbox{
     display: none;
 }
-.loginpage__forgotpassword{
+.bottom__forgotpassword{
     float: right;
+    margin-top:20px;
+    color:#616161;
 }
-.loginpage__Autologin_span{
-    margin-left: 0.5rem;
+.bottom__Autologin_span{
+    margin-left: 8px;
+    color:#616161;
 }
-.loginpage__signupbutton{
+.bottom__signupbutton{
     background-color:#ffffff; 
     border: 1px solid #fbb33b;
     color:#fbb33b;
-    border-radius: 30px;
-    font-size: 1rem;
-    width: 100%;
+    border-radius: $button-radius;
+    font-size: $button-fontsize;
+    width: $box-width;
+    height: $box-hegith;
     padding: 1rem;
-    margin: 10rem 0 auto;
+    margin-top:180px;
     display: block;
     outline: none;
 }
