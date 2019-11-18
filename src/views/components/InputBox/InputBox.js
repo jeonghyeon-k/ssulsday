@@ -67,16 +67,17 @@ const InputBox = ({ ...props }) => {
     <div className={cx("inputbox")}>
       <div
         className={cx(
-          "input-box__input",
-          isFocus && "input-box__input-focus",
+          "input-box__wrapper",
+          isFocus && "input-box__wrapper-focus",
           isCome &&
             (props.isValidation ||
               isFocus ||
               isNormal ||
-              "input-box__input-notemail")
+              "input-box__wrapper-notemail")
         )}
       >
         <input
+          className={cx("input-box__input")}
           placeholder={placeholder}
           onChange={handleChange}
           value={value}

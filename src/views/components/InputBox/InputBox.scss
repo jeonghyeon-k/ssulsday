@@ -5,20 +5,9 @@
   height: auto;
   margin: auto;
   background: $main-white;
-  &__input {
+  &__wrapper {
     border-bottom: 1px solid $main-black-3;
     color: $main-black-3;
-    & input {
-      width: 90%;
-      padding-top: 5pt;
-      padding-bottom: 5pt;
-      border: none;
-      outline: none;
-      color: $main-black-3;
-    }
-    & input:focus {
-      color: $main-black-1;
-    }
 
     &-focus {
       border-color: $main-black-1;
@@ -28,6 +17,18 @@
     &-notemail {
       border-color: $main-paleRed;
     }
+  }
+
+  &__input {
+    width: 90%;
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+    border: none;
+    outline: none;
+    color: $main-black-3;
+  }
+  &__input:focus {
+    color: $main-black-1;
   }
 
   &__remove-btn {
