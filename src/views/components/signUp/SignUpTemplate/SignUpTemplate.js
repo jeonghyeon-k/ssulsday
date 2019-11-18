@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import classNames from "classnames/bind";
-import styles from "./SignUpTemplate.scss";
 
 import SignUpHeader from "../SignUpHeader";
-import InputBox from "../../InputBox";
-
-const cx = classNames.bind(styles);
+import SignUpPrivate from "../SignUpPrivate";
+import SignUpAuth from "../SignUpAuth";
+import SignUpForm from "../SignUpForm/SignUpForm";
 
 const SignUpTemplate = () => {
   const [isValidation, setIsValidation] = useState(false);
@@ -28,60 +26,22 @@ const SignUpTemplate = () => {
       <SignUpHeader />
       {isAuth ? (
         //인증번호 인증 후
-        <>
-          <div className={cx("sign-up-form")}>
-            <span className={cx("sign-up-form__title")}>닉네임</span>
-            <div className={cx("sign-up-form__input")}>
-              <InputBox type="nickname" />
-            </div>
-          </div>
-          <div className={cx("sign-up-form")}>
-            <span className={cx("sign-up-form__title")}>비밀번호</span>
-            <div className={cx("sign-up-form__input")}>
-              <InputBox type="password" />
-            </div>
-          </div>
-          <div className={cx("sign-up-form")}>
-            <span className={cx("sign-up-form__title")}>비밀번호 재확인</span>
-            <div className={cx("sign-up-form__input")}>
-              <InputBox type="check-password" validation={chkEmail} />
-            </div>
-          </div>
-        </>
+        <SignUpPrivate validation={chkEmail} />
       ) : (
         //이하 인증번호 인증 전
-        <div className={cx("sign-up-form")}>
-          <span className={cx("sign-up-form__title")}>이메일주소</span>
-          <div className={cx("sign-up-form__input")}>
-            <InputBox
-              type="email"
-              validation={chkEmail}
-              isValidation={isValidation}
-            />
-          </div>
-        </div>
+        <SignUpForm
+          title="이메일주소"
+          type="email"
+          validation={chkEmail}
+          isValidation={isValidation}
+        />
       )}
 
       {isValidation &&
         (isAuth || (
           //이메일 입력 전
           <>
-            <div className={cx("sign-up-form")}>
-              <span className={cx("sign-up-form__title")}>인증코드</span>
-              <div className={cx("sign-up-form__input")}>
-                <InputBox type="auth" />
-              </div>
-              <div className={cx("sign-up-form__return-text")}>
-                인증코드 다시받기
-              </div>
-            </div>
-            <button
-              onClick={() => {
-                setIsAuth(true);
-              }}
-            >
-              다음
-            </button>
+            <SignUpAuth setIsAuth={setIsAuth} />
           </>
         ))}
     </>
