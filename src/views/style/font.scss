@@ -14,8 +14,8 @@
     //U+2582-3011;
     src: local("NotoSansCJK-Regular"),
     local("NotoSansCJK-Regular"),
-    url("./../assets/font/NotoSans-Regular.woff2") format("woff2"),
-    url("./../assets/font/NotoSans-Regular.woff") format("woff");
+    url("./../../assets/font/NotoSans-Regular.woff2") format("woff2"),
+    url("./../../assets/font/NotoSans-Regular.woff") format("woff");
   }
   
   @font-face {
@@ -33,8 +33,8 @@
     //U+2582-3011;
     src: local("NotoSansCJK-Light"),
     local("NotoSansCJKkr-Light"),
-    url("./../assets/font/NotoSans-Light.woff2") format("woff2"),
-    url("./../assets/font/NotoSans-Light.woff") format("woff");
+    url("./../../assets/font/NotoSans-Light.woff2") format("woff2"),
+    url("./../../assets/font/NotoSans-Light.woff") format("woff");
   }
   
   @font-face {
@@ -52,6 +52,6 @@
     //U+2582-3011;
     src: local("NotoSansCJK-Bold"),
     local("NotoSansCJKkr-Bold"),
-    url("./../assets/font/NotoSans-Bold.woff2") format("woff2"),
-    url("./../assets/font/NotoSans-Bold.woff") format("woff");
+    url("./../../assets/font/NotoSans-Bold.woff2") format("woff2"),
+    url("./../../assets/font/NotoSans-Bold.woff") format("woff");
   }
