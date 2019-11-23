@@ -1,0 +1,19 @@
+@import "../../../../style/index.scss";
+
+.input__wrapper {
+  width: 95%;
+  height: 30pt;
+  margin: 0 auto;
+  margin-bottom: 24pt;
+  border-radius: 5pt;
+  background: $main-black-5;
+}
+
+.input__text {
+  width: 90%;
+  height: 24pt;
+  margin-left: 5pt;
+  border: none;
+  outline: none;
+  background: $main-black-5;
+}
