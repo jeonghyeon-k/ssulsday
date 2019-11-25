@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./LoginPage.scss";
 import classNames from "classnames/bind";
-import Icon from "../../Icon/Icon";
+import Icon from "../../components/Icon/Icon";
 import PropTypes from "prop-types";
 
 const cx = classNames.bind(styles);
 
-const LoginPage = ({ logged }) => {
+const LoginPage = ({ isCookie }) => {
   return (
     <div className={cx("loginpage")}>
       <div className={cx("header")}>
@@ -34,7 +34,7 @@ const LoginPage = ({ logged }) => {
 };
 
 LoginPage.prototype = {
-  logged: PropTypes.bool
-};
+  isCookie: PropTypes.required
+}
 
 export default LoginPage;
