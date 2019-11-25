@@ -12,6 +12,7 @@ function commentCreate() {
         autoFocus={true}
         placeholder='댓글을 입력하세요'
       />
+      <button className={cx("createcommnet__button")}>등록</button>
     </div>
   );
 }
