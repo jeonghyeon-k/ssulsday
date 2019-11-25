@@ -1,10 +1,23 @@
 import Axios from "axios"
-import { SERVER_URL } from "../config/serverConfig"
+import { SERVER_URL , REST_API_KEY} from "../config/serverConfig"
 
 export const api = ({url, type = "get", param}) => {
     return Axios({
         method: type,
         url: `${SERVER_URL}${url}`,
         data: param,
+        headers: {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+            "Access-Control-Allow-Headers": "Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization"
+        }
+    })
+}
+export const convertGeoToAddress = (x, y) => {
+    return Axios({
+        method: "get",
+        url: `https://dapi.kakao.com/v2/local/geo/coord2address.json?x=${x}&y=${y}&input_coord=WGS84`,
+        headers: {Authorization: `KakaoAK ${REST_API_KEY}`}
     })
 }

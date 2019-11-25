@@ -8,7 +8,8 @@ import {
   ListPage,
   DetailsPage,
   SignUpPage,
-  FindPasswordPage
+  FindPasswordPage,
+  PageMain
 } from "./pages";
 
 const Login = () => {
@@ -23,7 +24,7 @@ const Login = () => {
 const Main = () => {
   return (
     <Switch>
-      <Route exact path="/" component={SamplePage} />
+      <Route exact path="/" component={PageMain} />
       <Route path="/post" component={PostPage} />
       <Route path="/search" component={SearchPage} />
       <Route path="/list" component={ListPage} />

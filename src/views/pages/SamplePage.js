@@ -1,14 +1,12 @@
 import React from "react";
-import Spinner from "../components/Spinner/Spinner";
-import LoginPage from "./LoginPage/LoginPage";
-import Cardlist from "./LoginPage/LoginPage";
+
+import PageMain from "./PageMain";
 
 const SamplePage = () => {
   return (
-    <>
-      <Spinner />
-    </>
-  );
+    <h1>asdfsf</h1>
+  )
+
 };
 
 export default SamplePage;
