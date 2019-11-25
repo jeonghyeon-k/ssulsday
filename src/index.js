@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./Root";
 import * as serviceWorker from "./serviceWorker";
+=======
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import "./views/style/index.scss";
+import * as serviceWorker from './serviceWorker';
+import Root from "./Root";
+>>>>>>> e3910b9... no message
 
 ReactDOM.render(<Root />, document.getElementById("root"));
 
