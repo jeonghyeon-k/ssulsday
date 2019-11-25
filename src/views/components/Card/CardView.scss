@@ -1,100 +1,96 @@
 @import "../../style/index.scss";
 @import "../../style//variable.scss";
 
+$font-size: 14px;
 
-
-$font-size : 14px;
-.padding{
-  padding-left:20px;
+.padding {
+  padding-left: 20px;
   padding-right: 20px;
 }
-.card{
-
-  border-radius: 10px;
+.card {
   margin: 20px 16px;
+  border-radius: 10px;
   box-shadow: 1pt 1pt 5pt 0pt $main-black-4;
 }
-.header{
+.header {
   @extend .padding;
-  padding-top:28px;
+  padding-top: 28px;
 }
-.header__title{
+.header__title {
   display: inline-block;
   font-size: 18px;
-  color: $main-black-1
+  color: $main-black-1;
 }
-.header__hash{
+.header__hash {
   float: right;
 }
-.contents{
+.contents {
   @extend .padding;
   max-height: 64px;
-  margin-top:20px;
+  margin-top: 20px;
   font-size: $font-size;
-  color: $main-black-1
+  color: $main-black-1;
 }
-.hash{
+.hash {
   @extend .padding;
-  font-size:$font-size;
-  color:$main-black-3;
-  margin-top:4px;
+  margin-top: 4px;
+  font-size: $font-size;
+  color: $main-black-3;
 }
-.info{
+.info {
   @extend .padding;
-  margin-top:18px;
   height: 20px;
+  margin-top: 18px;
 }
-.info__place{
+.info__place {
   display: inline-block;
-  font-size:$font-size;
-  color: $main-black-1
+  font-size: $font-size;
+  color: $main-black-1;
 }
-.info__date{
-  font-size:$font-size;
+.info__date {
   float: right;
-  margin-top:7px;
-  color: $main-black-1
+  margin-top: 7px;
+  font-size: $font-size;
+  color: $main-black-1;
 }
 
-.bottom{
+.bottom {
   @extend .padding;
-  margin-top:18px;
   height: 40px;
+  margin-top: 18px;
   border-radius: 0 0 10px 10px;
-  font-size:$font-size;
-  background-color:$main-black-5; 
+  background-color: $main-black-5;
+  font-size: $font-size;
 }
 
-
-.bottom__icon{
-  margin-left: 4px; 
+.bottom__icon {
+  margin-left: 4px;
   margin-top: 8px;
 }
 
-.bottom__comentcount{
+.bottom__comentcount {
   float: left;
   margin-top: 8px;
 }
-.bottom__commenticon{
+.bottom__commenticon {
   @extend .bottom__icon;
   float: left;
   margin-top: 8px;
 }
-.bottom__viewcount{
+.bottom__viewcount {
   float: right;
   margin-top: 8px;
 }
-.bottom__viewicon{
+.bottom__viewicon {
   @extend .bottom__icon;
   float: right;
   margin-right: 20px;
 }
-.bottom__likecount{
+.bottom__likecount {
   float: right;
   margin-top: 8px;
- 
 }
-.bottom__likeicon{
+.bottom__likeicon {
   @extend .bottom__icon;
   float: right;
 }

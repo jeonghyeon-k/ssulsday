@@ -14,29 +14,29 @@ $font-size: 14px;
 }
 .head__nickname{
   display: inline-block;
+  margin-left: 8px;
   color: $main-black-1;
   font-size:$font-size;
   font-weight: bold;
-  margin-left: 8px;
 }
 .head__time{
   display: inline-block;
+  margin-left: 0.6rem;
   color: $main-black-3;
   font-size:$font-size;
-  margin-left: 0.6rem;
 }
 .head__menu{
   float: right;
 }
 .content{
-  margin-top: 6px;
-  border-radius: 8px;
   display: inline-block;
   width: 343px - 16px;
+  margin-top: 6px;
+  padding: 16px 8px;
+  border-radius: 8px;
   background-color: $main-black-5;
   color: #616161;
   font-size:$font-size;
-  padding: 16px 8px;
 }
 
 
