@@ -1,4 +1,12 @@
 import React from "react";
+<<<<<<< HEAD
+
+export default function App (props) {
+  return (
+   <h1>do not use app before load page</h1>
+  );
+};
+=======
 import InputBox from "./views/components/InputBox/InputBox";
 import Ellipse from "./views/components/Ellipse/Ellipse";
 import PlaceCard from "./views/components/PlaceCard/PlaceCard";
@@ -14,3 +22,4 @@ export default function App(props) {
     </div>
   );
 };
+>>>>>>> 46360e6880d8b6cb546e3dae979f0a867076315e
