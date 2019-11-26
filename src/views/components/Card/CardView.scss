@@ -1,0 +1,96 @@
+@import "../../style/index.scss";
+@import "../../style//variable.scss";
+
+$font-size: 14px;
+
+.padding {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.card {
+  margin: 20px 16px;
+  border-radius: 10px;
+  box-shadow: 1pt 1pt 5pt 0pt $main-black-4;
+}
+.header {
+  @extend .padding;
+  padding-top: 28px;
+}
+.header__title {
+  display: inline-block;
+  font-size: 18px;
+  color: $main-black-1;
+}
+.header__hash {
+  float: right;
+}
+.contents {
+  @extend .padding;
+  max-height: 64px;
+  margin-top: 20px;
+  font-size: $font-size;
+  color: $main-black-1;
+}
+.hash {
+  @extend .padding;
+  margin-top: 4px;
+  font-size: $font-size;
+  color: $main-black-3;
+}
+.info {
+  @extend .padding;
+  height: 20px;
+  margin-top: 18px;
+}
+.info__place {
+  display: inline-block;
+  font-size: $font-size;
+  color: $main-black-1;
+}
+.info__date {
+  float: right;
+  margin-top: 7px;
+  font-size: $font-size;
+  color: $main-black-1;
+}
+
+.bottom {
+  @extend .padding;
+  height: 40px;
+  margin-top: 18px;
+  border-radius: 0 0 10px 10px;
+  background-color: $main-black-5;
+  font-size: $font-size;
+}
+
+.bottom__icon {
+  margin-left: 4px;
+  margin-top: 8px;
+}
+
+.bottom__comentcount {
+  float: left;
+  margin-top: 8px;
+}
+.bottom__commenticon {
+  @extend .bottom__icon;
+  float: left;
+  margin-top: 8px;
+}
+.bottom__viewcount {
+  float: right;
+  margin-top: 8px;
+}
+.bottom__viewicon {
+  @extend .bottom__icon;
+  float: right;
+  margin-right: 20px;
+}
+.bottom__likecount {
+  float: right;
+  margin-top: 8px;
+}
+.bottom__likeicon {
+  @extend .bottom__icon;
+  float: right;
+}
