@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types"
 export default function Layout (props) {
     return (
-        <div style={props.style} className={props.prefix} >
+        <div style={props.style} className={props.className} >
             {props.children}
         </div>
     )
@@ -14,5 +14,5 @@ Layout.propsTypes = {
         PropTypes.node
     ]).isRequired,
     style: PropTypes.style,
-    prefix: PropTypes.string,
+    className: PropTypes.string,
 }

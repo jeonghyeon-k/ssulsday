@@ -1,9 +1,10 @@
 import React from "react";
+import Spinner from "../components/Spinner/Spinner";
 
 const SamplePage = () => {
   return (
     <>
-      <h1>do not use app before load page</h1>
+      <Spinner/>
     </>
   );
 };
