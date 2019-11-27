@@ -1,9 +1,12 @@
 import React from "react";
+import PageTemplate from "../components/PageTemplate";
 
 const SamplePage = () => {
   return (
     <>
-      <h1>do not use app before load page</h1>
+      <PageTemplate>
+        <h1>do not use app before load page</h1>
+      </PageTemplate>
     </>
   );
 };

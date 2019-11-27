@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./PostTagModalList.scss";
 import classNames from "classnames/bind";
+import PropTypes from "prop-types";
 import Icon from "../../../Icon/Icon";
 
 const cx = classNames.bind(styles);
@@ -27,6 +28,18 @@ const PostTagModalList = ({ ...props }) => {
       ))}
     </>
   );
+};
+
+PostTagModalList.propTypes = {
+  tags: PropTypes.array,
+  handleAddTag: PropTypes.func
+};
+
+PostTagModalList.defaultProps = {
+  tags: [],
+  handleAddTag: () => {
+    console.log("handleAddTag is null");
+  }
 };
 
 export default PostTagModalList;

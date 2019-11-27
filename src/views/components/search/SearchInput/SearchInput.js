@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./PostTagModalInput.scss";
+import styles from "./SearchInput.scss";
 import classNames from "classnames/bind";
 import PropTypes from "prop-types";
-import Icon from "../../../Icon/Icon";
+import Icon from "../../Icon/Icon";
 
 const cx = classNames.bind(styles);
 
-const PostTagModalInput = ({ ...props }) => {
+const SearchInput = ({ ...props }) => {
   const handleChange = e => {
     props.setFilteredTagValue && props.setFilteredTagValue(e.target.value);
     props.setFilteredPlaceValue && props.setFilteredPlaceValue(e.target.value);
@@ -24,14 +24,14 @@ const PostTagModalInput = ({ ...props }) => {
   );
 };
 
-PostTagModalInput.propTypes = {
+SearchInput.propTypes = {
   setFilteredTagValue: PropTypes.func
 };
 
-PostTagModalInput.defaultProps = {
+SearchInput.defaultProps = {
   setFilteredTagValue: () => {
     console.log("setFilteredTagValue is null");
   }
 };
 
-export default PostTagModalInput;
+export default SearchInput;

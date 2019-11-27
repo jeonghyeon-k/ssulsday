@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames/bind";
-
+import PropTypes from "prop-types";
 import Icon from "../../Icon/Icon";
 
 const cx = classNames.bind();
@@ -12,6 +12,16 @@ const PostPlace = ({ ...props }) => {
       <Icon type="test" />
     </div>
   );
+};
+
+PostPlace.propTyps = {
+  handlePlaceModal: PropTypes.func
+};
+
+PostPlace.defaultProps = {
+  handlePlaceModal: () => {
+    console.log("handlePlaceModal is null");
+  }
 };
 
 export default PostPlace;

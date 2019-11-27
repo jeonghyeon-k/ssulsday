@@ -10,9 +10,12 @@
   border-bottom: 1px solid $main-black-4;
   outline: none;
   resize: none;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
   font-size: 12pt;
   &::placeholder {
-    font-weight: 700;
     color: $main-black-3;
   }
 }
