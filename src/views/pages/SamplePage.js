@@ -4,7 +4,7 @@ import Spinner from "../components/Spinner/Spinner";
 const SamplePage = () => {
   return (
     <>
-      <Spinner/>
+      <Spinner />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./PostTag.scss";
 import classNames from "classnames/bind";
+import PropTypes from "prop-types";
 import Icon from "../../Icon/Icon";
 import Ellipse from "../../Ellipse";
 
@@ -19,6 +20,18 @@ const PostTag = ({ ...props }) => {
         ))}
     </div>
   );
+};
+
+PostTag.propTypes = {
+  selectedTags: PropTypes.array,
+  handleTagModal: PropTypes.func
+};
+
+PostTag.defaultProps = {
+  selectedTags: [],
+  handleTagModal: () => {
+    console.log("handleTagModal is null");
+  }
 };
 
 export default PostTag;
