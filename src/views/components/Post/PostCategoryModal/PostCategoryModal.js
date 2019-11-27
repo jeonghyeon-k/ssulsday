@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./PostCategoryModal.scss";
 import classNames from "classnames/bind";
+import PropTypes from "prop-types";
 
 const cx = classNames.bind(styles);
 
@@ -56,6 +57,20 @@ const PostCategoryModal = ({ ...props }) => {
       </div>
     </>
   );
+};
+
+PostCategoryModal.propTypes = {
+  setKind: PropTypes.func,
+  handleCategoryModal: PropTypes.func
+};
+
+PostCategoryModal.defaultProps = {
+  setKind: () => {
+    console.log("setKind is null");
+  },
+  handleCategoryModal: () => {
+    console.log("handleCategoryModal is null");
+  }
 };
 
 export default PostCategoryModal;

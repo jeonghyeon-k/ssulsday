@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./PostPlaceModalTemplate.scss";
 import classNames from "classnames/bind";
+import PropTypes from "prop-types";
 import PostTagModalInput from "../../PostTagModal/PostTagModalInput/PostTagModalInput";
 import PostPlaceModalList from "../PostPlaceModalList";
 
@@ -29,6 +30,16 @@ const PostPlaceModalTemplate = ({ ...props }) => {
       />
     </div>
   );
+};
+
+PostPlaceModalTemplate.propTypes = {
+  handleAddPlace: PropTypes.func
+};
+
+PostPlaceModalTemplate.defaultProps = {
+  handleAddPlace: () => {
+    console.log("handleAddPlace is null");
+  }
 };
 
 export default PostPlaceModalTemplate;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./PostTagModalTemplate.scss";
 import classNames from "classnames/bind";
+import PropTypes from "prop-types";
 import PostTagModalInput from "../PostTagModalInput";
 import PostTagModalList from "../PostTagModalList";
 
@@ -27,6 +28,16 @@ const PostTagModalTemplate = ({ ...props }) => {
       <PostTagModalList handleAddTag={props.handleAddTag} tags={filteredTags} />
     </div>
   );
+};
+
+PostTagModalTemplate.propTypes = {
+  handleAddTag: PropTypes.func
+};
+
+PostTagModalTemplate.defaultProps = {
+  handleAddTag: () => {
+    console.log("handleAddTag is null");
+  }
 };
 
 export default PostTagModalTemplate;
