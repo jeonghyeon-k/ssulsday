@@ -1,0 +1,16 @@
+@import "../../../../style/index.scss";
+
+.around {
+  width: 95%;
+  height: 36px;
+  margin: 0 auto;
+  margin-bottom: 20pt;
+  &__text {
+    display: block;
+    float: right;
+    width: 90%;
+    height: 30px;
+    margin-top: 5pt;
+    color: $main-butterscotch;
+  }
+}

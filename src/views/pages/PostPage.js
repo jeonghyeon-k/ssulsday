@@ -1,8 +1,14 @@
 import React from "react";
 import PostTemplate from "../components/Post/PostTemplate";
+import Header from "../components/Header";
 
 const PostPage = () => {
-  return <PostTemplate />;
+  return (
+    <>
+      <Header />
+      <PostTemplate />
+    </>
+  );
 };
 
 export default PostPage;
