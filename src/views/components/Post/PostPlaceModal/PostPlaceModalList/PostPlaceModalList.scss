@@ -4,13 +4,19 @@
   width: 95%;
   height: 36px;
   margin: 0 auto;
-  margin-bottom: 20pt;
+  margin-bottom: 16pt;
   &__text {
     display: block;
-    float: right;
+    float: left;
     width: 90%;
     height: 30px;
     margin-top: 5pt;
     color: $main-butterscotch;
   }
+}
+
+.location-3 {
+  display: block;
+  float: left;
+  margin-top: 5pt;
 }
