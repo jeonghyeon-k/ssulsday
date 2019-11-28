@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import styles from "./InputBox.scss";
 import classNames from "classnames/bind";
 import PropTypes from "prop-types";
+
 import Icon from "../Icon/Icon";
 
 const cx = classNames.bind(styles);
@@ -53,7 +54,8 @@ const InputBox = ({ ...props }) => {
           "input-box__input",
           isFocus && "input-box__input-focus",
           isCome && (isEmail || isFocus || "input-box__input-notemail")
-        )}>
+        )}
+      >
         <input
           placeholder={props.placeholder}
           onChange={handleChange}
@@ -63,15 +65,20 @@ const InputBox = ({ ...props }) => {
           ref={inputRef}
         />
         {value && (
-          <div className={cx("input-box__remove-btn")} onClick={handleClickRemove}>
+          <div
+            className={cx("input-box__remove-btn")}
+            onClick={handleClickRemove}
+          >
             x
           </div>
         )}
-        <Icon className={cx("input-box__icon")} type='test' size='sm' />
+        <Icon className={cx("input-box__icon")} type="test" size="sm" />
       </div>
       {isCome &&
         (isEmail || isFocus || (
-          <span className={cx("input-box__text")}>이메일 주소 형식이 맞지 않습니다.</span>
+          <span className={cx("input-box__text")}>
+            이메일 주소 형식이 맞지 않습니다.
+          </span>
         ))}
 
       <button onClick={handleEmailCheck}>이메일?</button>
