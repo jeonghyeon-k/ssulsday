@@ -42,6 +42,7 @@ const PostTemplate = () => {
         kind={kind}
         setKind={setKind}
         handleCategoryModal={handleCategoryModal}
+        isCategoryModal={isCategoryModal}
       />
       <PostTextArea />
       <PostTag handleTagModal={handleTagModal} selectedTags={selectedTags} />

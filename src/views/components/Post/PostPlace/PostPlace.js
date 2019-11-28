@@ -9,7 +9,7 @@ const PostPlace = ({ ...props }) => {
   return (
     <div className={cx("post__tap")} onClick={props.handlePlaceModal}>
       <span className={cx("post__add")}>장소 추가</span>
-      <Icon type="test" />
+      <Icon type="arrow-small-right" />
     </div>
   );
 };
