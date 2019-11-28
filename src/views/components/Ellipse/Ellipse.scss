@@ -15,9 +15,14 @@
     color: $main-black-3;
   }
 
+  &-grey {
+    background: $main-black-4;
+    color: $main-black-1;
+  }
+
   &__text {
     display: inline-block;
-    padding: 4pt;
-    font-size: 12pt;
+    padding: 4pt 10pt 4pt 10pt;
+    font-size: 10pt;
   }
 }

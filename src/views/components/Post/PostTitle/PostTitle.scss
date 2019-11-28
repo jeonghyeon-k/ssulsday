@@ -1,0 +1,14 @@
+@import "../../../style/index.scss";
+
+.post__title {
+  display: block;
+  width: 90%;
+  height: 28pt;
+  margin: 0 auto;
+  padding-top: 2pt;
+  padding-bottom: 2pt;
+  background: $main-white;
+  border: none;
+  border-bottom: 1px solid $main-black-4;
+  outline: none;
+}
