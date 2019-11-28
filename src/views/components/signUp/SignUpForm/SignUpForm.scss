@@ -1,0 +1,13 @@
+@import "../../../style/index.scss";
+
+.sign-up {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20pt;
+  &__title {
+    font-size: 13.5pt;
+  }
+  &__input {
+    margin-top: 10pt;
+  }
+}

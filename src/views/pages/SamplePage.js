@@ -6,8 +6,7 @@ import Cardlist from "./LoginPage/LoginPage";
 const SamplePage = () => {
   return (
     <>
-    <Cardlist/>
-    
+      <Spinner />
     </>
   );
 };

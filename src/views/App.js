@@ -1,16 +1,43 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { SamplePage, NotFoundPage } from "./pages";
+import {
+  SamplePage,
+  NotFoundPage,
+  PostPage,
+  SearchPage,
+  ListPage,
+  DetailsPage,
+  SignUpPage,
+  FindPasswordPage
+} from "./pages";
+
+const Login = () => {
+  return (
+    <Switch>
+      <Route exact path="/" component={SamplePage} />
+      <Route component={NotFoundPage} />
+    </Switch>
+  );
+};
+
+const Main = () => {
+  return (
+    <Switch>
+      <Route exact path="/" component={SamplePage} />
+      <Route path="/post" component={PostPage} />
+      <Route path="/search" component={SearchPage} />
+      <Route path="/list" component={ListPage} />
+      <Route path="/details" component={DetailsPage} />
+      <Route path="/signup" component={SignUpPage} />
+      <Route path="/find-password" component={FindPasswordPage} />
+      <Route component={NotFoundPage} />
+    </Switch>
+  );
+};
 
 const App = () => {
-  return (
-    <div>
-      <Switch>
-        <Route exact path='/' component={SamplePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-    </div>
-  );
+  localStorage.login = true;
+  return localStorage.getItem("login") === "true" ? <Main /> : <Login />;
 };
 
 export default App;
