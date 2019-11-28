@@ -10,4 +10,4 @@ export default class User {
         this._id = id;
         this._name = name;
     }
-}}
+}
