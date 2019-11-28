@@ -6,7 +6,9 @@ import {
   PostPage,
   SearchPage,
   ListPage,
-  DetailsPage
+  DetailsPage,
+  SignUpPage,
+  FindPasswordPage
 } from "./pages";
 
 const Login = () => {
@@ -26,6 +28,8 @@ const Main = () => {
       <Route path="/search" component={SearchPage} />
       <Route path="/list" component={ListPage} />
       <Route path="/details" component={DetailsPage} />
+      <Route path="/signup" component={SignUpPage} />
+      <Route path="/find-password" component={FindPasswordPage} />
       <Route component={NotFoundPage} />
     </Switch>
   );
