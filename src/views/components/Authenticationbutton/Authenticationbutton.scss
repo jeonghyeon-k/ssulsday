@@ -1,4 +1,5 @@
 @import "../../style/index.scss";
+<<<<<<< HEAD
 @import "../../style/variable.scss";
 
 
@@ -16,4 +17,24 @@
     &.done{
         color: $main-black-1;
     }
+=======
+@import "../../style//variable.scss";
+
+.Authenticationbutton {
+  background-color: #ffffff;
+  border: 1px solid $authentication-button;
+  border-radius: 25px;
+  font-size: 18px;
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  margin: 0 auto;
+  margin-top: 30pt;
+  outline: none;
+  color: $main-black-3;
+  text-align: center;
+  &.done {
+    color: $main-black-1;
+  }
+>>>>>>> d7e7b2f50f3814acf5340074ad219a8535826ddf
 }
