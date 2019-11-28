@@ -17,6 +17,7 @@ function commentCreate() {
 >>>>>>> b5bd9fe... no message:src/views/components/CommentCreate/commentCreate.js
         placeholder='댓글을 입력하세요'
       />
+      <button className={cx("createcommnet__button")}>등록</button>
     </div>
   );
 }

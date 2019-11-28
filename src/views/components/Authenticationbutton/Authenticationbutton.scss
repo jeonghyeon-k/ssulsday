@@ -1,4 +1,23 @@
 @import "../../style/index.scss";
+<<<<<<< HEAD
+@import "../../style/variable.scss";
+
+
+.Authenticationbutton{
+    width: 343px;
+    border: 1px solid $authentication-button;
+    border-radius: 25px;
+    font-size: 18px;
+    padding-top:10px;
+    padding-bottom: 11px;
+    outline: none;
+    color: $main-black-3;
+    background-color: #ffffff;
+    text-align: center;
+    &.done{
+        color: $main-black-1;
+    }
+=======
 @import "../../style//variable.scss";
 
 .Authenticationbutton {
@@ -17,4 +36,5 @@
   &.done {
     color: $main-black-1;
   }
+>>>>>>> d7e7b2f50f3814acf5340074ad219a8535826ddf
 }
