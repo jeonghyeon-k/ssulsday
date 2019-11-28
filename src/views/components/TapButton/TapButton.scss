@@ -4,15 +4,16 @@
   display: inline-block;
   box-sizing: border-box;
   width: 33%;
-  height: 32pt;
-  border-bottom: 1pt solid;
+  height: 28pt;
+  margin-bottom: 10pt;
+  border-bottom: 1px solid;
   color: $main-black-3;
   text-align: center;
   cursor: pointer;
 
   &__text {
-    padding-top: 6pt;
-    font-size: 15pt;
+    padding-bottom: 6pt;
+    font-size: 18px;
   }
 
   &-toggle {
