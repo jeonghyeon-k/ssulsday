@@ -3,10 +3,13 @@ import { Switch, Route } from "react-router-dom";
 import {
   SamplePage,
   NotFoundPage,
+<<<<<<< HEAD
   PostPage,
   SearchPage,
   ListPage,
   DetailsPage,
+=======
+>>>>>>> b6afb40b4204f1913abea27efaee8bb1e2fb0f0c
   SignUpPage,
   FindPasswordPage
 } from "./pages";
@@ -22,6 +25,7 @@ const Login = () => {
 
 const Main = () => {
   return (
+<<<<<<< HEAD
     <Switch>
       <Route exact path="/" component={SamplePage} />
       <Route path="/post" component={PostPage} />
@@ -32,6 +36,16 @@ const Main = () => {
       <Route path="/find-password" component={FindPasswordPage} />
       <Route component={NotFoundPage} />
     </Switch>
+=======
+    <div>
+      <Switch>
+        <Route exact path="/" component={SamplePage} />
+        <Route path="/signup" component={SignUpPage} />
+        <Route path="/find-password" component={FindPasswordPage} />
+        <Route component={NotFoundPage} />
+      </Switch>
+    </div>
+>>>>>>> b6afb40b4204f1913abea27efaee8bb1e2fb0f0c
   );
 };
 
