@@ -1,6 +1,13 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { SamplePage, NotFoundPage, PostPage, SearchPage } from "./pages";
+import {
+  SamplePage,
+  NotFoundPage,
+  PostPage,
+  SearchPage,
+  ListPage,
+  DetailsPage
+} from "./pages";
 
 const Login = () => {
   return (
@@ -17,6 +24,8 @@ const Main = () => {
       <Route exact path="/" component={SamplePage} />
       <Route path="/post" component={PostPage} />
       <Route path="/search" component={SearchPage} />
+      <Route path="/list" component={ListPage} />
+      <Route path="/details" component={DetailsPage} />
       <Route component={NotFoundPage} />
     </Switch>
   );

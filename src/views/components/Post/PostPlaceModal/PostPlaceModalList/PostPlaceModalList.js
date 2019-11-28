@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 const PostPlace = ({ ...props }) => {
   return (
     <div className={cx("tag")}>
-      <Icon type="test" size="lg" />
+      <Icon type="location-icon" size="md" className="location-icon" />
       <span className={cx("tag__text")} onClick={() => props.handleAddPlace()}>
         {props.place}
       </span>
@@ -21,7 +21,7 @@ const PostPlaceModalList = ({ ...props }) => {
   return (
     <>
       <div className={cx("around")}>
-        <Icon type="test" />
+        <Icon type="location-3" className="location-3" />
         <span className={cx("around__text")}>현재 위치 근처 장소</span>
       </div>
       {props.places.map((place, index) => (

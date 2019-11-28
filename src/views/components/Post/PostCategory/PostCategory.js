@@ -12,7 +12,7 @@ const PostCategory = ({ ...props }) => {
     <>
       <div className={cx("post__tap")} onClick={props.handleCategoryModal}>
         <span className={cx("post__add")}>{props.kind}</span>
-        <Icon type="test" />
+        <Icon type="arrow-small" />
       </div>
     </>
   );

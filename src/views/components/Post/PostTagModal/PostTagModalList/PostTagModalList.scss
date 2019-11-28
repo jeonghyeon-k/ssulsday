@@ -7,9 +7,14 @@
   margin-bottom: 20pt;
   &__text {
     display: block;
-    float: right;
-    width: 88%;
+    float: left;
+    width: 80%;
     height: 30px;
     margin-top: 5pt;
+    margin-left: 5pt;
   }
+}
+.location-icon {
+  display: block;
+  float: left;
 }
