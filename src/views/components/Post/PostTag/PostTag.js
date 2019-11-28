@@ -11,7 +11,7 @@ const PostTag = ({ ...props }) => {
   return (
     <div className={cx("post__tap")} onClick={props.handleTagModal}>
       <span className={cx("post__add")}>태그 추가</span>
-      <Icon type="test" />
+      <Icon type="arrow-small-right" />
       {props.selectedTags &&
         props.selectedTags.map((tag, index) => (
           <Ellipse isGrey key={index}>
