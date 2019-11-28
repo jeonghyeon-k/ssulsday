@@ -5,7 +5,7 @@
     height: 800px;
 }
 
-.Mypageheader{
+.header{
     display:block;
     background-color: $main-white;
     margin-top: 12px;
@@ -21,13 +21,6 @@
 }
 .header__editicon{
     float: right;
-    width: 64px;
-    height: 24px;
-    border : 1px solid $main-black-3;
-    border-radius: 12px; 
-    text-align: center;
-    color: $main-black-3;
-    font-size: 14px;
 }
 .box{
     

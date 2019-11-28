@@ -12,12 +12,14 @@ const Mypage = ({ ...props }) => {
   return (
     <div className={cx("template")}>
       <Navbar />
-      <div className={cx("Mypageheader")}>
+      <div className={cx("header")}>
         <div className={cx("header__usericon")}>
-          <Icon type='location-2' />
+          <Icon type='test' />
         </div>
         <div className={cx("header__username")}>{props.name}</div>
-        <div className={cx("header__editicon")}>수정</div>
+        <div className={cx("header__editicon")}>
+          <Icon type='test' />
+        </div>
         <hr />
       </div>
       <Link to='/'>
@@ -62,12 +64,14 @@ const Mypage = ({ ...props }) => {
   );
 };
 
-Mypage.prototype = {};
+Mypage.prototype = {
+
+};
 Mypage.defaultProps = {
   name: "test",
   mycontentcount: 0,
-  mycommentcount: 0,
-  mylikecount: 0
+  mycommentcount:0,
+  mylikecount:0
 };
 
 export default Mypage;

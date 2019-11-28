@@ -1,9 +1,13 @@
 import React from "react";
+import Spinner from "../components/Spinner/Spinner";
+import LoginPage from "./LoginPage/LoginPage";
+import Cardlist from "./LoginPage/LoginPage";
 
 const SamplePage = () => {
   return (
     <>
-      <h1>do not use app before load page</h1>
+    <Cardlist/>
+    
     </>
   );
 };
