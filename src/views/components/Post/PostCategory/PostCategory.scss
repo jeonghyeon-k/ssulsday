@@ -1,0 +1,13 @@
+@import "../../../style/index.scss";
+
+.post__tap {
+  display: block;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 8pt;
+  padding-bottom: 8pt;
+  background: $main-white;
+  border: none;
+  border-bottom: 1px solid $main-black-4;
+}

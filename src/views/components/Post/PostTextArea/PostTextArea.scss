@@ -1,0 +1,21 @@
+@import "../../../style/index.scss";
+
+.textarea {
+  display: block;
+  width: 90%;
+  height: 290pt;
+  margin: 0 auto;
+  margin-top: 5pt;
+  border: none;
+  border-bottom: 1px solid $main-black-4;
+  outline: none;
+  resize: none;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+  font-size: 12pt;
+  &::placeholder {
+    color: $main-black-3;
+  }
+}

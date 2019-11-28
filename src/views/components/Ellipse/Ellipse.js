@@ -11,7 +11,13 @@ const Ellipse = ({ children, ...props }) => {
   //   return setIsToggle(!isToggle);
   // };
   return (
-    <div className={cx("ellipse", props.isToggle && "ellipse-toggle")}>
+    <div
+      className={cx(
+        "ellipse",
+        props.isToggle && "ellipse-toggle",
+        props.isGrey && "ellipse-grey"
+      )}
+    >
       <span className={cx("ellipse__text")}>{children}</span>
     </div>
   );
@@ -19,12 +25,14 @@ const Ellipse = ({ children, ...props }) => {
 
 Ellipse.propTypes = {
   children: PropTypes.string.isRequired,
-  isToggle: PropTypes.bool
+  isToggle: PropTypes.bool,
+  isGrey: PropTypes.bool
 };
 
 Ellipse.defaultProps = {
   children: "null value",
-  isToggle: false
+  isToggle: false,
+  isGrey: false
 };
 
 export default Ellipse;
