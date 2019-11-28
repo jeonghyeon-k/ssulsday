@@ -13,6 +13,7 @@ const InputBox = ({ ...props }) => {
   const [isCome, setIsCome] = useState(false);
   const [caution, setCaution] = useState("caution");
   const [placeholder, setPlaceholder] = useState("placeholder");
+  const [type, setType] = useState("");
   const [isNormal, setIsNormal] = useState(false);
   const inputRef = useRef(null);
 
@@ -29,10 +30,12 @@ const InputBox = ({ ...props }) => {
       setIsNormal(true);
     } else if (props.type === "check-password") {
       setCaution("비밀번호가 일치하지 않습니다.");
+      setType("password");
       setPlaceholder("비밀번호를 다시 입력해주세요.");
     } else {
       setCaution("");
       setPlaceholder("비밀번호를 입력해주세요.");
+      setType("password");
       setIsNormal(true);
     }
   });
@@ -78,6 +81,7 @@ const InputBox = ({ ...props }) => {
       >
         <input
           className={cx("input-box__input")}
+          type={type}
           placeholder={placeholder}
           onChange={handleChange}
           value={value}
@@ -85,22 +89,31 @@ const InputBox = ({ ...props }) => {
           onKeyUp={e => handleEmailCheck(e)}
           ref={inputRef}
         />
+        <Icon
+          type={props.isValidation ? "check" : "check-dimmed"}
+          className="check__icon"
+        />
         {value &&
           isFocus &&
           (props.isValidation || (
-            <div
-              className={cx("input-box__remove-btn")}
-              onClick={handleClickRemove}
-            >
-              x
+            <div onClick={handleClickRemove}>
+              <Icon className="input-box__remove-btn" type="close" />
             </div>
           ))}
-        <Icon className={cx("input-box__icon")} type="test" size="sm" />
       </div>
-      {isCome &&
-        (props.isValidation || isFocus || isNormal || (
-          <span className={cx("input-box__text")}>{caution}</span>
-        ))}
+
+      <span
+        className={cx(
+          "input-box__text",
+          isCome &&
+            (props.isValidation ||
+              isFocus ||
+              isNormal ||
+              "input-box__text-caution")
+        )}
+      >
+        {caution}
+      </span>
     </div>
   );
 };

@@ -5,12 +5,14 @@ import PropTypes from "prop-types";
 
 const cx = classNames.bind(styles);
 
-
-
-const Authenticationbutton = ({done}) => {
-  
+const Authenticationbutton = ({ ...props }) => {
   return (
-      <div className={cx("Authenticationbutton",done&&"done")}  > 인증코드받기</div>
+    <div
+      className={cx("Authenticationbutton", props.isValidation && "done")}
+      onClick={props.isValidation && (() => props.setGetAuth(true))}
+    >
+      인증코드받기
+    </div>
   );
 };
 

@@ -1,11 +1,14 @@
 @import "../../style/index.scss";
 
 .input-box {
+  display: block;
   width: 85%;
-  height: auto;
   margin: auto;
   background: $main-white;
   &__wrapper {
+    display: block;
+    width: 100%;
+    height: 24pt;
     border-bottom: 1px solid $main-black-3;
     color: $main-black-3;
 
@@ -20,7 +23,9 @@
   }
 
   &__input {
-    width: 90%;
+    display: block;
+    float: left;
+    width: 80%;
     padding-top: 5pt;
     padding-bottom: 5pt;
     border: none;
@@ -32,17 +37,27 @@
   }
 
   &__remove-btn {
-    display: inline-block;
-    width: 4%;
+    display: block;
+    float: right;
+    width: 24px;
     text-align: center;
-  }
-  // 오른쪽 정렬 필요
-  &__icon {
   }
 
   &__text {
+    display: block;
+    width: 100%;
     font-size: 8pt;
     font-weight: 200;
-    color: $main-paleRed;
+    color: $main-white;
+    &-caution {
+      color: $main-paleRed;
+    }
   }
+}
+
+.check__icon {
+  display: block;
+  float: right;
+  width: 24px;
+  height: 24px;
 }
