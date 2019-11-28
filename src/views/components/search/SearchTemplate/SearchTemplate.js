@@ -33,17 +33,40 @@ const SearchTemplate = () => {
     "대림역",
     "신길역"
   ]);
+
+  const [filterdSearchFavoriteValue, setFilterdSearchFavoriteValue] = useState(
+    ""
+  );
+  const [filterdSearchPlaceValue, setFilterdSearchPlaceValue] = useState("");
+  const [filterdSearchTagValue, setFilterdSearchTagValue] = useState("");
+
+  let filterdSearchFavorite = favorites.filter(val =>
+    val.includes(filterdSearchFavoriteValue)
+  );
+  let filterdSearchPlace = places.filter(val =>
+    val.includes(filterdSearchPlaceValue)
+  );
+  let filterdSearchTag = tags.filter(val =>
+    val.includes(filterdSearchTagValue)
+  );
+
   return (
     <>
-      <SearchInput />
+      <SearchInput
+        selected={selected}
+        setFilterdSearchFavoriteValue={setFilterdSearchFavoriteValue}
+        setFilterdSearchPlaceValue={setFilterdSearchPlaceValue}
+        setFilterdSearchTagValue={setFilterdSearchTagValue}
+      />
       <SearchTap selected={selected} setSelected={setSelected} />
       <SearchList
+        selected={selected}
         searchList={
           selected === "favorite"
-            ? favorites
+            ? filterdSearchFavorite
             : selected === "tag"
-            ? tags
-            : places
+            ? filterdSearchTag
+            : filterdSearchPlace
         }
       />
     </>

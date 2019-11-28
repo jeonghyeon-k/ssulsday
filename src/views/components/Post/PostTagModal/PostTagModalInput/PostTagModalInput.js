@@ -14,7 +14,7 @@ const PostTagModalInput = ({ ...props }) => {
 
   return (
     <div className={cx("input__wrapper")}>
-      <Icon type="test" />
+      <Icon type="search" className="search-icon" />
       <input
         className={cx("input__text")}
         placeholder="장소 또는 키워드 검색하세요."

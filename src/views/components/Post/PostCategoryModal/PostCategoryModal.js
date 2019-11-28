@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./PostCategoryModal.scss";
 import classNames from "classnames/bind";
 import PropTypes from "prop-types";
+import Icon from "../../Icon/Icon";
 
 const cx = classNames.bind(styles);
 
@@ -30,13 +31,10 @@ const PostCategoryModal = ({ ...props }) => {
         />
         <div className={cx("modal__category")}>
           <div className={cx("modal__header")}>
-            <div className={cx("modal__title")}>카테고리</div>
-            <div
-              className={cx("modal__close")}
-              onClick={props.handleCategoryModal}
-            >
-              X
+            <div className="close" onClick={props.handleCategoryModal}>
+              <Icon type="close" />
             </div>
+            <div className={cx("modal__title")}>카테고리</div>
           </div>
           <Category
             value="고백썰"

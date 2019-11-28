@@ -28,20 +28,20 @@
   }
 
   &__title {
+    display: block;
     width: 90%;
-    float: left;
+    float: right;
     margin-top: 5pt;
     margin-left: 5pt;
     text-align: center;
   }
-
-  &__close {
-    width: 5%;
-    float: right;
-    margin-top: 5pt;
-  }
 }
-
+.close {
+  display: block;
+  float: right;
+  width: 6%;
+  margin-top: 5pt;
+}
 .category__kind {
   width: 90%;
   height: 25pt;
