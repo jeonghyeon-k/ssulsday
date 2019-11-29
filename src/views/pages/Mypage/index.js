@@ -1,1 +1,1 @@
-export {default} from './Mypage';
+export {default} from './Mypage'

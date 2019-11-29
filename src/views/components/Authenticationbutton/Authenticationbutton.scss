@@ -31,6 +31,9 @@
   outline: none;
   color: $main-black-3;
   text-align: center;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: normal;
   &.done {
     color: $main-black-1;
   }
