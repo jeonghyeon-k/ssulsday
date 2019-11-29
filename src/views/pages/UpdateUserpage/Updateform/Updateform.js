@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Updateform.scss";
+import styles from "./Updateform.module.scss";
 import classNames from "classnames/bind";
 import PropTypes from "prop-types";
 import Icon from "../../../components/Icon/Icon";

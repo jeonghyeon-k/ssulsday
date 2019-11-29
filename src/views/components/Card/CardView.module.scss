@@ -1,5 +1,5 @@
 @import "../../style/index.scss";
-@import "../../style//variable.scss";
+@import "../../style/variable.scss";
 
 $font-size: 14px;
 
@@ -18,12 +18,16 @@ $font-size: 14px;
   padding-top: 28px;
 }
 .header__title {
-  float: left;
+  display: inline-block;
+  width: 200px;
   font-size: 18px;
   color: $main-black-1;
   font-family: "NotoSans";
   font-style: normal;
   font-weight: normal;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 .header__hash {
   float: right;
@@ -31,6 +35,7 @@ $font-size: 14px;
 .contents {
   @extend .padding;
   max-height: 64px;
+  text-align: left;
   margin-top: 20px;
   font-size: $font-size;
   font-family: "NotoSans";
@@ -49,7 +54,6 @@ $font-size: 14px;
 }
 .info {
   @extend .padding;
-  height: 20px;
   margin-top: 18px;
 }
 .info__place {

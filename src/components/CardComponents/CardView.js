@@ -15,9 +15,13 @@ import styles from "./Card.scss";
 >>>>>>> 3cb7984... style. 사이즈 px 변경, 색상 변경 docs. 최종으로 변경된 디자인으로 수정:src/views/components/Card/CardView.js
 =======
 import React, { useState } from "react";
+<<<<<<< HEAD:src/components/CardComponents/CardView.js
 >>>>>>> e8e4316... feat. mypage style. 아이콘 추가:src/views/components/Card/CardView.js
 import styles from "./CardView.scss";
 >>>>>>> b5bd9fe... no message:src/views/components/Card/CardView.js
+=======
+import styles from "./CardView.module.scss";
+>>>>>>> 4c8ca83... feat. 상세페이지 라우터설정:src/views/components/Card/CardView.js
 import classNames from "classnames/bind";
 import Icon from "../Icon/Icon";
 import Ellipse from "../Ellipse/Ellipse";
@@ -29,24 +33,32 @@ function CardView({ ...props }) {
   const [like, setLike] = useState(props.islike);
   const onLike = () => {
     setLike(!like);
+    
   };
-
+  let now = new Date();
+  let old = new Date(props.date);
+  let gap = now.getTime()-old.getTime();
+  let sec_gap = gap / 10000000;
+  let set_gap=Math.floor(sec_gap);
+  console.log(props.hashtags);
   return (
     <div className={cx("card")}>
       <div className={cx("header")}>
         <div className={cx("header__title")}>{props.title}</div>
         <div className={cx("header__hash")}>
-          <Ellipse>{props.ellipse}</Ellipse>
+          <Ellipse>{props.category_id}</Ellipse>
         </div>
       </div>
       <div className={cx("contents")}>{props.contents} </div>
+      {props.hashtags && (
       <div className={cx("hash")}>{props.hashtags}</div>
+      )}
       <div className={cx("info")}>
         <Icon type='location' size='xsm' />
-        {props.hashtags && (
+       
           <div className={cx("info__place")}>{props.spot}</div>
-        )}
-        <div className={cx("info__date")}>{props.date}</div>
+        
+        <div className={cx("info__date")}>{set_gap}시간전</div>
       </div>
       <div className={cx("bottom")}>
         <div className={cx("bottom__comentcount")}>{props.comentcounte}</div>
@@ -83,7 +95,6 @@ CardView.defaultProps = {
   title: "제목 없음",
   contents: "내용 없음",
   spot: "강남역",
-  hashtags: "null hashtags",
   date: "0시간 전",
   comentcounte: "0",
   viewcount: "0",
