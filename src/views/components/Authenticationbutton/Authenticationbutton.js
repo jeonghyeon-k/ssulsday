@@ -12,10 +12,14 @@ const Authenticationbutton = ({ done }) => {
       {" "}
 =======
 const Authenticationbutton = ({ ...props }) => {
+  const handleAuthButton = () => {
+    props.isValidation && props.setGetAuth(true);
+    props.ApiEmailAuth({ email: props.userid });
+  };
   return (
     <div
       className={cx("Authenticationbutton", props.isValidation && "done")}
-      onClick={props.isValidation && (() => props.setGetAuth(true))}
+      onClick={handleAuthButton}
     >
 >>>>>>> 22ca58d55e2eb09bcbf6da40d39d0a98d9d440c9
       인증코드받기
