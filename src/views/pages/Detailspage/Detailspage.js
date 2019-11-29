@@ -12,7 +12,9 @@ import {getCardById} from "../../../repository/CardRepository";
 
 const cx = classNames.bind(styles);
 
-const Detailspage = ({ ...props }, { commentlist }) => {
+const Detailspage = ({ ...props }) => {
+  const { postid } = props.match.params;
+  console.log(postid);
   const [like, setLike] = useState(props.islike);
   const onLike = () => {
     setLike(!like);
@@ -25,14 +27,12 @@ const Detailspage = ({ ...props }, { commentlist }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        getCardById({ postId: props.cardid }).then(data => {
+        getCardById({ postId: postid }).then(data => {
           const response = data.data;
-          console.log(response);
           setCard(response);
         });
-        getCommentById({ id: props.cardid }).then(data => {
+        getCommentById({ id: postid }).then(data => {
           const response = data.data;
-          console.log(response);
           setComment(response);
         });
       } catch (e) {
@@ -85,7 +85,7 @@ const Detailspage = ({ ...props }, { commentlist }) => {
         comment={comment.comment_content}
         />
       ))}
-      <CommnetCreate postId= {props.cardid} />
+      <CommnetCreate postId= {props.cardid} userId={props.userId} />
     </div>
   );
 };
