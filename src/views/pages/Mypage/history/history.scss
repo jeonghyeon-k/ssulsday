@@ -1,0 +1,22 @@
+@import "../../../style/index.scss";
+
+.template{
+    background-color: $main-black-5;
+}
+.box{
+    background-color: $main-white;
+    display: inline-block;
+    width: 125px;
+    height: 103px;
+    text-align: center;
+    //border-bottom: 1px solid $choidcolor;
+}
+.box__count{
+    margin-top:20px;
+    font-size:21px;
+}
+.box__title{
+    margin-top:12px;
+    font-size:14px;
+    color:$main-black-2;
+}

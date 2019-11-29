@@ -5,6 +5,7 @@ import Icon from "../../components/Icon/Icon";
 import PropTypes from "prop-types";
 import Spinner from "../../components/Spinner/Spinner";
 import { ApiLogin } from "../../../repository/UserRepository";
+import logo from "../../../assets/images/logo.png";
 
 const cx = classNames.bind(styles);
 
@@ -34,27 +35,17 @@ const LoginPage = ({ isCookie }) => {
     setCheck(!check);
   };
   const onClick = () => {
-    if(id == "") return LoginPage;
-    if(pwd == "") return LoginPage;
-    setLoading(!loading);
-    const response = ApiLogin({
-      "cookie": false,
-      "isUseCookie": false,
-      "user_id": "string",
-      "user_pwd": "string"
-    });
-    console.log(response);
-    setLoading(!loading);
+    if(id === "") return LoginPage;
+    if(pwd === "") return LoginPage;
   };
 
-  if (loading) return <Spinner />;
   if (isCookie != null) {
     return <span>자동로그인</span>;
   } else {
     return (
       <div className={cx("loginpage")}>
         <div className={cx("header")}>
-          <div className={cx("header__logo")}></div>
+          <img className={cx("header__logo")} src={logo} alt="logo"/>
         </div>
         <div className={cx("input")}>
           <input
@@ -79,12 +70,13 @@ const LoginPage = ({ isCookie }) => {
           </button>
 
           <div className={cx("bottom__Autologin")} onClick={onCheck}>
+            <div className={cx("bottom__Autologin__icon")} >
             {check ? (
               <Icon type='check--color' />
             ) : (
               <Icon type='check--color-dimmed' />
-            )}
-            <span className={cx("bottom__Autologin_span")}>자동로그인</span>
+            )}</div>
+            <span className={cx("bottom__Autologin__span")}>자동로그인</span>
           </div>
 
           <a href='/' className={cx("bottom__forgotpassword")}>

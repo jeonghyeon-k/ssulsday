@@ -10,10 +10,6 @@ const cx = classNames.bind(styles);
 
 const Listpage = ({ ...props }) => {
 
-const response = getCardList();
-console.log(response);
-  const [cards, setCards] = useState(null);
-  //setCards(reponse.data);
   return (
     <div className={cx("Template")}>
       <Navbar />

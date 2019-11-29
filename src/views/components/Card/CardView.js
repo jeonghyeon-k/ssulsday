@@ -33,16 +33,13 @@ function CardView({ ...props }) {
       <div className={cx("bottom")}>
         <div className={cx("bottom__comentcount")}>{props.comentcounte}</div>
         <div className={cx("bottom__commenticon")}>
-          {" "}
           <Icon type='message' />
         </div>
         <div className={cx("bottom__likeicon")} onClick={onLike}>
-          {" "}
-          {like ? <Icon type='heart' /> : <Icon type='heart-dimmed' />}{" "}
+          {like ? <Icon type='heart' /> : <Icon type='heart-dimmed' />}
         </div>
         <div className={cx("bottom__likecount")}>{props.likecount}</div>
         <div className={cx("bottom__viewicon")}>
-          {" "}
           <Icon type='viewer' />
         </div>
         <div className={cx("bottom__viewcount")}>{props.viewcount}</div>
@@ -67,7 +64,7 @@ CardView.prototype = {
 CardView.defaultProps = {
   title: "제목 없음",
   contents: "내용 없음",
-  spot: "null spot",
+  spot: "강남역",
   hashtags: "null hashtags",
   date: "0시간 전",
   comentcounte: "0",

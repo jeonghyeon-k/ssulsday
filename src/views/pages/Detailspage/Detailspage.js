@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./Detailspage.scss";
 import classNames from "classnames/bind";
 import Navbar from "../../components/Navbar/Navbar";
@@ -11,6 +11,10 @@ import Icon from "../../components/Icon/Icon";
 const cx = classNames.bind(styles);
 
 const Detailspage = ({ ...props }, { commentlist }) => {
+  const [like, setLike] = useState(props.islike);
+  const onLike = () => {
+    setLike(!like);
+  };
   return (
     <div className={cx("Template")}>
       <Navbar />
@@ -20,12 +24,12 @@ const Detailspage = ({ ...props }, { commentlist }) => {
         <div className={cx("head")}>
           <div className={cx("head__username")}>{props.username}</div>
           <div className={cx("head__date")}>{props.date}</div>
-          <div className={cx("head__likeicon")}>
-            <Icon type='test' />
+          <div className={cx("head__likeicon")} onClick={onLike}>
+          {like ? <Icon type='heart' /> : <Icon type='heart-dimmed' />}
           </div>
           <div className={cx("head__likecount")}>{props.likecount}</div>
           <div className={cx("head__viewicon")}>
-            <Icon type='test' />
+            <Icon type='viewer' />
           </div>
           <div className={cx("head__viewcount")}>{props.viewcount}</div>
         </div>
@@ -33,13 +37,13 @@ const Detailspage = ({ ...props }, { commentlist }) => {
         <div className={cx("cardcontent")}>{props.contents}</div>
         <div className={cx("hashtag")}>{props.hashtag}</div>
         <div className={cx("placeicon")}>
-          <Icon type='test' />
+          <Icon type='location' />
         </div>
         <div className={cx("spot")}>{props.spot}</div>
         <div className={cx("map")}></div>
         <div className={cx("commentcount")}>{props.commentcount}</div>
         <div className={cx("commenticon")}>
-          <Icon type='test' />
+          <Icon type='message' />
         </div>
         <hr className={cx("hrbar")} />
       </div>

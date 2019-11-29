@@ -1,6 +1,7 @@
 @import "../../style/index.scss";
 
 $fontsize: 14px;
+
 .Template{
   margin-bottom: 120px;
 }
@@ -17,16 +18,25 @@ $fontsize: 14px;
 .head__username {
   display: inline-block;
   font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
 }
 .head__date {
   display: inline-block;
   margin-left: 16px;
   font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
 }
 .head__viewcount {
   float: right;
   margin-right: 4px;
   font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
 }
 .head__viewicon {
   float: right;
@@ -36,6 +46,9 @@ $fontsize: 14px;
   float: right;
   margin-right: 4px;
   font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
 }
 .head__likeicon {
   float: right;
@@ -43,10 +56,16 @@ $fontsize: 14px;
 .cardcontent {
 margin-top:20px;
   font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
 }
 .hashtag {
   margin-top:16px;
   font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
 }
 .placeicon {
     display: inline-block;
@@ -56,6 +75,9 @@ margin-top:20px;
     display: inline-block;
     margin-left:3px; 
   font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
 }
 .map {
   width: 343px;
@@ -68,6 +90,9 @@ border-radius: 12px;
     display: inline-block;
     margin-top:20px;
   font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
  
 }
 .commenticon {
