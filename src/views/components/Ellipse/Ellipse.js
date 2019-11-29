@@ -6,10 +6,8 @@ import PropTypes from "prop-types";
 const cx = classNames.bind(styles);
 
 const Ellipse = ({ children, ...props }) => {
-  // const [isToggle, setIsToggle] = useState(true);
-  // const toggle = isToggle => {
-  //   return setIsToggle(!isToggle);
-  // };
+  const myText =
+    children === 1 ? "고백썰" : children === 2 ? "이별썰" : "이상형썰";
   return (
     <div
       className={cx(
@@ -18,7 +16,7 @@ const Ellipse = ({ children, ...props }) => {
         props.isGrey && "ellipse-grey"
       )}
     >
-      <span className={cx("ellipse__text")}>{children}</span>
+      <span className={cx("ellipse__text")}>{myText}</span>
     </div>
   );
 };

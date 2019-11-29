@@ -11,8 +11,10 @@ import {
 =======
 >>>>>>> b6afb40b4204f1913abea27efaee8bb1e2fb0f0c
   SignUpPage,
-  FindPasswordPage
+  FindPasswordPage,
+  PageMain,
 } from "./pages";
+import Mypage from "./pages/Mypage";
 
 const Login = () => {
   return (
@@ -27,13 +29,14 @@ const Main = () => {
   return (
 <<<<<<< HEAD
     <Switch>
-      <Route exact path="/" component={SamplePage} />
+      <Route exact path="/" component={PageMain} />
       <Route path="/post" component={PostPage} />
       <Route path="/search" component={SearchPage} />
       <Route path="/list" component={ListPage} />
-      <Route path="/details" component={DetailsPage} />
+      <Route path="/details/:postid" component={DetailsPage} />
       <Route path="/signup" component={SignUpPage} />
       <Route path="/find-password" component={FindPasswordPage} />
+      <Route path="/mypage/:userid" component={Mypage} />
       <Route component={NotFoundPage} />
     </Switch>
 =======

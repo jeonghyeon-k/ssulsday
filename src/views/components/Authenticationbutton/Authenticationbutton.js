@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames/bind";
-import styles from "./Authenticationbutton.scss";
+import styles from "./Authenticationbutton.module.scss";
 import PropTypes from "prop-types";
 
 const cx = classNames.bind(styles);
