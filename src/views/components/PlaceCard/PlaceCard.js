@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./PlaceCard.scss";
+import styles from "./PlaceCard.module.scss";
 import classNames from "classnames/bind";
 import PropTypes from "prop-types";
 
@@ -13,16 +13,18 @@ const PlaceCard = ({ ...props }) => {
     <div>
       <div className={cx("placecard")}>
         <img className={cx("placecard__image")} src={place} alt="" />
-        <div className={cx("info")}>
-          <div className={cx("spot")}>
-            <Icon type="test" size="md" />
-            <div className={cx("spot__text")}>{props.spot}</div>
+        <div className={cx("shadow")}>
+          <div className={cx("info")}>
+            <div className={cx("spot")}>
+              <Icon type="location" size="lmd" />
+              <div className={cx("spot__text")}>{props.spot}</div>
+            </div>
+            <div className={cx("stories")}>{props.stories}개</div>
           </div>
-          <div className={cx("stories")}>{props.stories}개</div>
+          {props.hashTags && (
+            <div className={cx("hashtags")}>{props.hashTags}</div>
+          )}
         </div>
-        {props.hashtags && (
-          <div className={cx("hashtags")}>{props.hashtags}</div>
-        )}
       </div>
     </div>
   );
@@ -31,13 +33,13 @@ const PlaceCard = ({ ...props }) => {
 PlaceCard.propTypes = {
   spot: PropTypes.string.isRequired,
   stories: PropTypes.number,
-  hashtags: PropTypes.string
+  hashTags: PropTypes.string
 };
 
 PlaceCard.defaultProps = {
   spot: "null spot",
   stories: 0,
-  hashtags: "null hashtags"
+  hashTags: "null hashtags"
 };
 
 export default PlaceCard;
