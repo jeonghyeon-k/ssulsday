@@ -10,6 +10,7 @@ $font-size: 14px;
 .card {
   margin: 20px 16px;
   border-radius: 10px;
+  background-color: $main-white;
   box-shadow: 1pt 1pt 5pt 0pt $main-black-4;
 }
 .header {
@@ -20,6 +21,9 @@ $font-size: 14px;
   float: left;
   font-size: 18px;
   color: $main-black-1;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: normal;
 }
 .header__hash {
   float: right;
@@ -29,12 +33,18 @@ $font-size: 14px;
   max-height: 64px;
   margin-top: 20px;
   font-size: $font-size;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
   color: $main-black-1;
 }
 .hash {
   @extend .padding;
   margin-top: 4px;
   font-size: $font-size;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
   color: $main-black-3;
 }
 .info {
@@ -46,11 +56,17 @@ $font-size: 14px;
   display: inline-block;
   font-size: $font-size;
   color: $main-black-1;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
 }
 .info__date {
   float: right;
   margin-top: 7px;
   font-size: $font-size;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
   color: $main-black-1;
 }
 
@@ -71,6 +87,9 @@ $font-size: 14px;
 .bottom__comentcount {
   float: left;
   margin-top: 8px;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
 }
 .bottom__commenticon {
   @extend .bottom__icon;
@@ -80,6 +99,9 @@ $font-size: 14px;
 .bottom__viewcount {
   float: right;
   margin-top: 8px;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
 }
 .bottom__viewicon {
   @extend .bottom__icon;
@@ -89,6 +111,9 @@ $font-size: 14px;
 .bottom__likecount {
   float: right;
   margin-top: 8px;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
 }
 .bottom__likeicon {
   @extend .bottom__icon;

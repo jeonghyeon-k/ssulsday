@@ -1,28 +1,28 @@
-import { api } from "../utils/api";
+import { api } from "../context/serverContext";
 
 export const getCommentById = async (param) => {
     return await api({
-        url: `/cms/Comment/list.do/${param.id}`,
+        url: `/cms/comment/list.do/${param.id}`,
         type: "get",
     });
 }
 export const ApiPostComment = async (param) => {
     return await api({
-        url: `/cms/Comment/reg_action.do`,
+        url: `/cms/comment/reg_action.do`,
         type: "post",
         param
     });
 }
 export const ApiDeleteComment = async (param) => {
     return await api({
-        url: `/cms/Comment/del_action.do`,
+        url: `/cms/comment/del_action.do`,
         type: "delete",
         param
     });
 }
 export const ApiPutComment = async (param) => {
     return await api({
-        url: `/cms/Comment/edit_action.do`,
+        url: `/cms/comment/edit_action.do`,
         type: "put",
         param
     });
