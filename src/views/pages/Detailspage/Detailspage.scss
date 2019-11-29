@@ -1,0 +1,108 @@
+@import "../../style/index.scss";
+
+$fontsize: 14px;
+
+.Template{
+  margin-bottom: 120px;
+}
+.pageblock {
+  padding: 0 16px 0 16px;
+}
+.title {
+  font-size: 21px;
+  color: $main-black-1;
+}
+.head {
+  margin-top: 10px;
+}
+.head__username {
+  display: inline-block;
+  font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
+  color: $main-black-1;
+}
+.head__date {
+  display: inline-block;
+  margin-left: 16px;
+  font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
+  color:$main-black-3;
+}
+.head__viewcount {
+  float: right;
+  margin-right: 4px;
+  font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
+}
+.head__viewicon {
+  float: right;
+  margin-right: 18px;
+}
+.head__likecount {
+  float: right;
+  margin-right: 4px;
+  font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
+}
+.head__likeicon {
+  float: right;
+}
+.cardcontent {
+margin-top:20px;
+  font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
+  color: $main-black-1;
+}
+.hashtag {
+  margin-top:16px;
+  font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
+  color:$main-black-3;
+}
+.placeicon {
+    display: inline-block;
+    margin-top:20px;
+}
+.spot {
+    display: inline-block;
+    margin-left:3px; 
+  font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
+}
+.map {
+  width: 343px;
+  height: 120px;
+  margin-top: 17.4px;
+border-radius: 12px;
+  border: 0.5px solid #000000;
+}
+.commentcount {
+    display: inline-block;
+    margin-top:20px;
+  font-size: $fontsize;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
+ 
+}
+.commenticon {
+    display: inline-block;
+}
+.hrbar{
+    margin-top: 20px;
+    color:$main-white;
+}
