@@ -9,8 +9,9 @@ import {
   DetailsPage,
   SignUpPage,
   FindPasswordPage,
-  PageMain
+  PageMain,
 } from "./pages";
+import Mypage from "./pages/Mypage";
 
 const Login = () => {
   return (
@@ -28,9 +29,10 @@ const Main = () => {
       <Route path="/post" component={PostPage} />
       <Route path="/search" component={SearchPage} />
       <Route path="/list" component={ListPage} />
-      <Route path="/details" component={DetailsPage} />
+      <Route path="/details/:postid" component={DetailsPage} />
       <Route path="/signup" component={SignUpPage} />
       <Route path="/find-password" component={FindPasswordPage} />
+      <Route path="/mypage/:userid" component={Mypage} />
       <Route component={NotFoundPage} />
     </Switch>
   );

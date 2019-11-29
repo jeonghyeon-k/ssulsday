@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Mypage.scss";
+import styles from "./Mypage.module.scss";
 import classNames from "classnames/bind";
 import Navbar from "../../components/Navbar/Navbar";
 import Icon from "../../components/Icon/Icon";
@@ -8,7 +8,8 @@ import Item from "./item/item"
 const cx = classNames.bind(styles);
 
 const Mypage = ({ ...props }) => {
-
+  const { userid } = props.match.params;
+  
   return (
     <div className={cx("template")}>
       <Navbar />
