@@ -3,10 +3,9 @@
 .placecard {
   display: inline-block;
   box-sizing: border-box;
-  width: 235pt;
+  width: 240pt;
   margin: 5pt;
-  border-radius: 10pt;
-  box-shadow: 0pt 4pt 8pt 5pt $main-black-4;
+  border-radius: 5pt;
   font-size: 0;
 
   &__image {
@@ -15,14 +14,21 @@
   }
 }
 
+.shadow {
+  height: 65pt;
+  border-radius: 5pt;
+  box-shadow: 0pt 1pt 1pt 1pt $main-black-4;
+}
+
 .info {
   display: flex;
+  height: 40pt;
 }
 
 .spot {
   flex: 7;
-  height: 30pt;
-  margin-top: 15pt;
+  height: 28pt;
+  margin-top: 10pt;
   margin-left: 5pt;
   overflow: hidden;
 
@@ -35,14 +41,15 @@
 .stories {
   flex: 3;
   height: 20pt;
-  margin-top: 18pt;
+  margin-top: 13pt;
   margin-right: 5pt;
   text-align: right;
   font-size: 15pt;
+  font-weight: 200;
 }
 
 .hashtags {
-  margin-left: 15pt;
+  margin: 0 0 12pt 12pt;
   color: $main-black-3;
   font-size: 13pt;
 }
