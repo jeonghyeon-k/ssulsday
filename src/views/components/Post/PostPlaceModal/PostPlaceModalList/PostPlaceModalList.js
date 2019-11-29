@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 const PostPlace = ({ ...props }) => {
   return (
     <div className={cx("tag")}>
-      <Icon type="location-icon" size="md" className="location-icon" />
+      <Icon type="location-icon" size="md" className="location__icon" />
       <span className={cx("tag__text")} onClick={() => props.handleAddPlace()}>
         {props.place}
       </span>
