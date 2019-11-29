@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 const PostTag = ({ ...props }) => {
   return (
     <div className={cx("tag")}>
-      <Icon type="location-icon-hash" size="md" className="location-icon" />
+      <Icon type="location-icon-hash" size="md" className="location__icon" />
       <span
         className={cx("tag__text")}
         onClick={() => props.handleAddTag(props.tag)}

@@ -1,7 +1,6 @@
 @import "../../style/index.scss";
 .hash {
   display: inline-block;
-  width: auto;
   min-width: 5%;
   margin: 5pt;
   border: 1pt solid;
@@ -12,7 +11,6 @@
 
   &__text {
     display: inline-block;
-    padding: 4pt;
     font-size: 12pt;
   }
 }
