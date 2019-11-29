@@ -4,11 +4,19 @@ import classNames from "classnames/bind";
 import PropTypes from "prop-types";
 import Icon from "../../Icon/Icon";
 
+import { ApiCardByHashTag } from "../../../../repository/CardRepository";
+
 const cx = classNames.bind(styles);
 
 const Search = ({ ...props }) => {
+  const handleSearchList = () => {
+    console.log(props.val);
+    ApiCardByHashTag({ searchKeyword: props.val }).then(data => {
+      console.log(data);
+    });
+  };
   return (
-    <div className={cx("tag")}>
+    <div className={cx("tag")} onClick={handleSearchList}>
       <Icon type="location-icon" className="location__icon" />
       <span className={cx("tag__text")}>{props.val}</span>
     </div>
