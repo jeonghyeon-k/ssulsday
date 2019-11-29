@@ -122,7 +122,7 @@
         background-position: -191px -72px;
     } @else if $type == "arrow-small" {
         @include xsm();
-        background-position: -235.3px -72px;
+        background-position: -229px -72px;
     } @else if $type == "arrow-small-right" {
         @include xsm();
         background-position: -267px -72px;
