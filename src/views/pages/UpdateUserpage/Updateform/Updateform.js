@@ -28,7 +28,10 @@ const SignUpForm = ({ ...props }) => {
             className={cx("update__box__input")}
             onFocus={handleFocus}
             onChange={handleChange}
-            value={value}>
+            value={value}
+            placeholder={props.hoder}
+            >
+            
             {props.child}
           </div>
         ) : (
@@ -37,13 +40,12 @@ const SignUpForm = ({ ...props }) => {
             onFocus={handleFocus}
             onChange={handleChange}
             value={value}
-            placeholder={props.child}
+            placeholder={props.hoder}
           />
         )}
-
         {value && isFocus && (
           <div className={cx("update__box__icon")} onClick={handleClickRemove}>
-            <Icon />
+            <Icon type="close"/>
           </div>
         )}
       </div>

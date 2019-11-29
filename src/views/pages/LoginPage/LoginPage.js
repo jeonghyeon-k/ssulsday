@@ -43,6 +43,12 @@ const LoginPage = ({ isCookie }) => {
         "user_pwd": pwd
       }).then(data => {
         console.log(data.data.retMsg);
+        if(data.data.retMsg==""){
+          localStorage.login = true;
+         // history.push("")
+        }else{
+
+        }
       });
   };
 
