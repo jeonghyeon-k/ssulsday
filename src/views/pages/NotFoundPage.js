@@ -1,7 +1,7 @@
 import React from "react";
 
-const NotFoundPage = () => {
-  return <div>NotFound</div>;
+const NotFoundPage = ({ ...props }) => {
+  return <div>{props.location.pathname}</div>;
 };
 
 export default NotFoundPage;
