@@ -6,10 +6,14 @@ import PropTypes from "prop-types";
 const cx = classNames.bind(styles);
 
 const Authenticationbutton = ({ ...props }) => {
+  const handleAuthButton = () => {
+    props.isValidation && props.setGetAuth(true);
+    props.ApiEmailAuth({ email: props.userid });
+  };
   return (
     <div
       className={cx("Authenticationbutton", props.isValidation && "done")}
-      onClick={props.isValidation && (() => props.setGetAuth(true))}
+      onClick={handleAuthButton}
     >
       인증코드받기
     </div>

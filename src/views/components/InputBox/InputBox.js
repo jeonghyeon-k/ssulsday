@@ -42,6 +42,7 @@ const InputBox = ({ ...props }) => {
 
   const handleChange = e => {
     const { value } = e.target;
+    props.handleChanges && props.handleChanges(value);
     setValue(value);
     setIsFocus(true);
   };
