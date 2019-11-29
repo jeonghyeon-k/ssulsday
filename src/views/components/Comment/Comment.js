@@ -10,10 +10,10 @@ const Comment = ({ Nickname, comment, time}) => {
   return (
     <div className={cx("comment")}>
       <div className={cx("head")}>
-        <div className={cx("head__icon")}><Icon type="test"/></div>
+        <div className={cx("head__icon")}><Icon type="location-2"/></div>
         <div className={cx("head__nickname")}>{Nickname}</div>
         <div className={cx("head__time")}>{time}</div>
-        <div className={cx("head__menu")}><Icon type="test"/></div>
+        <div className={cx("head__menu")}><Icon type="more"/></div>
       </div>
       <div className={cx("content")}>{comment}</div>
     </div>
@@ -29,7 +29,7 @@ Comment.prototype = {
 Comment.defaultProps = {
   Nickname: "익명이",
   comment: "내용없음",
-  time: "0시간전"
+  time: "0시간"
 };
 
 export default Comment;
