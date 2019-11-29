@@ -14,13 +14,13 @@ export default class Post {
       hashtags = ""
     } = postInfo;
 
-    this._id = user_id;
-    this._post_title = post_title;
-    this._post_content = post_content;
-    this._username = username;
-    this._category_id = category_id;
-    this._latitude = latitude;
-    this._longitude = longitude;
-    this._hashtags = hashtags;
+    this.user_id = user_id;
+    this.post_title = post_title;
+    this.post_content = post_content;
+    this.username = username;
+    this.category_id = category_id;
+    this.latitude = latitude;
+    this.longitude = longitude;
+    this.hashtags = hashtags;
   }
 }
