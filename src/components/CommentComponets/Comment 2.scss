@@ -1,0 +1,76 @@
+//======댓글 표시=================================
+
+.comment_container {
+  display: inline-block;
+  width: 82% !important;
+  height: 1rem;
+  margin-top: 1rem;
+  margin-left: 10% !important;
+}
+
+.content_container {
+  display: block;
+  word-break: break-all;
+  width: 100%;
+}
+
+.comment {
+  border-radius: 8px;
+  display: inline-block;
+  width: 90%;
+  background-color: #f7f7fa;
+  color: #616161;
+  padding: 1rem;
+}
+
+.comment_head {
+  text-align: left;
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+.comment_bottom {
+  display: block;
+}
+
+.comment_time {
+  display: inline-block;
+  color: #9c9c9c;
+  margin-left: 0.5rem;
+}
+
+.comment_button {
+  display: inline-block;
+  color: black;
+  margin-left: 1.5rem;
+  outline: none;
+  margin: none;
+  background-color: none;
+}
+
+//======댓글 입력 폼=================================
+
+.create_container {
+  position: fixed;
+  bottom: 0px;
+  background-color: white;
+  width: 100%;
+  height: 12%;
+  border-top: 4px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.create_content {
+  display: inline-block;
+  background: #f7f7fa;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #f7f7fa;
+  width: 85%;
+  height: 60%;
+  outline: none;
+}
