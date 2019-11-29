@@ -1,5 +1,6 @@
 import Axios from "axios"
-import { SERVER_URL , REST_API_KEY} from "../config/serverConfig"
+const SERVER_URL = process.env.REACT_APP_SERVER_URL || "";
+const REST_API_KEY = process.env.REACT_APP_REST_API_KEY || "";
 
 export const api = ({url, type = "get", param}) => {
     return Axios({
