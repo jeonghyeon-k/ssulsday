@@ -9,7 +9,8 @@ import {
   SignUpPage,
   FindPasswordPage,
   PageMain,
-  Mypage
+  Mypage,
+  question
 } from "./pages";
 
 const Login = () => {
@@ -30,7 +31,8 @@ const Main = () => {
       <Route path="/details/:postid" component={DetailsPage} />
       <Route path="/signup" component={SignUpPage} />
       <Route path="/find-password" component={FindPasswordPage} />
-      <Route path="/mypage/" component={Mypage} />
+      <Route exact path="/mypage/" component={Mypage} />
+      <Route path="/mypage/question" component={question} />
       <Route component={NotFoundPage} />
     </Switch>
   );

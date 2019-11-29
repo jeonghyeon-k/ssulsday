@@ -7,3 +7,4 @@ export { default as SignUpPage } from "./SignUpPage";
 export { default as FindPasswordPage } from "./FindPasswordPage";
 export {default as PageMain} from "./PageMain";
 export {default as Mypage} from "./Mypage/Mypage";
+export {default as question} from "./Mypage/question/question";
