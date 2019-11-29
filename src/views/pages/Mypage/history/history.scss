@@ -10,13 +10,22 @@
     height: 103px;
     text-align: center;
     //border-bottom: 1px solid $choidcolor;
+    &-focus {
+        border-bottom: 1px solid $main-butterscotch;  
+    }
 }
 .box__count{
     margin-top:20px;
     font-size:21px;
+    &-focus {
+        color: $main-butterscotch; 
+      }
 }
 .box__title{
     margin-top:12px;
     font-size:14px;
     color:$main-black-2;
+    &-focus {
+        color: $main-butterscotch; 
+      }
 }

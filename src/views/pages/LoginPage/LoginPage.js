@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./LoginPage.scss";
 import classNames from "classnames/bind";
 import Icon from "../../components/Icon/Icon";
@@ -21,7 +21,7 @@ const LoginPage = ({ isCookie }) => {
   const onChange = e => {
     const { value, name } = e.target;
     setInputs({
-      ...inputs, 
+      ...inputs,
       [name]: value
     });
   };
@@ -35,8 +35,15 @@ const LoginPage = ({ isCookie }) => {
     setCheck(!check);
   };
   const onClick = () => {
-    if(id === "") return LoginPage;
-    if(pwd === "") return LoginPage;
+    if (id === "") return LoginPage;
+    if (pwd === "") return LoginPage;
+      ApiLogin({
+        "isCookie": check,
+        "user_id": id,
+        "user_pwd": pwd
+      }).then(data => {
+        console.log(data.data.retMsg);
+      });
   };
 
   if (isCookie != null) {
@@ -45,7 +52,7 @@ const LoginPage = ({ isCookie }) => {
     return (
       <div className={cx("loginpage")}>
         <div className={cx("header")}>
-          <img className={cx("header__logo")} src={logo} alt="logo"/>
+          <img className={cx("header__logo")} src={logo} alt='logo' />
         </div>
         <div className={cx("input")}>
           <input
@@ -70,12 +77,13 @@ const LoginPage = ({ isCookie }) => {
           </button>
 
           <div className={cx("bottom__Autologin")} onClick={onCheck}>
-            <div className={cx("bottom__Autologin__icon")} >
-            {check ? (
-              <Icon type='check--color' />
-            ) : (
-              <Icon type='check--color-dimmed' />
-            )}</div>
+            <div className={cx("bottom__Autologin__icon")}>
+              {check ? (
+                <Icon type='check--color' />
+              ) : (
+                <Icon type='check--color-dimmed' />
+              )}
+            </div>
             <span className={cx("bottom__Autologin__span")}>자동로그인</span>
           </div>
 

@@ -3,7 +3,7 @@ import styles from "./Mypage.scss";
 import classNames from "classnames/bind";
 import Navbar from "../../components/Navbar/Navbar";
 import Icon from "../../components/Icon/Icon";
-import Itemlist from "./itemlist/itemlist";
+import Item from "./item/item"
 
 const cx = classNames.bind(styles);
 
@@ -34,7 +34,14 @@ const Mypage = ({ ...props }) => {
         <div className={cx("box__count")}>{props.mylikecount}</div>
         <div className={cx("box__title")}>좋아한 글</div>
       </div>
-      <Itemlist /> 
+      <div className={cx("support")}>
+        <div className={cx("item__title")}>지원</div>
+        <Item title='문의하기' />
+      </div>
+      <div className={cx("account")}>
+        <div className={cx("item__title")}>계정</div>
+        <Item title='로그아웃' />
+      </div>
     </div>
   );
 };

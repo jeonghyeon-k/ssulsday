@@ -59,5 +59,27 @@ $choidcolor:$main-butterscotch;
     font-size:14px;
     color:$main-black-2;
 }
+.support{
+    background-color: $main-white;
+    margin-top:8px;
+    padding-left: 28px;
+    padding-right: 16px;
+}
+.account{
+    background-color: $main-white;
+    margin-top:8px;
+    padding-left: 28px;
+    padding-right: 16px;
+}
+.item__title{
+    font-size: 16px;
+}
+.item__hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $main-black-4;
+    padding: 0; 
+}
 
 

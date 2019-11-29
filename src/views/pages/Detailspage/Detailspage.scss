@@ -21,6 +21,7 @@ $fontsize: 14px;
   font-family: "NotoSans";
   font-style: normal;
   font-weight: 300;
+  color: $main-black-1;
 }
 .head__date {
   display: inline-block;
@@ -29,6 +30,7 @@ $fontsize: 14px;
   font-family: "NotoSans";
   font-style: normal;
   font-weight: 300;
+  color:$main-black-3;
 }
 .head__viewcount {
   float: right;
@@ -59,6 +61,7 @@ margin-top:20px;
   font-family: "NotoSans";
   font-style: normal;
   font-weight: 300;
+  color: $main-black-1;
 }
 .hashtag {
   margin-top:16px;
@@ -66,6 +69,7 @@ margin-top:20px;
   font-family: "NotoSans";
   font-style: normal;
   font-weight: 300;
+  color:$main-black-3;
 }
 .placeicon {
     display: inline-block;
