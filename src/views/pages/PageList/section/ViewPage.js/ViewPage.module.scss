@@ -1,0 +1,29 @@
+.page {
+    background-color: rgb(247,247,250);
+    .header {
+        .tags {
+            display: flex;
+            justify-content: center;
+            .tag {
+                margin-right: 7px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                padding: 4pt 10pt 4pt 10pt;
+                font-size: 14px;
+                font-weight: 300;
+                color: rgb(156, 156, 156);
+                border-radius: 12pt;
+                background-color: #fff;
+                box-shadow: 1pt 1pt 5pt 0pt #dbdbdb;
+                &--clicked {
+                    color: #fff;
+                    background-color:rgb(251, 179, 59);
+                }
+            }
+        }
+    }
+    .list {
+
+    }
+}
