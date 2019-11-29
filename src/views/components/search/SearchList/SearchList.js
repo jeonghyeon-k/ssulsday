@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 const Search = ({ ...props }) => {
   return (
     <div className={cx("tag")}>
-      <Icon type="location-icon" />
+      <Icon type="location-icon" className="location__icon" />
       <span className={cx("tag__text")}>{props.val}</span>
     </div>
   );
