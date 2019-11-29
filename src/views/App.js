@@ -11,7 +11,8 @@ import {
 =======
 >>>>>>> b6afb40b4204f1913abea27efaee8bb1e2fb0f0c
   SignUpPage,
-  FindPasswordPage
+  FindPasswordPage,
+  PageMain
 } from "./pages";
 
 const Login = () => {
@@ -27,7 +28,7 @@ const Main = () => {
   return (
 <<<<<<< HEAD
     <Switch>
-      <Route exact path="/" component={SamplePage} />
+      <Route exact path="/" component={PageMain} />
       <Route path="/post" component={PostPage} />
       <Route path="/search" component={SearchPage} />
       <Route path="/list" component={ListPage} />
