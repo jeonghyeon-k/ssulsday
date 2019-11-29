@@ -6,15 +6,15 @@ import {
 <<<<<<< HEAD
   PostPage,
   SearchPage,
-  ListPage,
   DetailsPage,
 =======
 >>>>>>> b6afb40b4204f1913abea27efaee8bb1e2fb0f0c
   SignUpPage,
   FindPasswordPage,
   PageMain,
+  Mypage,
+  question
 } from "./pages";
-import Mypage from "./pages/Mypage";
 
 const Login = () => {
   return (
@@ -32,11 +32,11 @@ const Main = () => {
       <Route exact path="/" component={PageMain} />
       <Route path="/post" component={PostPage} />
       <Route path="/search" component={SearchPage} />
-      <Route path="/list" component={ListPage} />
       <Route path="/details/:postid" component={DetailsPage} />
       <Route path="/signup" component={SignUpPage} />
       <Route path="/find-password" component={FindPasswordPage} />
-      <Route path="/mypage/:userid" component={Mypage} />
+      <Route exact path="/mypage/" component={Mypage} />
+      <Route path="/mypage/question" component={question} />
       <Route component={NotFoundPage} />
     </Switch>
 =======
