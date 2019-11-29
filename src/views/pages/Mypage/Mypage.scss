@@ -1,5 +1,7 @@
 @import "../../style/index.scss";
 
+$choidcolor:$main-butterscotch;
+
 .template {
     background-color: $main-black-4;
     height: 800px;
@@ -28,14 +30,25 @@
     text-align: center;
     color: $main-black-3;
     font-size: 14px;
+    font-family: "NotoSans";
+    font-style: normal;
+    font-weight: 300;
 }
+.header__hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $main-black-4;
+    padding: 0; 
+}
+
 .box{
-    
     background-color: $main-white;
     display: inline-block;
     width: 125px;
     height: 103px;
     text-align: center;
+    //border-bottom: 1px solid $choidcolor;
 }
 .box__count{
     margin-top:20px;
@@ -61,4 +74,12 @@
 .item__title{
     font-size: 16px;
 }
+.item__hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $main-black-4;
+    padding: 0; 
+}
+
 
