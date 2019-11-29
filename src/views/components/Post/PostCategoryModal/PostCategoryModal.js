@@ -10,6 +10,7 @@ const Category = ({ ...props }) => {
   const handleKind = value => {
     props.setKind(value);
     props.handleCategoryModal();
+    props.setCategoryId();
   };
   return (
     <div
@@ -39,16 +40,19 @@ const PostCategoryModal = ({ ...props }) => {
           <Category
             value="고백썰"
             setKind={props.setKind}
+            setCategoryId={() => props.setCategoryId(1)}
             handleCategoryModal={props.handleCategoryModal}
           />
           <Category
             value="이별썰"
             setKind={props.setKind}
+            setCategoryId={() => props.setCategoryId(2)}
             handleCategoryModal={props.handleCategoryModal}
           />
           <Category
             value="이상형썰"
             setKind={props.setKind}
+            setCategoryId={() => props.setCategoryId(3)}
             handleCategoryModal={props.handleCategoryModal}
           />
         </div>

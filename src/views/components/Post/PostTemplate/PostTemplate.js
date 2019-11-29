@@ -13,8 +13,6 @@ import {
   ApiPostPost
 } from "../../../../repository/PostRepository";
 
-import Post from "../../../../domain/Post";
-
 const PostTemplate = () => {
   useEffect(() => {
     ApiGetPostList().then(data => {
@@ -23,38 +21,26 @@ const PostTemplate = () => {
   });
   const [title, setTitle] = useState("");
   const [categoryId, setCategoryId] = useState(1);
+  const [content, setContent] = useState("");
   const [kind, setKind] = useState("고백썰");
   const [isCategoryModal, setisCategoryModal] = useState(false);
   const [isTagModal, setIsTagModal] = useState(false);
   const [selectedTags, setSelectedTags] = useState([]);
   const [isPlaceModal, setIsPlaceModal] = useState(false);
 
-  const postinfooo = {
-    category_id: 2,
-    hashtags: ["고백"],
-    latitude: 0,
-    longitude: 0,
-    post_content:
-      "안녕하세요~평소에 맘에 드는 사람이 있어서 고백했어요~과연 잘 될까요~잘됐으면 좋겠네요",
-    post_title: "고백했어요",
-    user_id: "beaaa0410@gmail.com",
-    username: "도토리"
-  };
   const handlePost = () => {
     const postinfo = {
       user_id: "beaaa0410@gmail.com",
       username: "도토리",
-      post_title: "고백했어요",
+      post_title: title,
       category_id: categoryId,
-      post_content:
-        "안녕하세요~평소에 맘에 드는 사람이 있어서 고백했어요~과연 잘 될까요~잘됐으면 좋겠네요",
-
+      post_content: content,
       hashtags: selectedTags,
       latitude: 0,
       loggitude: 0
     };
-    const post = new Post(postinfo);
-    ApiPostPost(post).then(data => {
+
+    ApiPostPost(postinfo).then(data => {
       console.log(data);
     });
   };
@@ -78,23 +64,24 @@ const PostTemplate = () => {
   const handleAddPlace = () => {
     setIsPlaceModal(!isPlaceModal);
   };
-
+  console.log(content);
   return (
     <div>
-      <button onClick={handlePost()}>제출</button>
-      <PostTitle />
+      <button onClick={handlePost}>제출</button>
+      <PostTitle setTitle={setTitle} />
       <PostCategory
         kind={kind}
         setKind={setKind}
         handleCategoryModal={handleCategoryModal}
         isCategoryModal={isCategoryModal}
       />
-      <PostTextArea />
+      <PostTextArea setContent={setContent} />
       <PostTag handleTagModal={handleTagModal} selectedTags={selectedTags} />
       <PostPlace handlePlaceModal={handlePlaceModal} />
       {isCategoryModal && (
         <PostCategoryModal
           handleCategoryModal={handleCategoryModal}
+          setCategoryId={setCategoryId}
           setKind={setKind}
         />
       )}
