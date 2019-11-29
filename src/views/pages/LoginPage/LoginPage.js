@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./LoginPage.scss";
+import styles from "./LoginPage.module.scss";
 import classNames from "classnames/bind";
 import Icon from "../../components/Icon/Icon";
 import PropTypes from "prop-types";

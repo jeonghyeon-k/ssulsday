@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./CardView.scss";
+import styles from "./CardView.module.scss";
 import classNames from "classnames/bind";
 import Icon from "../Icon/Icon";
 import Ellipse from "../Ellipse/Ellipse";
@@ -11,24 +11,32 @@ function CardView({ ...props }) {
   const [like, setLike] = useState(props.islike);
   const onLike = () => {
     setLike(!like);
+    
   };
-
+  let now = new Date();
+  let old = new Date(props.date);
+  let gap = now.getTime()-old.getTime();
+  let sec_gap = gap / 10000000;
+  let set_gap=Math.floor(sec_gap);
+  console.log(props.hashtags);
   return (
     <div className={cx("card")}>
       <div className={cx("header")}>
         <div className={cx("header__title")}>{props.title}</div>
         <div className={cx("header__hash")}>
-          <Ellipse>{props.ellipse}</Ellipse>
+          <Ellipse>{props.category_id}</Ellipse>
         </div>
       </div>
       <div className={cx("contents")}>{props.contents} </div>
+      {props.hashtags && (
       <div className={cx("hash")}>{props.hashtags}</div>
+      )}
       <div className={cx("info")}>
         <Icon type='location' size='xsm' />
-        {props.hashtags && (
+       
           <div className={cx("info__place")}>{props.spot}</div>
-        )}
-        <div className={cx("info__date")}>{props.date}</div>
+        
+        <div className={cx("info__date")}>{set_gap}시간전</div>
       </div>
       <div className={cx("bottom")}>
         <div className={cx("bottom__comentcount")}>{props.comentcounte}</div>
@@ -65,7 +73,6 @@ CardView.defaultProps = {
   title: "제목 없음",
   contents: "내용 없음",
   spot: "강남역",
-  hashtags: "null hashtags",
   date: "0시간 전",
   comentcounte: "0",
   viewcount: "0",

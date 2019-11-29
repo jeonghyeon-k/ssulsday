@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import classNames from "classnames/bind";
-import styles from "./CommentCreate.scss";
+import styles from "./CommentCreate.module.scss";
 import PropTypes from "prop-types";
 import {ApiPostComment} from "../../../repository/CommentRepository";
 
@@ -41,10 +41,8 @@ CommentCreate.prototype = {
   postId :PropTypes.int,
   userId :PropTypes.int
 };
-
 CommentCreate.defaultProps = {
   userId : "redhd0410@gmail.com"
-
 };
 
 
