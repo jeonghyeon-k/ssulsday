@@ -5,13 +5,22 @@ import PropTypes from "prop-types";
 const SignUpPrivate = ({ ...props }) => {
   return (
     <>
-      <SignUpForm title="닉네임" type="nickname" />
-      <SignUpForm title="비밀번호" type="password" />
+      <SignUpForm
+        title="닉네임"
+        type="nickname"
+        handleChange={props.setUsername}
+      />
+      <SignUpForm
+        title="비밀번호"
+        type="password"
+        handleChange={props.setUserpwd}
+      />
       <SignUpForm
         title="비밀번호 재확인"
         type="check-password"
         validation={props.validation}
       />
+      <button onClick={props.handleSignUp}>가입</button>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import FindPasswordTemplate from "../components/FindPassword/FindPasswordTemplate/FindPasswordTemplate";
+import FindPasswordTemplate from "../../components/FindPassword/FindPasswordTemplate/FindPasswordTemplate";
 
 const FindPasswordPage = () => {
   return (

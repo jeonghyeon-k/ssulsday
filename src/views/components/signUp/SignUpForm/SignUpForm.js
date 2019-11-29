@@ -16,6 +16,7 @@ const SignUpForm = ({ ...props }) => {
           type={props.type}
           validation={props.validation}
           isValidation={props.isValidation}
+          handleChanges={props.handleChange}
         />
       </div>
     </div>
