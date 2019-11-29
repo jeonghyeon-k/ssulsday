@@ -21,8 +21,11 @@ export default function PageMain (props) {
                 const res = await getCardList({searchCondition: "isLike"});
                 const resLocationList = res.data;
                 const dataLocationList = await Promise.all(resLocationList.map(async (el) => {
-                    const resSpot = await convertGeoToAddress(el.longitude, el.latitude);
-                    const dataSpot = await resSpot.data.documents[0].address.address_name;
+                    let dataSpot = "위치를 찾을 수 없습니다.";
+                    if(el.longitude !== 0 && el.latitude !== 0) {
+                        const resSpot = await convertGeoToAddress(el.longitude, el.latitude);
+                        dataSpot = await resSpot.data.documents[0].address.address_name;
+                    } 
                     return ({
                         idx: el.post_id,
                         title: el.card_title,
