@@ -51,6 +51,7 @@ const Main = () => {
 };
 
 const App = () => {
+  console.log(process.env)
   localStorage.login = true;
   return localStorage.getItem("login") === "true" ? <Main /> : <Login />;
 };
