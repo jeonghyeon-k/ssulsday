@@ -14,7 +14,15 @@ import Modal from "../../components/Modal/PostModal/PostModal"
 =======
 import { getCardById } from "../../../repository/CardRepository";
 import DetailHeader from "../../components/DetailHeader";
+<<<<<<< HEAD
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
+=======
+<<<<<<< HEAD
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
+import place from "../../../assets/images/invalidName.png";
+>>>>>>> a619475... feat. 장소사진 추가
+>>>>>>> f8b271d... feat.댓글 입력폼
 
 const cx = classNames.bind(styles);
 
@@ -93,7 +101,9 @@ const Detailspage = ({ ...props }, { commentlist }) => {
           <Icon type="location" />
         </div>
         <div className={cx("spot")}>{props.spot}</div>
-        <div className={cx("map")}></div>
+        <div className={cx("map")}>
+          <img src= {place} alt="place"/>
+        </div>
         <div className={cx("commentcount")}>{card.commentcount}</div>
         <div className={cx("commenticon")}>
           <Icon type="message" />
