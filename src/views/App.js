@@ -14,13 +14,15 @@ import {
   FindPasswordPage,
   PageMain,
   Mypage,
-  question
+  question,
+  LoginPage
 } from "./pages";
 
 const Login = () => {
   return (
     <Switch>
-      <Route exact path="/" component={SamplePage} />
+      <Route exact path="/" component={LoginPage} />
+      <Route path="/signup" component={SignUpPage} />
       <Route component={NotFoundPage} />
     </Switch>
   );
@@ -39,6 +41,9 @@ const Main = () => {
       <Route path="/find-password" component={FindPasswordPage} />
       <Route exact path="/mypage/" component={Mypage} />
       <Route path="/mypage/question" component={question} />
+      <Route path="/details" component={DetailsPage} />
+      <Route path="/find-password" component={FindPasswordPage} />
+      <Route path="/mypage" component={Mypage} />
       <Route component={NotFoundPage} />
     </Switch>
 =======
@@ -55,7 +60,6 @@ const Main = () => {
 };
 
 const App = () => {
-  console.log(process.env)
   localStorage.login = true;
   return localStorage.getItem("login") === "true" ? <Main /> : <Login />;
 };
