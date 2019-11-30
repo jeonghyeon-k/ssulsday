@@ -6,11 +6,14 @@ $button-radius: 25px;
 $box-width: 300px;
 $box-hegith: 48px;
 
+
 .loginpage {
   margin-left: 38px;
   margin-right: 37px;
   margin-top: 139px;
   padding: 0;
+  position: fixed; 
+	overflow-y: scroll;
 }
 
 .header {
