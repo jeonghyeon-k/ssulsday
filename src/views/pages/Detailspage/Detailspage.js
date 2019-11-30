@@ -87,10 +87,14 @@ const Detailspage = ({ ...props }, { commentlist }) => {
         />
       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <CommnetCreate postId= {props.cardid} />
 =======
       <CommnetCreate postId={props.cardid} userId={props.userId} />
 >>>>>>> 84a06a7... 리베이스 커밋
+=======
+      <CommnetCreate postId={props.cardid} />
+>>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
     </div>
   );
 };

@@ -10,10 +10,13 @@ const cx = classNames.bind(styles);
 
 const Mypage = ({ ...props }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const { userid } = props.match.params;
 >>>>>>> 84a06a7... 리베이스 커밋
 
+=======
+>>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
   return (
     <div className={cx("template")}>
       <Navbar />
@@ -23,7 +26,11 @@ const Mypage = ({ ...props }) => {
           <Icon type='test' />
 =======
           <Icon type="location-2" />
+<<<<<<< HEAD
 >>>>>>> 84a06a7... 리베이스 커밋
+=======
+>>>>>>> b7a3397... 헤더 마무리
+>>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
         </div>
         <div className={cx("header__username")}>{props.name}</div>
 <<<<<<< HEAD

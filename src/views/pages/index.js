@@ -11,6 +11,7 @@ export { default as SignUpPage } from "./SignUpPage";
 export { default as FindPasswordPage } from "./FindPasswordPage";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export {default as PageMain} from "./PageMain";
 export {default as Mypage} from "./Mypage/Mypage";
@@ -31,3 +32,10 @@ export { default as question } from "./Mypage/question/question";
 export { default as PageList } from "./PageList";
 export { default as LoginPage } from "./LoginPage";
 >>>>>>> 84a06a7... 리베이스 커밋
+=======
+=======
+export { default as Mypage } from "./Mypage";
+export { default as PageMain } from "./PageMain";
+export { default as LoginPage } from "./LoginPage";
+>>>>>>> b7a3397... 헤더 마무리
+>>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef

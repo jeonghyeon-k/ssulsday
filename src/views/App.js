@@ -15,6 +15,7 @@ import {
   FindPasswordPage
 =======
   FindPasswordPage,
+<<<<<<< HEAD
   PageMain,
 <<<<<<< HEAD
   Mypage
@@ -28,6 +29,12 @@ import {
   question,
   LoginPage
 >>>>>>> 84a06a7... 리베이스 커밋
+=======
+  Mypage,
+  PageMain,
+  LoginPage
+>>>>>>> b7a3397... 헤더 마무리
+>>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
 } from "./pages";
 
 const Login = () => {
@@ -50,8 +57,8 @@ const Main = () => {
 <<<<<<< HEAD
       <Route path="/list" component={ListPage} />
       <Route path="/details" component={DetailsPage} />
-      <Route path="/signup" component={SignUpPage} />
       <Route path="/find-password" component={FindPasswordPage} />
+<<<<<<< HEAD
 =======
       <Route path="/details/:postid" component={DetailsPage} />
       <Route path="/list" component={PageList} />
@@ -70,6 +77,9 @@ const Main = () => {
       <Route path="/find-password" component={FindPasswordPage} />
       <Route path="/mypage" component={Mypage} />
 >>>>>>> 84a06a7... 리베이스 커밋
+=======
+      <Route path="/mypage" component={Mypage} />
+>>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
       <Route component={NotFoundPage} />
     </Switch>
 =======
