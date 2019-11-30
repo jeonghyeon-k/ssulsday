@@ -26,12 +26,24 @@ import classNames from "classnames/bind";
 import Icon from "../Icon/Icon";
 import Ellipse from "../Ellipse/Ellipse";
 import PropTypes from "prop-types";
+import {ApiPostLike} from "../../../repository/LikeRepository"
 
 const cx = classNames.bind(styles);
-
+let id = localStorage.getItem('userid');
 function CardView({ ...props }) {
   const [like, setLike] = useState(props.islike);
   const onLike = () => {
+    ApiPostLike({
+      user_id: id,
+      post_id: props.post_id
+    }).then(data => {
+      if (data.data.retMsg == "OK") {
+      localStorage.login = true;
+      localStorage.setItem('userid', id);
+       window.location.reload();
+      } else {
+      }
+    });
     setLike(!like);
     
   };
@@ -40,7 +52,6 @@ function CardView({ ...props }) {
   let gap = now.getTime()-old.getTime();
   let sec_gap = gap / 10000000;
   let set_gap=Math.floor(sec_gap);
-  console.log(props.hashtags);
   return (
     <div className={cx("card")}>
       <div className={cx("header")}>
