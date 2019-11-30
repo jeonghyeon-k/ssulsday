@@ -25,13 +25,11 @@ $font-size: 14px;
   font-family: "NotoSans";
   font-style: normal;
   font-weight: normal;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.header__hash {
-  float: right;
-}
+
 .contents {
   @extend .padding;
   max-height: 64px;

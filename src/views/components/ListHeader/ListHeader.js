@@ -4,10 +4,13 @@ import classNames from "classnames/bind";
 import Icon from "../Icon";
 const cx = classNames.bind(styles);
 
-const ListHeader = () => {
+const ListHeader = ({ ...props }) => {
+  const handleBack = () => {
+    props.history.goBack();
+  };
   return (
     <div className={cx("list__wrapper")}>
-      <div className={cx("list__arrow")}>
+      <div className={cx("list__arrow")} onClick={handleBack}>
         <Icon type="arrow" />
       </div>
       <input
