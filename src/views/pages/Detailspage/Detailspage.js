@@ -26,12 +26,13 @@ const Detailspage = ({ ...props }, { commentlist }) => {
   };
 
   const [card, setCard] = useState(null);
-  const [comment, setComment] = useState(null);
+  const [comment, setComment] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   useEffect(() => {
-    const fetchUsers = async () => {
+    async function fetchUsers () {
       try {
+<<<<<<< HEAD
         getCardById({ postId: props.cardid }).then(data => {
           const response = data.data;
           console.log(response);
@@ -42,6 +43,14 @@ const Detailspage = ({ ...props }, { commentlist }) => {
           console.log(response);
           setComment(response);
         });
+=======
+        const resCard = await getCardById({ postId: postid });
+        const dataCard = resCard.data;
+        setCard(dataCard);
+        const resComment = await getCommentById({ id: postid })
+        const dataComment = resComment.data;
+        setComment(dataComment);
+>>>>>>> db81a76... [master]/fix detailPage UPdate
       } catch (e) {
         setError(e);
       }
