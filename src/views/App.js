@@ -6,6 +6,7 @@ import {
 <<<<<<< HEAD
   PostPage,
   SearchPage,
+  PageList,
   DetailsPage,
 =======
 >>>>>>> b6afb40b4204f1913abea27efaee8bb1e2fb0f0c
@@ -33,6 +34,7 @@ const Main = () => {
       <Route path="/post" component={PostPage} />
       <Route path="/search" component={SearchPage} />
       <Route path="/details/:postid" component={DetailsPage} />
+      <Route path="/list" component={PageList} />
       <Route path="/signup" component={SignUpPage} />
       <Route path="/find-password" component={FindPasswordPage} />
       <Route exact path="/mypage/" component={Mypage} />
