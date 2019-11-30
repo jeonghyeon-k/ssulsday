@@ -12,13 +12,6 @@ const SignUpAuth = ({ ...props }) => {
     <>
       <SignUpForm title="인증코드" type="auth" />
       <div className={cx("sign-up__return")}>인증코드 다시받기</div>
-      <button
-        onClick={() => {
-          props.setIsAuth(true);
-        }}
-      >
-        다음
-      </button>
     </>
   );
 };
