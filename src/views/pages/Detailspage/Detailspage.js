@@ -14,7 +14,11 @@ import Modal from "../../components/Modal/PostModal/PostModal"
 =======
 import { getCardById } from "../../../repository/CardRepository";
 import DetailHeader from "../../components/DetailHeader";
+<<<<<<< HEAD
 >>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
+import place from "../../../assets/images/invalidName.png";
+>>>>>>> a619475... feat. 장소사진 추가
 
 const cx = classNames.bind(styles);
 
@@ -28,20 +32,18 @@ const Detailspage = ({ ...props }) => {
   };
 
   const [card, setCard] = useState(null);
-  const [comment, setComment] = useState(null);
+  const [comment, setComment] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   useEffect(() => {
-    const fetchUsers = async () => {
+    async function fetchUsers () {
       try {
-        getCardById({ postId: postid }).then(data => {
-          const response = data.data;
-          setCard(response);
-        });
-        getCommentById({ id: postid }).then(data => {
-          const response = data.data;
-          setComment(response);
-        });
+        const resCard = await getCardById({ postId: postid });
+        const dataCard = resCard.data;
+        setCard(dataCard);
+        const resComment = await getCommentById({ id: postid })
+        const dataComment = resComment.data;
+        setComment(dataComment);
       } catch (e) {
         setError(e);
       }
@@ -84,7 +86,9 @@ const Detailspage = ({ ...props }) => {
           <Icon type="location" />
         </div>
         <div className={cx("spot")}>{props.spot}</div>
-        <div className={cx("map")}></div>
+        <div className={cx("map")}>
+          <img src= {place} alt="place"/>
+        </div>
         <div className={cx("commentcount")}>{card.commentcount}</div>
         <div className={cx("commenticon")}>
           <Icon type="message" />
