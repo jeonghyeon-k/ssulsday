@@ -50,9 +50,9 @@ function CardView({ ...props }) {
       }
     });
     setLike(!like);
-    
   };
-  let now = new Date();
+
+  let now = new Date("YYYY/MM/DD");
   let old = new Date(props.date);
   let gap = now.getTime()-old.getTime();
   let sec_gap = gap / 10000000;
@@ -60,6 +60,7 @@ function CardView({ ...props }) {
   console.log(props.hashtags);
 >>>>>>> d1f958d... feate. 좋아요 api 추가
   return (
+<<<<<<< HEAD
     <div className={cx("card_container")}>
       <div className={cx("card_head")}>
         <div className={cx("card_title")}>{title}</div>
@@ -67,6 +68,25 @@ function CardView({ ...props }) {
         <button className={cx("card_commentbutton")}>
           <Icon type="test"/>
         </button>
+=======
+    <div className={cx("card")}>
+      <div className={cx("header")}>
+        <div className={cx("header__title")}>{props.title}</div>
+        <div className={cx("header__hash")}>
+          <Ellipse>{props.category_id}</Ellipse>
+        </div>
+      </div>
+      <div className={cx("contents")}>{props.contents} </div>
+      {props.hashtags && (
+      <div className={cx("hash")}>{props.hashtags}</div>
+      )}
+      <div className={cx("info")}>
+        <Icon type='location' size='xsm' />
+       
+          <div className={cx("info__place")}>{props.spot}</div>
+
+        <div className={cx("info__date")}>{set_gap}시간전</div>
+>>>>>>> b55434a... no message
       </div>
 <<<<<<< HEAD
       {type ? false : <div className={cx("card_content")}>{Contents}</div>}
