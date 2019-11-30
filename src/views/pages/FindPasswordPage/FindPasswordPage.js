@@ -1,10 +1,10 @@
 import React from "react";
 import FindPasswordTemplate from "../../components/FindPassword/FindPasswordTemplate/FindPasswordTemplate";
 
-const FindPasswordPage = () => {
+const FindPasswordPage = ({ ...props }) => {
   return (
     <>
-      <FindPasswordTemplate />
+      <FindPasswordTemplate history={props.history} />
     </>
   );
 };

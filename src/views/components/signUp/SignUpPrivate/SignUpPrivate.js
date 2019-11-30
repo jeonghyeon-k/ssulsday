@@ -20,7 +20,6 @@ const SignUpPrivate = ({ ...props }) => {
         type="check-password"
         validation={props.validation}
       />
-      <button onClick={props.handleSignUp}>가입</button>
     </>
   );
 };
