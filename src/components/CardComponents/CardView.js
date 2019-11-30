@@ -45,9 +45,9 @@ function CardView({ ...props }) {
       }
     });
     setLike(!like);
-    
   };
-  let now = new Date();
+
+  let now = new Date("YYYY/MM/DD");
   let old = new Date(props.date);
   let gap = now.getTime()-old.getTime();
   let sec_gap = gap / 10000000;
@@ -68,7 +68,7 @@ function CardView({ ...props }) {
         <Icon type='location' size='xsm' />
        
           <div className={cx("info__place")}>{props.spot}</div>
-        
+
         <div className={cx("info__date")}>{set_gap}시간전</div>
       </div>
       <div className={cx("bottom")}>
