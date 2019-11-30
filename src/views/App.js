@@ -75,7 +75,6 @@ const Main = () => {
 };
 
 const App = () => {
-  localStorage.login = true;
   return localStorage.getItem("login") === "true" ? <Main /> : <Login />;
 };
 
