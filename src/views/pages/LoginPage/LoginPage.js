@@ -50,6 +50,9 @@ const LoginPage = (props) => {
       }
     });
   };
+  const onSignUp = () => {
+    window.location.reload("/signup");
+  }
 
   return (
     <div className={cx("loginpage")}>
@@ -92,7 +95,7 @@ const LoginPage = (props) => {
         <a href='/' className={cx("bottom__forgotpassword")}>
           비밀번호 찾기
         </a>
-        <button className={cx("bottom__signupbutton")}>회원가입</button>
+        <button className={cx("bottom__signupbutton")} onClick={onSignUp}>회원가입</button>
       </div>
     </div>
   );
