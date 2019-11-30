@@ -18,8 +18,15 @@ const Detailspage = ({ ...props }) => {
   const { postid } = props.match.params;
   console.log(postid);
   const [like, setLike] = useState(props.islike);
+  const[likecount, setCount] = useState(props.likecount);
   const [isModal, setModal] = useState(true);
   const onLike = () => {
+    if(!like){
+      setCount(likecount+1);
+    }else{ 
+    
+      setCount(likecount-1);
+    }
     setLike(!like);
   };
 
@@ -60,7 +67,7 @@ const Detailspage = ({ ...props }) => {
           <div className={cx("head__likeicon")} onClick={onLike}>
             {like ? <Icon type="heart" /> : <Icon type="heart-dimmed" />}
           </div>
-          <div className={cx("head__likecount")}>{card.likecount}</div>
+          <div className={cx("head__likecount")}>{likecount}</div>
           <div className={cx("head__viewicon")}>
             <Icon type="viewer" />
           </div>
