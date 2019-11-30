@@ -6,15 +6,13 @@ import SignUpPrivate from "../SignUpPrivate";
 import SignUpAuth from "../SignUpAuth";
 import SignUpForm from "../SignUpForm/SignUpForm";
 
-import {
-  ApiPostUser,
-  ApiEmailAuth
-} from "../../../../repository/UserRepository";
+import { ApiPostUser } from "../../../../repository/UserRepository";
 
-const SignUpTemplate = () => {
+const SignUpTemplate = ({ ...props }) => {
   const [isValidation, setIsValidation] = useState(false);
   const [getAuth, setGetAuth] = useState(false);
   const [isAuth, setIsAuth] = useState(false);
+  const [isNext, setIsNext] = useState(false);
 
   const [username, setUsername] = useState("");
   const [userid, setUserid] = useState("");
@@ -30,7 +28,7 @@ const SignUpTemplate = () => {
       user_new_pwd: null
     };
     ApiPostUser(userinfo).then(data => {
-      console.log(data);
+      props.history.goBack();
     });
   };
   const chkEmail = str => {
@@ -44,12 +42,22 @@ const SignUpTemplate = () => {
 
   return (
     <>
-      <SignUpHeader />
+      <SignUpHeader
+        history={props.history}
+        isNext={isNext}
+        setIsNext={setIsNext}
+        isAuth={isAuth}
+        setIsAuth={setIsAuth}
+        rightButton="다음"
+        getAuth={getAuth}
+        handleSignUp={handleSignUp}
+      >
+        회원가입
+      </SignUpHeader>
       {isAuth ? (
         //인증번호 인증 후
         <SignUpPrivate
           validation={chkEmail}
-          handleSignUp={handleSignUp}
           setUsername={setUsername}
           setUserpwd={setUserpwd}
         />
@@ -67,7 +75,6 @@ const SignUpTemplate = () => {
             <Authenticationbutton
               isValidation={isValidation}
               setGetAuth={setGetAuth}
-              ApiEmailAuth={ApiEmailAuth}
               userid={userid}
             />
           )}
@@ -77,7 +84,7 @@ const SignUpTemplate = () => {
       {getAuth &&
         (isAuth || (
           //이메일 입력 전
-          <SignUpAuth setIsAuth={setIsAuth} />
+          <SignUpAuth />
         ))}
     </>
   );
