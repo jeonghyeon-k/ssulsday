@@ -1,6 +1,7 @@
 @import "../../style/index.scss";
 
 .createcommnet {
+  display: flex;
     position: fixed;
     bottom: 0px;
     background-color: $main-white;
@@ -9,8 +10,8 @@
     box-shadow: 0 -3px 5px 0 $main-black-4;
     text-align: center;
   }
-  
   .createcommnet__form{
+    flex:9;
     display: inline-block;
     background: $main-black-5;
     padding:9px 18px;
@@ -26,7 +27,12 @@
     outline: none;
   }
   .createcommnet__button{
+    flex:1;
+    height: 60px;
+    background-color: $main-white; 
     color:$main-butterscotch;
+    outline: none;
+    border: none;
     font-size:16px;
   }
   
