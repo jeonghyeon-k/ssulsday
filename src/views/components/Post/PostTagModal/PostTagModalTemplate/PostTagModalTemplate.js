@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import PropTypes from "prop-types";
 import PostTagModalInput from "../PostTagModalInput";
 import PostTagModalList from "../PostTagModalList";
+import PostModalHeader from "../../PostModalHeader";
 
 const cx = classNames.bind(styles);
 
@@ -24,6 +25,9 @@ const PostTagModalTemplate = ({ ...props }) => {
 
   return (
     <div className={cx("modal__wrapper")}>
+      <PostModalHeader setIsTagModal={props.setIsTagModal}>
+        태그추가
+      </PostModalHeader>
       <PostTagModalInput setFilteredTagValue={setFilteredTagValue} />
       <PostTagModalList handleAddTag={props.handleAddTag} tags={filteredTags} />
     </div>

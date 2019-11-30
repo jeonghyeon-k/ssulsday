@@ -4,16 +4,21 @@ import PropTypes from "prop-types";
 import style from "./Icon.scss";
 const cx = className.bind(style);
 export default function Icon(props) {
-  if(props.src) {
+  if (props.src) {
     return (
       <img
         src={props.src}
         alt={props.alt}
-        className={cx(props.size, props.style, props.className)} 
+        className={cx(props.size, props.style, props.className)}
       />
-    )
+    );
   }
-  return <i className={cx("icon", props.type, props.size, props.className)} title={props.alt} />;
+  return (
+    <i
+      className={cx("icon", props.type, props.size, props.className)}
+      title={props.alt}
+    />
+  );
 }
 Icon.propTypes = {
   type: PropTypes.oneOf([
@@ -29,9 +34,10 @@ Icon.propTypes = {
     "location-3",
     "navi",
     "heart",
-    "home-black",
-    "location-black",
-    "white-black",
+    "tab-home-black",
+    "tab-location-black",
+    "tab-write-black",
+    "tab-mypage-black",
     "arrow",
     "close",
     "check-dimmed",
@@ -52,7 +58,7 @@ Icon.propTypes = {
   alt: PropTypes.string,
   src: PropTypes.string,
   style: PropTypes.string,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 Icon.defaultProp = {
   type: "test",

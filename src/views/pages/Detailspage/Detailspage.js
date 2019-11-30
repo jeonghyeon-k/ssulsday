@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Detailspage.scss";
 import classNames from "classnames/bind";
 import Navbar from "../../components/Navbar/Navbar";
@@ -8,7 +8,8 @@ import CommnetCreate from "../../components/CommentCreate/commentCreate";
 import PropTypes from "prop-types";
 import Icon from "../../components/Icon/Icon";
 import { getCommentById } from "../../../repository/CommentRepository";
-import {getCardById} from "../../../repository/CardRepository";
+import { getCardById } from "../../../repository/CardRepository";
+import DetailHeader from "../../components/DetailHeader";
 
 const cx = classNames.bind(styles);
 
@@ -49,7 +50,7 @@ const Detailspage = ({ ...props }, { commentlist }) => {
   if (!card) return null;
   return (
     <div className={cx("Template")}>
-      <Navbar />
+      <DetailHeader history={props.history} />
       <Ellipse />
       <div className={cx("pageblock")}>
         <div className={cx("title")}>{card.card_title}</div>
@@ -57,11 +58,11 @@ const Detailspage = ({ ...props }, { commentlist }) => {
           <div className={cx("head__username")}>{card.username}</div>
           <div className={cx("head__date")}>{props.date}</div>
           <div className={cx("head__likeicon")} onClick={onLike}>
-          {like ? <Icon type='heart' /> : <Icon type='heart-dimmed' />}
+            {like ? <Icon type="heart" /> : <Icon type="heart-dimmed" />}
           </div>
           <div className={cx("head__likecount")}>{card.likecount}</div>
           <div className={cx("head__viewicon")}>
-            <Icon type='viewer' />
+            <Icon type="viewer" />
           </div>
           <div className={cx("head__viewcount")}>{card.viewcount}</div>
         </div>
@@ -69,23 +70,27 @@ const Detailspage = ({ ...props }, { commentlist }) => {
         <div className={cx("cardcontent")}>{card.card_content}</div>
         <div className={cx("hashtag")}>{card.hashtags}</div>
         <div className={cx("placeicon")}>
-          <Icon type='location' />
+          <Icon type="location" />
         </div>
         <div className={cx("spot")}>{props.spot}</div>
         <div className={cx("map")}></div>
         <div className={cx("commentcount")}>{card.commentcount}</div>
         <div className={cx("commenticon")}>
-          <Icon type='message' />
+          <Icon type="message" />
         </div>
         <hr className={cx("hrbar")} />
       </div>
       {comment.map(comment => (
         <Comment
-        Nickname={comment.username}
-        comment={comment.comment_content}
+          Nickname={comment.username}
+          comment={comment.comment_content}
         />
       ))}
+<<<<<<< HEAD
       <CommnetCreate postId= {props.cardid} />
+=======
+      <CommnetCreate postId={props.cardid} userId={props.userId} />
+>>>>>>> 84a06a7... 리베이스 커밋
     </div>
   );
 };
@@ -100,11 +105,11 @@ Detailspage.prototype = {
   hashtags: PropTypes.string,
   spot: PropTypes.string.isRequired,
   comentcounte: PropTypes.string,
-  commentlist:PropTypes.func
+  commentlist: PropTypes.func
 };
 
 Detailspage.defaultProps = {
-  cardid : 1,
+  cardid: 1,
   title: "제목없음",
   username: "익명이",
   date: "0시간",
@@ -114,7 +119,7 @@ Detailspage.defaultProps = {
   hashtags: "",
   spot: "장소없음",
   commentcount: 0,
-  commentlist:{}
+  commentlist: {}
 };
 
 export default Detailspage;
