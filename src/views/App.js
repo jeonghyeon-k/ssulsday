@@ -39,6 +39,8 @@ const Main = () => {
       <Route path="/mypage/question" component={question} />
       <Route path="/details" component={DetailsPage} />
       <Route path="/find-password" component={FindPasswordPage} />
+      <Route path="/details" component={DetailsPage} />
+      <Route path="/find-password" component={FindPasswordPage} />
       <Route path="/mypage" component={Mypage} />
       <Route component={NotFoundPage} />
     </Switch>
