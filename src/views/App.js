@@ -9,13 +9,16 @@ import {
   DetailsPage,
   SignUpPage,
   FindPasswordPage,
-  PageMain
+  Mypage,
+  PageMain,
+  LoginPage
 } from "./pages";
 
 const Login = () => {
   return (
     <Switch>
-      <Route exact path="/" component={SamplePage} />
+      <Route exact path="/" component={LoginPage} />
+      <Route path="/signup" component={SignUpPage} />
       <Route component={NotFoundPage} />
     </Switch>
   );
@@ -29,15 +32,14 @@ const Main = () => {
       <Route path="/search" component={SearchPage} />
       <Route path="/list" component={ListPage} />
       <Route path="/details" component={DetailsPage} />
-      <Route path="/signup" component={SignUpPage} />
       <Route path="/find-password" component={FindPasswordPage} />
+      <Route path="/mypage" component={Mypage} />
       <Route component={NotFoundPage} />
     </Switch>
   );
 };
 
 const App = () => {
-  console.log(process.env)
   localStorage.login = true;
   return localStorage.getItem("login") === "true" ? <Main /> : <Login />;
 };

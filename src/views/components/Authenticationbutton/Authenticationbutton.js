@@ -8,7 +8,6 @@ const cx = classNames.bind(styles);
 const Authenticationbutton = ({ ...props }) => {
   const handleAuthButton = () => {
     props.isValidation && props.setGetAuth(true);
-    props.ApiEmailAuth({ email: props.userid });
   };
   return (
     <div

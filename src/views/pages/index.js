@@ -6,4 +6,6 @@ export { default as ListPage } from "./Listpage";
 export { default as DetailsPage } from "./Detailspage";
 export { default as SignUpPage } from "./SignUpPage";
 export { default as FindPasswordPage } from "./FindPasswordPage";
-export {default as PageMain} from "./PageMain";
+export { default as Mypage } from "./Mypage";
+export { default as PageMain } from "./PageMain";
+export { default as LoginPage } from "./LoginPage";
