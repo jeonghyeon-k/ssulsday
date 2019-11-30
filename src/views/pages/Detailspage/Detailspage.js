@@ -18,16 +18,17 @@ const Detailspage = ({ ...props }) => {
   const { postid } = props.match.params;
   console.log(postid);
   const [like, setLike] = useState(props.islike);
-  const[likecount, setCount] = useState(props.likecount);
+  const[likecount, setCount] = useState(postid);
   const [isModal, setModal] = useState(true);
   const onLike = () => {
     if(!like){
-      setCount(likecount+1);
+      let getcount = Number(likecount)+1;
+      setCount(getcount);
+      setLike(!like);
     }else{ 
-    
       setCount(likecount-1);
+      setLike(!like);
     }
-    setLike(!like);
   };
 
   const [card, setCard] = useState(null);
