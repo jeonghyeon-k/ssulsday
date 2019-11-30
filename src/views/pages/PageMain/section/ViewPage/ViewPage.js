@@ -35,7 +35,7 @@ const famousLocationList = [
   }
 ];
 
-const Category = ({ ...props }) => {
+const Category = (props) => {
   const handleKind = value => {
     props.setSearch(value);
     props.handleClickCategory();
