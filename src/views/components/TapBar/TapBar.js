@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./TapBar.scss";
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ const TapBlock = ({ children, ...props }) => {
   const handleTapClick = val => {
     props.setTap(val);
   };
-  const to = "/" + props.tap;
+  const to = "/" + props.val;
   return (
     <Link
       className={cx("tapblock")}
@@ -19,7 +19,10 @@ const TapBlock = ({ children, ...props }) => {
       onClick={() => handleTapClick(props.val)}
     >
       <div className={cx("tapblock__icon")}>
-        <Icon type={props.isTap ? props.type : props.type} size="md" />
+        <Icon
+          type={props.isTap ? props.type : props.type + "-black"}
+          size="md"
+        />
       </div>
       <span
         className={cx("tapblock__text", props.isTap && "tapblock__text-istap")}
@@ -31,37 +34,39 @@ const TapBlock = ({ children, ...props }) => {
 };
 
 const TapBar = ({ ...props }) => {
+  const [tap, setTap] = useState(props.selected);
+
   return (
     <div className={cx("tapbar")}>
       <TapBlock
-        type="test"
-        val="home"
-        isTap={props.selected === "home" ? true : false}
-        setTap={props.setTap}
+        type="tab-home"
+        val=""
+        isTap={tap === "home" ? true : false}
+        setTap={setTap}
       >
         홈
       </TapBlock>
       <TapBlock
-        type="test"
+        type="tab-location"
         val="list"
-        isTap={props.selected === "list" ? true : false}
-        setTap={props.setTap}
+        isTap={tap === "list" ? true : false}
+        setTap={setTap}
       >
         재미있썰
       </TapBlock>
       <TapBlock
-        type="test"
+        type="tab-write"
         val="post"
-        isTap={props.selected === "post" ? true : false}
-        setTap={props.setTap}
+        isTap={tap === "post" ? true : false}
+        setTap={setTap}
       >
         뭐했썰
       </TapBlock>
       <TapBlock
-        type="test"
+        type="tab-mypage"
         val="mypage"
-        isTap={props.selected === "mypage" ? true : false}
-        setTap={props.setTap}
+        isTap={tap === "mypage" ? true : false}
+        setTap={setTap}
       >
         마이페이지
       </TapBlock>
@@ -83,11 +88,16 @@ TapBar.defaultProps = {
 
 TapBlock.propTypes = {
   //type은 추후 icon에 맞춰서 수정
-  type: PropTypes.oneOf(["home,list,post,mypage"]),
-  val: PropTypes.oneOf(["home,list,post,mypage"]),
+  type: PropTypes.oneOf([
+    "tab-home",
+    "tab-location",
+    "tab-write",
+    "tab-mypage"
+  ]),
+  val: PropTypes.string,
   isTap: PropTypes.bool,
   setTap: PropTypes.func,
-  children: PropTypes.oneOf(["홈,재미있썰,뭐했썰,마이페이지"])
+  children: PropTypes.oneOf(["홈", "재미있썰", "뭐했썰", "마이페이지"])
 };
 
 TapBlock.defaultProps = {

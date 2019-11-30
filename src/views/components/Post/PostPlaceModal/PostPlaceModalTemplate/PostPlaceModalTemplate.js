@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import PropTypes from "prop-types";
 import PostTagModalInput from "../../PostTagModal/PostTagModalInput/PostTagModalInput";
 import PostPlaceModalList from "../PostPlaceModalList";
+import PostModalHeader from "../../PostModalHeader";
 
 const cx = classNames.bind(styles);
 
@@ -23,6 +24,9 @@ const PostPlaceModalTemplate = ({ ...props }) => {
 
   return (
     <div className={cx("modal__wrapper")}>
+      <PostModalHeader setIsPlaceModal={props.setIsPlaceModal}>
+        장소추가
+      </PostModalHeader>{" "}
       <PostTagModalInput setFilteredPlaceValue={setFilteredPlaceValue} />
       <PostPlaceModalList
         handleAddPlace={props.handleAddPlace}

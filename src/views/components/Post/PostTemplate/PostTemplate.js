@@ -12,8 +12,9 @@ import {
   ApiGetPostList,
   ApiPostPost
 } from "../../../../repository/PostRepository";
+import PostHeader from "../PostHeader";
 
-const PostTemplate = () => {
+const PostTemplate = ({ ...props }) => {
   useEffect(() => {
     ApiGetPostList().then(data => {
       console.log(data.data);
@@ -43,6 +44,7 @@ const PostTemplate = () => {
     ApiPostPost(postinfo).then(data => {
       console.log(data);
     });
+    props.history.goBack();
   };
   const handleCategoryModal = () => {
     setisCategoryModal(!isCategoryModal);
@@ -67,7 +69,7 @@ const PostTemplate = () => {
   console.log(content);
   return (
     <div>
-      <button onClick={handlePost}>제출</button>
+      <PostHeader history={props.history} handlePost={handlePost} />
       <PostTitle setTitle={setTitle} />
       <PostCategory
         kind={kind}
@@ -85,9 +87,17 @@ const PostTemplate = () => {
           setKind={setKind}
         />
       )}
-      {isTagModal && <PostTagModalTemplate handleAddTag={handleAddTag} />}
+      {isTagModal && (
+        <PostTagModalTemplate
+          handleAddTag={handleAddTag}
+          setIsTagModal={setIsTagModal}
+        />
+      )}
       {isPlaceModal && (
-        <PostPlaceModalTemplate handleAddPlace={handleAddPlace} />
+        <PostPlaceModalTemplate
+          handleAddPlace={handleAddPlace}
+          setIsPlaceModal={setIsPlaceModal}
+        />
       )}
     </div>
   );
