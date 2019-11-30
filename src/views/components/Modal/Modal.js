@@ -1,9 +1,15 @@
-import React from "react";
-import classNames from "classnames/bind";
-import styles from "./Modal.module.scss";
-const cx = classNames.bind(styles);
+import React, { useState } from "react";
+import { PostModal, ShareModal } from "./index";
+
 export default function Modal(props) {
-    return (
-        <div>asdfsdf</div>
-    )
+  const [Type, setType] = useState(props.type);
+  const [open, setOpen] = useState(false);
+  console.log(Type);
+  if (Type == "share") {
+    setType(true);
+  }
+  if (Type == "post") {
+    setType(false);
+  }
+  return <div>{open && (Type ?  <ShareModal /> : <PostModal />)}</div>;
 }
