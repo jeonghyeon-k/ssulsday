@@ -6,7 +6,10 @@ import {
 <<<<<<< HEAD
   PostPage,
   SearchPage,
+<<<<<<< HEAD
+=======
   PageList,
+>>>>>>> f073f03f245d74ab977ac426c282360a8173967e
   DetailsPage,
 =======
 >>>>>>> b6afb40b4204f1913abea27efaee8bb1e2fb0f0c
@@ -16,12 +19,19 @@ import {
 =======
   FindPasswordPage,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f073f03f245d74ab977ac426c282360a8173967e
   PageMain,
 <<<<<<< HEAD
   Mypage
 >>>>>>> 47e641a... feat. 마이페이지 라우터
 =======
   Mypage,
+<<<<<<< HEAD
+  question
+>>>>>>> bc0949e... feat. 마이페이지- 문의하기
+=======
 <<<<<<< HEAD
   question
 >>>>>>> bc0949e... feat. 마이페이지- 문의하기
@@ -35,6 +45,7 @@ import {
   LoginPage
 >>>>>>> b7a3397... 헤더 마무리
 >>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
+>>>>>>> f073f03f245d74ab977ac426c282360a8173967e
 } from "./pages";
 
 const Login = () => {
@@ -65,11 +76,21 @@ const Main = () => {
       <Route path="/signup" component={SignUpPage} />
       <Route path="/find-password" component={FindPasswordPage} />
 <<<<<<< HEAD
+=======
+      <Route path="/details/:postid" component={DetailsPage} />
+      <Route path="/signup" component={SignUpPage} />
+      <Route path="/find-password" component={FindPasswordPage} />
+=======
+>>>>>>> f073f03f245d74ab977ac426c282360a8173967e
+<<<<<<< HEAD
       <Route path="/mypage/" component={Mypage} />
 >>>>>>> 47e641a... feat. 마이페이지 라우터
 =======
       <Route exact path="/mypage/" component={Mypage} />
       <Route path="/mypage/question" component={question} />
+<<<<<<< HEAD
+>>>>>>> bc0949e... feat. 마이페이지- 문의하기
+=======
 <<<<<<< HEAD
 >>>>>>> bc0949e... feat. 마이페이지- 문의하기
 =======
@@ -80,6 +101,7 @@ const Main = () => {
 =======
       <Route path="/mypage" component={Mypage} />
 >>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
+>>>>>>> f073f03f245d74ab977ac426c282360a8173967e
       <Route component={NotFoundPage} />
     </Switch>
 =======

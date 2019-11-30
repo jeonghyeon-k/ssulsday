@@ -8,13 +8,19 @@ import CommnetCreate from "../../components/CommentCreate/commentCreate";
 import PropTypes from "prop-types";
 import Icon from "../../components/Icon/Icon";
 import { getCommentById } from "../../../repository/CommentRepository";
+<<<<<<< HEAD
+import {getCardById} from "../../../repository/CardRepository";
+import Modal from "../../components/Modal/PostModal/PostModal"
+=======
 import { getCardById } from "../../../repository/CardRepository";
 import DetailHeader from "../../components/DetailHeader";
+>>>>>>> f073f03f245d74ab977ac426c282360a8173967e
 
 const cx = classNames.bind(styles);
 
 const Detailspage = ({ ...props }, { commentlist }) => {
   const [like, setLike] = useState(props.islike);
+  const [isModal, setModal] = useState(true);
   const onLike = () => {
     setLike(!like);
   };
@@ -50,7 +56,12 @@ const Detailspage = ({ ...props }, { commentlist }) => {
   if (!card) return null;
   return (
     <div className={cx("Template")}>
+<<<<<<< HEAD
+     
+      <Navbar />
+=======
       <DetailHeader history={props.history} />
+>>>>>>> f073f03f245d74ab977ac426c282360a8173967e
       <Ellipse />
       <div className={cx("pageblock")}>
         <div className={cx("title")}>{card.card_title}</div>
@@ -90,11 +101,18 @@ const Detailspage = ({ ...props }, { commentlist }) => {
 <<<<<<< HEAD
       <CommnetCreate postId= {props.cardid} />
 =======
+      {isModal ? <Modal type='post'/> : <CommnetCreate postId= {props.cardid} userId={props.userId} />}
+>>>>>>> b8e1436... no message
+=======
+<<<<<<< HEAD
+      <CommnetCreate postId= {props.cardid} />
+=======
       <CommnetCreate postId={props.cardid} userId={props.userId} />
 >>>>>>> 84a06a7... 리베이스 커밋
 =======
       <CommnetCreate postId={props.cardid} />
 >>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
+>>>>>>> f073f03f245d74ab977ac426c282360a8173967e
     </div>
   );
 };
