@@ -41,17 +41,21 @@ const cx = classNames.bind(styles);
 let id = localStorage.getItem("userid");
 function CardView({ ...props }) {
   const [like, setLike] = useState(props.islike);
+  const[likecount, setCount] = useState(props.likecount);
   const onLike = () => {
+    if(likecount){
+      likecount+=1;
+      setCount(likecount);
+    }else{ 
+      likecount-=1;
+      setCount(likecount);
+    }
+    setLike(like)
     ApiPostLike({
-      user_id: id,
-      post_id: props.post_id
+      "user_id": id,
+      "post_id": props.post_id
     }).then(data => {
-      if (data.data.retMsg == "OK") {
-        localStorage.login = true;
-        localStorage.setItem("userid", id);
-        window.location.reload();
-      } else {
-      }
+     console.log(data.data)
     });
     setLike(!like);
   };

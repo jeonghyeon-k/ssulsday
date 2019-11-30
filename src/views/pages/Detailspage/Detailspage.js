@@ -28,9 +28,17 @@ const cx = classNames.bind(styles);
 
 const Detailspage = ({ ...props }, { commentlist }) => {
   const [like, setLike] = useState(props.islike);
+  const[likecount, setCount] = useState(postid);
   const [isModal, setModal] = useState(true);
   const onLike = () => {
-    setLike(!like);
+    if(!like){
+      let getcount = Number(likecount)+1;
+      setCount(getcount);
+      setLike(!like);
+    }else{ 
+      setCount(likecount-1);
+      setLike(!like);
+    }
   };
 
   const [card, setCard] = useState(null);
@@ -88,7 +96,7 @@ const Detailspage = ({ ...props }, { commentlist }) => {
           <div className={cx("head__likeicon")} onClick={onLike}>
             {like ? <Icon type="heart" /> : <Icon type="heart-dimmed" />}
           </div>
-          <div className={cx("head__likecount")}>{card.likecount}</div>
+          <div className={cx("head__likecount")}>{likecount}</div>
           <div className={cx("head__viewicon")}>
             <Icon type="viewer" />
           </div>
@@ -118,8 +126,11 @@ const Detailspage = ({ ...props }, { commentlist }) => {
       ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <CommnetCreate postId= {props.cardid} />
 =======
+=======
+>>>>>>> 8241650... feat. 좋아요
       {isModal ? <Modal type='post'/> : <CommnetCreate postId= {props.cardid} userId={props.userId} />}
 >>>>>>> b8e1436... no message
 =======
@@ -130,14 +141,23 @@ const Detailspage = ({ ...props }, { commentlist }) => {
 >>>>>>> 84a06a7... 리베이스 커밋
 =======
       <CommnetCreate postId={props.cardid} />
+<<<<<<< HEAD
 >>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
+=======
+>>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
+      <CommnetCreate postId={postid} userId={props.user_id} />
+>>>>>>> c31fc0e... feat. 댓글 수정
+>>>>>>> 8241650... feat. 좋아요
     </div>
   );
 };
 
 Detailspage.prototype = {
   title: PropTypes.string,
+  user_id: PropTypes.string,
   username: PropTypes.string,
   date: PropTypes.string,
   viewcount: PropTypes.string,
@@ -145,7 +165,7 @@ Detailspage.prototype = {
   contents: PropTypes.string,
   hashtags: PropTypes.string,
   spot: PropTypes.string.isRequired,
-  comentcounte: PropTypes.string,
+  commentcount: PropTypes.string,
   commentlist: PropTypes.func
 };
 
