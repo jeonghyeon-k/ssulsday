@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 import Icon from "../../components/Icon/Icon";
 import { getCommentById } from "../../../repository/CommentRepository";
 import {getCardById} from "../../../repository/CardRepository";
+import Modal from "../../components/Modal/PostModal/PostModal"
 
 const cx = classNames.bind(styles);
 
@@ -16,6 +17,7 @@ const Detailspage = ({ ...props }) => {
   const { postid } = props.match.params;
   console.log(postid);
   const [like, setLike] = useState(props.islike);
+  const [isModal, setModal] = useState(true);
   const onLike = () => {
     setLike(!like);
   };
@@ -49,6 +51,7 @@ const Detailspage = ({ ...props }) => {
   if (!card) return null;
   return (
     <div className={cx("Template")}>
+     
       <Navbar />
       <Ellipse />
       <div className={cx("pageblock")}>
@@ -85,7 +88,7 @@ const Detailspage = ({ ...props }) => {
         comment={comment.comment_content}
         />
       ))}
-      <CommnetCreate postId= {props.cardid} userId={props.userId} />
+      {isModal ? <Modal type='post'/> : <CommnetCreate postId= {props.cardid} userId={props.userId} />}
     </div>
   );
 };
