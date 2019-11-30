@@ -10,6 +10,12 @@ export { default as DetailsPage } from "./Detailspage";
 export { default as SignUpPage } from "./SignUpPage";
 export { default as FindPasswordPage } from "./FindPasswordPage";
 <<<<<<< HEAD
+export {default as PageMain} from "./PageMain";
+export {default as Mypage} from "./Mypage/Mypage";
+export {default as question} from "./Mypage/question/question";
+export {default as UpdateUser} from "./UpdateUserpage/UpdateUser";
+=======
+<<<<<<< HEAD
 export { default as PageMain } from "./PageMain";
 export { default as Mypage } from "./Mypage/Mypage";
 export { default as question } from "./Mypage/question/question";
@@ -19,3 +25,4 @@ export { default as Mypage } from "./Mypage";
 export { default as PageMain } from "./PageMain";
 >>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
 export { default as LoginPage } from "./LoginPage";
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
