@@ -11,3 +11,4 @@ export { default as Mypage } from "./Mypage/Mypage";
 export { default as question } from "./Mypage/question/question";
 export { default as PageList } from "./PageList";
 export { default as LoginPage } from "./LoginPage";
+export { default as UpdatePage } from "./UpdateUserpage/UpdateUser";

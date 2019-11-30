@@ -12,7 +12,8 @@ import {
   PageMain,
   Mypage,
   question,
-  LoginPage
+  LoginPage,
+  UpdatePage
 } from "./pages";
 
 const Login = () => {
@@ -39,6 +40,7 @@ const Main = () => {
       <Route exact path="/mypage/" component={Mypage} />
       <Route path="/mypage/question" component={question} />
       <Route path="/mypage" component={Mypage} />
+      <Route path="/updateuser" component={UpdatePage} />
       <Route component={NotFoundPage} />
     </Switch>
   );
