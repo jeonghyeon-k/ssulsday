@@ -20,6 +20,7 @@ const Login = () => {
     <Switch>
       <Route exact path="/" component={LoginPage} />
       <Route path="/signup" component={SignUpPage} />
+      <Route path="/find-password" component={FindPasswordPage} />
       <Route component={NotFoundPage} />
     </Switch>
   );
@@ -32,15 +33,11 @@ const Main = () => {
       <Route path="/post" component={PostPage} />
       <Route path="/search" component={SearchPage} />
       <Route path="/details/:postid" component={DetailsPage} />
+      <Route path="/details" component={DetailsPage} />
       <Route path="/list" component={PageList} />
       <Route path="/signup" component={SignUpPage} />
-      <Route path="/find-password" component={FindPasswordPage} />
       <Route exact path="/mypage/" component={Mypage} />
       <Route path="/mypage/question" component={question} />
-      <Route path="/details" component={DetailsPage} />
-      <Route path="/find-password" component={FindPasswordPage} />
-      <Route path="/details" component={DetailsPage} />
-      <Route path="/find-password" component={FindPasswordPage} />
       <Route path="/mypage" component={Mypage} />
       <Route component={NotFoundPage} />
     </Switch>
