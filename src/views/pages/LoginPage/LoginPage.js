@@ -51,6 +51,9 @@ const LoginPage = ({ isCookie }) => {
         }
       });
   };
+  const onSignUp = () => {
+    window.location.reload("/signup");
+  }
 
   if (isCookie != null) {
     return <span>자동로그인</span>;
@@ -93,11 +96,18 @@ const LoginPage = ({ isCookie }) => {
             <span className={cx("bottom__Autologin__span")}>자동로그인</span>
           </div>
 
+<<<<<<< HEAD
           <a href='/' className={cx("bottom__forgotpassword")}>
             비밀번호 찾기
           </a>
           <button className={cx("bottom__signupbutton")}>회원가입</button>
         </div>
+=======
+        <a href='/' className={cx("bottom__forgotpassword")}>
+          비밀번호 찾기
+        </a>
+        <button className={cx("bottom__signupbutton")} onClick={onSignUp}>회원가입</button>
+>>>>>>> 6111460... feat.회원가입
       </div>
     );
   }

@@ -24,7 +24,7 @@ export const ApiGetActivityMyCommentListList = async (param) => {
 export const ApiGetActivityMyListCount = async (param) => {
     console.log(param);
     return await api({
-        url: `/cms/activity/mycount.do?userid=${param.userid}`,
+        url: `/cms/activity/mycount.do?user_id=${param.userid}`,
         type: "get",
         param
         
