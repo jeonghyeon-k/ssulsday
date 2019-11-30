@@ -12,6 +12,7 @@ $point-color : rgb(251, 179, 59);
         .logo{
             height: 37px;
             background-image: url("../../../../../assets/images/logo.png");
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -113,6 +114,7 @@ padding-bottom: 53px;
                     height: 26px;
                     width: 76px;
                     background-image: url("../../../../../assets/images/logo.png");
+                    background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center;
                 }

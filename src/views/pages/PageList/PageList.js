@@ -1,8 +1,13 @@
 import React, {useState, useEffect} from "react";
 import ViewPage from "./section/ViewPage.js/ViewPage";
 import {convertGeoToAddress} from "../../../context/serverContext";
+<<<<<<< HEAD
 import { getCardList } from "../../../repository/CardRepository";
 import { isS } from "xmlchars/xml/1.0/ed5";
+=======
+import { getCardList, ApiCardByHashTag } from "../../../repository/CardRepository";
+import TapBar from "../../components/TapBar/TapBar";
+>>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
 
 const dataTags = [
     { id: 1, text: "고백썰", categoryId: 1, isSelected: false},
@@ -35,6 +40,10 @@ const sortList = [
 export default function PageList(props) {
     const [tags, setTags] = useState(dataTags);
     const [category, setCategory] = useState(1);
+<<<<<<< HEAD
+=======
+    const [isSearch, setIsSearch] = useState(false);
+>>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
     const [sort, setSort] = useState(sortList[0]);
     const [cardList, setCardList] = useState([]);
     useEffect(() => {
@@ -65,7 +74,47 @@ export default function PageList(props) {
                 console.log(e);
             } 
         }
+<<<<<<< HEAD
         fetchData();
+=======
+        async function fetchDataWithSearch(search) {
+            try {
+                const res = await ApiCardByHashTag({searchKeyword: search});
+                const resCardList = res.data;
+                const dataCardList = await Promise.all(resCardList.map(async (el) => {
+                    let dataSpot = "위치를 찾을 수 없습니다.";
+                    if(el.longitude !== 0 && el.latitude !== 0) {
+                        const resSpot = await convertGeoToAddress(el.longitude, el.latitude);
+                        dataSpot = await resSpot.data.documents[0].address.address_name;
+                    } 
+                    return ({
+                        idx: el.post_id,
+                        title: el.card_title,
+                        contents: el.card_content,
+                        hashTags: el.hashTags,
+                        spot: dataSpot,
+                        date: el.time_created,
+                        comentcounte: el.commentcount,
+                        likecount: el.likecount,
+                        viewcount: el.viewcount
+                    })
+                }));
+                setCardList(dataCardList);
+            } catch (e){
+                console.log(e);
+            } 
+        }
+        const search = props.location.search;
+        const keyword = search.split("=")[1];
+        if(keyword) {
+            setIsSearch(true);
+            fetchDataWithSearch(keyword);
+        } else {
+            setIsSearch(false);
+            fetchData();
+        }
+        
+>>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
     }, [tags, sort]);
     function handleClickTag (id) {
         const tempTags = tags.map(el => {
@@ -79,6 +128,7 @@ export default function PageList(props) {
            }
         })
         setTags(sortTags)
+<<<<<<< HEAD
     }
     function handleClickCard(id) {
         props.history.push()
@@ -88,11 +138,31 @@ export default function PageList(props) {
     }
     return (
         <ViewPage
+=======
+    }
+    function handleClickCard(id) {
+        props.history.push()
+    }
+    function updateSort(sortId) {
+        setSort(sort[sortId])
+    }
+    return (
+        <>
+        <ViewPage
+        isSearch={isSearch}
+>>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
          cardList={cardList}
          sort={sort}
          dataTags={tags}
          handleClickTag={handleClickTag}
          handleClickCard={handleClickCard}
          />
+<<<<<<< HEAD
     )
 }
+=======
+         <TapBar selected="list" />
+        </>
+    )
+}
+>>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
