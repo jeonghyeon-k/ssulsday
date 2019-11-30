@@ -29,10 +29,11 @@ const PostTemplate = ({ ...props }) => {
   const [selectedTags, setSelectedTags] = useState([]);
   const [isPlaceModal, setIsPlaceModal] = useState(false);
 
+  console.log(localStorage.getItem("userid"));
   const handlePost = () => {
     const postinfo = {
-      user_id: "beaaa0410@gmail.com",
-      username: "도토리",
+      user_id: localStorage.getItem("userid"),
+      username: "",
       post_title: title,
       category_id: categoryId,
       post_content: content,
