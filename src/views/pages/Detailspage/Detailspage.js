@@ -86,7 +86,11 @@ const Detailspage = ({ ...props }) => {
           comment={comment.comment_content}
         />
       ))}
+<<<<<<< HEAD
       <CommnetCreate postId={props.cardid} userId={props.userId} />
+=======
+      <CommnetCreate postId={props.cardid} />
+>>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
     </div>
   );
 };

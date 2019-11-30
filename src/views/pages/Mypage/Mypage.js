@@ -9,8 +9,11 @@ import TapBar from "../../components/TapBar/TapBar";
 const cx = classNames.bind(styles);
 
 const Mypage = ({ ...props }) => {
+<<<<<<< HEAD
   const { userid } = props.match.params;
 
+=======
+>>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
   return (
     <div className={cx("template")}>
       <Navbar />
