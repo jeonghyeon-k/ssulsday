@@ -26,16 +26,17 @@ const Detailspage = ({ ...props }) => {
   const { postid } = props.match.params;
   console.log(postid);
   const [like, setLike] = useState(props.islike);
-  const[likecount, setCount] = useState(props.likecount);
+  const[likecount, setCount] = useState(postid);
   const [isModal, setModal] = useState(true);
   const onLike = () => {
     if(!like){
-      setCount(likecount+1);
+      let getcount = Number(likecount)+1;
+      setCount(getcount);
+      setLike(!like);
     }else{ 
-    
       setCount(likecount-1);
+      setLike(!like);
     }
-    setLike(!like);
   };
 
   const [card, setCard] = useState(null);
@@ -109,6 +110,7 @@ const Detailspage = ({ ...props }) => {
         />
       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
       {isModal ? <Modal type='post'/> : <CommnetCreate postId= {props.cardid} userId={props.userId} />}
 =======
 <<<<<<< HEAD
@@ -117,12 +119,16 @@ const Detailspage = ({ ...props }) => {
       <CommnetCreate postId={props.cardid} />
 >>>>>>> c5630b6bfce9eb77102c80f487f797567862585a
 >>>>>>> e64739f19fef7d351189f5b3d74376d10bf1fd04
+=======
+      <CommnetCreate postId={postid} userId={props.user_id} />
+>>>>>>> c31fc0e... feat. 댓글 수정
     </div>
   );
 };
 
 Detailspage.prototype = {
   title: PropTypes.string,
+  user_id: PropTypes.string,
   username: PropTypes.string,
   date: PropTypes.string,
   viewcount: PropTypes.string,
@@ -130,7 +136,7 @@ Detailspage.prototype = {
   contents: PropTypes.string,
   hashtags: PropTypes.string,
   spot: PropTypes.string.isRequired,
-  comentcounte: PropTypes.string,
+  commentcount: PropTypes.string,
   commentlist: PropTypes.func
 };
 
