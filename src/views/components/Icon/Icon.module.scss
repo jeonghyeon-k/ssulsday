@@ -107,7 +107,7 @@
     background-position: -1px -72px;
   } @else if $type == "close" {
     @include xsm();
-    background-position: -39px 72px;
+    background-position: -39px -72px;
   } @else if $type == "check-dimmed" {
     @include xsm();
     background-position: -77px -72px;

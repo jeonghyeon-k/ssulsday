@@ -4,6 +4,7 @@ import { Layout, Icon } from "../../../../components";
 import Hash from "../../../../components/Hash/Hash";
 import PlaceCard from "../../../../components/PlaceCard/PlaceCard";
 import CardView from "../../../../components/Card/CardView";
+import TapBar from "../../../../components/TapBar/TapBar";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 const famousLocationList = [
@@ -33,6 +34,23 @@ const famousLocationList = [
     hashTags: "ㅗㅑ"
   }
 ];
+
+const Category = ({ ...props }) => {
+  const handleKind = value => {
+    props.setSearch(value);
+    props.handleClickCategory();
+    // props.setCategoryId();
+  };
+  return (
+    <div
+      className={cx("category__kind")}
+      onClick={() => handleKind(props.value)}
+    >
+      {props.value}
+    </div>
+  );
+};
+
 export default function ViewPage(props) {
   const {
     userLocation,
@@ -115,6 +133,44 @@ export default function ViewPage(props) {
             ))}
           </div>
         </div>
+        <TapBar selected="home" />
+
+        {isCategoryModal && (
+          <>
+            <div className={cx("modal")}>
+              <div
+                className={cx("modal__background")}
+                onClick={handleClickCategory}
+              />
+              <div className={cx("modal__category")}>
+                <div className={cx("modal__header")}>
+                  <div className="close" onClick={handleClickCategory}>
+                    <Icon type="close" />
+                  </div>
+                  <div className={cx("modal__title")}>카테고리</div>
+                </div>
+                <Category
+                  value="고백썰"
+                  setSearch={setSearch}
+                  //setCategoryId={() => props.setCategoryId(1)}
+                  handleClickCategory={handleClickCategory}
+                />
+                <Category
+                  value="이별썰"
+                  setSearch={setSearch}
+                  //setCategoryId={() => props.setCategoryId(2)}
+                  handleClickCategory={handleClickCategory}
+                />
+                <Category
+                  value="이상형썰"
+                  setSearch={setSearch}
+                  //setCategoryId={() => props.setCategoryId(3)}
+                  handleClickCategory={handleClickCategory}
+                />
+              </div>
+            </div>
+          </>
+        )}
       </Layout.Content>
     </Layout>
   );
