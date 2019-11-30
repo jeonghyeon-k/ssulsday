@@ -9,7 +9,7 @@ import logo from "../../../assets/images/logo.png";
 
 const cx = classNames.bind(styles);
 
-const LoginPage = ({ isCookie }) => {
+const LoginPage = (props) => {
   const [loading, setLoading] = useState(false);
   const [check, setCheck] = useState(false);
   const [inputs, setInputs] = useState({
@@ -37,70 +37,65 @@ const LoginPage = ({ isCookie }) => {
   const onClick = () => {
     if (id === "") return LoginPage;
     if (pwd === "") return LoginPage;
-      ApiLogin({
-        "isCookie": check,
-        "user_id": id,
-        "user_pwd": pwd
-      }).then(data => {
-        console.log(data.data.retMsg);
-        if(data.data.retMsg==""){
-          localStorage.login = true;
-         // history.push("")
-        }else{
-
-        }
-      });
+    ApiLogin({
+      isCookie: check,
+      user_id: id,
+      user_pwd: pwd
+    }).then(data => {
+      if (data.data.retMsg == "OK") {
+      localStorage.login = true;
+      localStorage.setItem('userid', id);
+       window.location.reload();
+      } else {
+      }
+    });
   };
 
-  if (isCookie != null) {
-    return <span>자동로그인</span>;
-  } else {
-    return (
-      <div className={cx("loginpage")}>
-        <div className={cx("header")}>
-          <img className={cx("header__logo")} src={logo} alt='logo' />
-        </div>
-        <div className={cx("input")}>
-          <input
-            className={cx("input__email")}
-            name='id'
-            placeholder='이메일 주소'
-            onChange={onChange}
-            value={id}
-          />
-          <input
-            className={cx("input__password")}
-            name='pwd'
-            placeholder='비밀번호'
-            type='password'
-            onChange={onChange}
-            value={pwd}
-          />
-        </div>
-        <div className={cx("bottom")}>
-          <button className={cx("bottom__loginbutton")} onClick={onClick}>
-            로그인
-          </button>
-
-          <div className={cx("bottom__Autologin")} onClick={onCheck}>
-            <div className={cx("bottom__Autologin__icon")}>
-              {check ? (
-                <Icon type='check--color' />
-              ) : (
-                <Icon type='check--color-dimmed' />
-              )}
-            </div>
-            <span className={cx("bottom__Autologin__span")}>자동로그인</span>
-          </div>
-
-          <a href='/' className={cx("bottom__forgotpassword")}>
-            비밀번호 찾기
-          </a>
-          <button className={cx("bottom__signupbutton")}>회원가입</button>
-        </div>
+  return (
+    <div className={cx("loginpage")}>
+      <div className={cx("header")}>
+        <img className={cx("header__logo")} src={logo} alt='logo' />
       </div>
-    );
-  }
+      <div className={cx("input")}>
+        <input
+          className={cx("input__email")}
+          name='id'
+          placeholder='이메일 주소'
+          onChange={onChange}
+          value={id}
+        />
+        <input
+          className={cx("input__password")}
+          name='pwd'
+          placeholder='비밀번호'
+          type='password'
+          onChange={onChange}
+          value={pwd}
+        />
+      </div>
+      <div className={cx("bottom")}>
+        <button className={cx("bottom__loginbutton")} onClick={onClick}>
+          로그인
+        </button>
+
+        <div className={cx("bottom__Autologin")} onClick={onCheck}>
+          <div className={cx("bottom__Autologin__icon")}>
+            {check ? (
+              <Icon type='check--color' />
+            ) : (
+              <Icon type='check--color-dimmed' />
+            )}
+          </div>
+          <span className={cx("bottom__Autologin__span")}>자동로그인</span>
+        </div>
+
+        <a href='/' className={cx("bottom__forgotpassword")}>
+          비밀번호 찾기
+        </a>
+        <button className={cx("bottom__signupbutton")}>회원가입</button>
+      </div>
+    </div>
+  );
 };
 
 LoginPage.prototype = {

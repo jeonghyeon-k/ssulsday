@@ -1,0 +1,11 @@
+@import "../../../style/index.scss";
+
+.header__post {
+  border-bottom: $main-black-3;
+}
+
+.post__finish {
+  flex: 1;
+  min-width: 30px;
+  color: $main-butterscotch;
+}

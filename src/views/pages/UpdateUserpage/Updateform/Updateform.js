@@ -12,6 +12,7 @@ const SignUpForm = ({ ...props }) => {
   const handleChange = e => {
     const { value } = e.target;
     setValue(value);
+    props.setContent(value);
   };
   const handleFocus = () => {
     setIsFocus(true);

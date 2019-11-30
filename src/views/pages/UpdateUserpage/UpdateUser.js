@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState} from "react";
 import PropTypes from "prop-types";
 import Updateform from "./Updateform/Updateform";
 import styles from "./UpdateUser.module.scss";
@@ -8,23 +8,30 @@ import { Icon } from "../../components";
 
 const UpdateUser = ({ ...props }) => {
   const cx = classNames.bind(styles);
-  const [nickname, setnickname] = useState();
-  const [pwd, setpwd] = useState();
-  const [newpwd, setnewpwd] = useState();
-  const [renewpwd, setrenewpwd] = useState();
-
-
+  const [nickname, setnickname] = useState("");
+  const [pwd, setpwd] = useState("");
+  const [newpwd, setnewpwd] = useState("");
+  const [renewpwd, setrenewpwd] = useState("");
+ let userid = localStorage.getItem('userid');
+ console.log(userid);
   const onClick = () => {
-    console.log()
+   if(pwd == null){
     ApiPutUser({
-      "user_id" : "redhd0410@gmail.com",
-      "user_": "123",
-      "user_pwd" : 4321,
-      "user_new_pwd" : 1234
- 
+      user_id: userid,
+      username: nickname,
     }).then(data => {
       console.log(data.data.retMsg);
     });
+   }else if(pwd == renewpwd){
+      ApiPutUser({
+        user_id: userid,
+        username: nickname,
+        user_pwd: pwd,
+        user_new_pwd: renewpwd
+      }).then(data => {
+        console.log(data.data.retMsg);
+      });
+    }
   };
 
   return (
@@ -39,10 +46,33 @@ const UpdateUser = ({ ...props }) => {
         </div>
       </div>
       <Updateform type='Fix' title='이메일' />
-      <Updateform title='닉네임' id="nickname" value={nickname} />
-      <Updateform title='기존 비밀번호' id="pwd" hoder="현재 비밀번호를 입력해주세요." value={pwd} />
-      <Updateform title='신규 비밀번호' id="newpwd" hoder="신규 비밀번호를 입력해주세요." value={newpwd} />
-      <Updateform title='신규 비밀번호 재확인' id="renewpwd"hoder="신규 비밀번호를 재입력해주세요."  value={renewpwd}  />
+      <Updateform
+        title='닉네임'
+        setContent={setnickname}
+        id='nickname'
+        value={nickname}
+      />
+      <Updateform
+        title='기존 비밀번호'
+        setContent={setpwd}
+        id='pwd'
+        hoder='현재 비밀번호를 입력해주세요.'
+        value={pwd}
+      />
+      <Updateform
+        title='신규 비밀번호'
+        setContent={setnewpwd}
+        id='newpwd'
+        hoder='신규 비밀번호를 입력해주세요.'
+        value={newpwd}
+      />
+      <Updateform
+        title='신규 비밀번호 재확인'
+        setContent={setrenewpwd}
+        id='renewpwd'
+        hoder='신규 비밀번호를 재입력해주세요.'
+        value={renewpwd}
+      />
     </div>
   );
 };

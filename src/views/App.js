@@ -5,18 +5,23 @@ import {
   NotFoundPage,
   PostPage,
   SearchPage,
+  PageList,
   DetailsPage,
   SignUpPage,
   FindPasswordPage,
   PageMain,
   Mypage,
-  question
+  question,
+  LoginPage,
+  UpdatePage
 } from "./pages";
 
 const Login = () => {
   return (
     <Switch>
-      <Route exact path="/" component={SamplePage} />
+      <Route exact path="/" component={LoginPage} />
+      <Route path="/signup" component={SignUpPage} />
+      <Route path="/find-password" component={FindPasswordPage} />
       <Route component={NotFoundPage} />
     </Switch>
   );
@@ -29,18 +34,19 @@ const Main = () => {
       <Route path="/post" component={PostPage} />
       <Route path="/search" component={SearchPage} />
       <Route path="/details/:postid" component={DetailsPage} />
+      <Route path="/details" component={DetailsPage} />
+      <Route path="/list" component={PageList} />
       <Route path="/signup" component={SignUpPage} />
-      <Route path="/find-password" component={FindPasswordPage} />
       <Route exact path="/mypage/" component={Mypage} />
       <Route path="/mypage/question" component={question} />
+      <Route path="/mypage" component={Mypage} />
+      <Route path="/updateuser" component={UpdatePage} />
       <Route component={NotFoundPage} />
     </Switch>
   );
 };
 
 const App = () => {
-  console.log(process.env)
-  localStorage.login = true;
   return localStorage.getItem("login") === "true" ? <Main /> : <Login />;
 };
 
