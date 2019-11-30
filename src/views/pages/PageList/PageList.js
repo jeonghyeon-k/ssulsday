@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ViewPage from "./section/ViewPage.js/ViewPage";
-import {convertGeoToAddress} from "../../../context/serverContext";
-import { getCardList, ApiCardByHashTag } from "../../../repository/CardRepository";
+import { convertGeoToAddress } from "../../../context/serverContext";
+import {
+  getCardList,
+  ApiCardByHashTag
+} from "../../../repository/CardRepository";
 import TapBar from "../../components/TapBar/TapBar";
 
 const dataTags = [
@@ -33,107 +36,120 @@ const sortList = [
   }
 ];
 export default function PageList(props) {
-    const [tags, setTags] = useState(dataTags);
-    const [category, setCategory] = useState(1);
-    const [isSearch, setIsSearch] = useState(false);
-    const [sort, setSort] = useState(sortList[0]);
-    const [cardList, setCardList] = useState([]);
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const res = await getCardList({searchCondition: sort.key, category_id: category});
-                const resCardList = res.data;
-                const dataCardList = await Promise.all(resCardList.map(async (el) => {
-                    let dataSpot = "위치를 찾을 수 없습니다.";
-                    if(el.longitude !== 0 && el.latitude !== 0) {
-                        const resSpot = await convertGeoToAddress(el.longitude, el.latitude);
-                        dataSpot = await resSpot.data.documents[0].address.address_name;
-                    } 
-                    return ({
-                        idx: el.post_id,
-                        title: el.card_title,
-                        contents: el.card_content,
-                        hashTags: el.hashTags,
-                        spot: dataSpot,
-                        date: el.time_created,
-                        comentcounte: el.commentcount,
-                        likecount: el.likecount,
-                        viewcount: el.viewcount
-                    })
-                }));
-                setCardList(dataCardList);
-            } catch (e){
-                console.log(e);
-            } 
-        }
-        async function fetchDataWithSearch(search) {
-            try {
-                const res = await ApiCardByHashTag({searchKeyword: search});
-                const resCardList = res.data;
-                const dataCardList = await Promise.all(resCardList.map(async (el) => {
-                    let dataSpot = "위치를 찾을 수 없습니다.";
-                    if(el.longitude !== 0 && el.latitude !== 0) {
-                        const resSpot = await convertGeoToAddress(el.longitude, el.latitude);
-                        dataSpot = await resSpot.data.documents[0].address.address_name;
-                    } 
-                    return ({
-                        idx: el.post_id,
-                        title: el.card_title,
-                        contents: el.card_content,
-                        hashTags: el.hashTags,
-                        spot: dataSpot,
-                        date: el.time_created,
-                        comentcounte: el.commentcount,
-                        likecount: el.likecount,
-                        viewcount: el.viewcount
-                    })
-                }));
-                setCardList(dataCardList);
-            } catch (e){
-                console.log(e);
-            } 
-        }
-        const search = props.location.search;
-        const keyword = search.split("=")[1];
-        if(keyword) {
-            setIsSearch(true);
-            fetchDataWithSearch(keyword);
-        } else {
-            setIsSearch(false);
-            fetchData();
-        }
-        
-    }, [tags, sort]);
-    function handleClickTag (id) {
-        const tempTags = tags.map(el => {
-            return {...el, isSelected: false}
-        })
-        const sortTags = tempTags.map(el => {
-           if (el.id === id) {
-               return {...el, isSelected: true}
-           } else {
-               return el;
-           }
-        })
-        setTags(sortTags)
+  const [tags, setTags] = useState(dataTags);
+  const [category, setCategory] = useState(1);
+  const [isSearch, setIsSearch] = useState(false);
+  const [sort, setSort] = useState(sortList[0]);
+  const [cardList, setCardList] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await getCardList({
+          searchCondition: sort.key,
+          category_id: category
+        });
+        const resCardList = res.data;
+        const dataCardList = await Promise.all(
+          resCardList.map(async el => {
+            let dataSpot = "위치를 찾을 수 없습니다.";
+            if (el.longitude !== 0 && el.latitude !== 0) {
+              const resSpot = await convertGeoToAddress(
+                el.longitude,
+                el.latitude
+              );
+              dataSpot = await resSpot.data.documents[0].address.address_name;
+            }
+            return {
+              idx: el.post_id,
+              title: el.card_title,
+              contents: el.card_content,
+              hashTags: el.hashTags,
+              spot: dataSpot,
+              date: el.time_created,
+              comentcounte: el.commentcount,
+              likecount: el.likecount,
+              viewcount: el.viewcount
+            };
+          })
+        );
+        setCardList(dataCardList);
+      } catch (e) {
+        console.log(e);
+      }
     }
-    function handleClickCard(id) {
-        props.history.push(`/details/${id}`)
+    async function fetchDataWithSearch(search) {
+      try {
+        const res = await ApiCardByHashTag({ searchKeyword: search });
+        const resCardList = res.data;
+        const dataCardList = await Promise.all(
+          resCardList.map(async el => {
+            let dataSpot = "위치를 찾을 수 없습니다.";
+            if (el.longitude !== 0 && el.latitude !== 0) {
+              const resSpot = await convertGeoToAddress(
+                el.longitude,
+                el.latitude
+              );
+              dataSpot = await resSpot.data.documents[0].address.address_name;
+            }
+            return {
+              idx: el.post_id,
+              title: el.card_title,
+              contents: el.card_content,
+              hashTags: el.hashTags,
+              spot: dataSpot,
+              date: el.time_created,
+              comentcounte: el.commentcount,
+              likecount: el.likecount,
+              viewcount: el.viewcount
+            };
+          })
+        );
+        setCardList(dataCardList);
+      } catch (e) {
+        console.log(e);
+      }
     }
-    function updateSort(sortId) {
-        setSort(sort[sortId])
+    const search = props.location.search;
+    const keyword = search.split("=")[1];
+    if (keyword) {
+      setIsSearch(true);
+      fetchDataWithSearch(keyword);
+    } else {
+      setIsSearch(false);
+      fetchData();
     }
-    return (
-        <>
-        <ViewPage
+  }, [tags, sort]);
+  function handleClickTag(id) {
+    const tempTags = tags.map(el => {
+      return { ...el, isSelected: false };
+    });
+    const sortTags = tempTags.map(el => {
+      if (el.id === id) {
+        return { ...el, isSelected: true };
+      } else {
+        return el;
+      }
+    });
+    setTags(sortTags);
+  }
+  function handleClickCard(id) {
+    props.history.push(`/details/${id}`);
+  }
+  function updateSort(sortId) {
+    setSort(sort[sortId]);
+  }
+  return (
+    <>
+      <ViewPage
         isSearch={isSearch}
-         cardList={cardList}
-         sort={sort}
-         dataTags={tags}
-         handleClickTag={handleClickTag}
-         handleClickCard={handleClickCard}
-         />
-         <TapBar selected="list" />
-        </>
-    )
+        cardList={cardList}
+        sort={sort}
+        dataTags={tags}
+        handleClickTag={handleClickTag}
+        handleClickCard={handleClickCard}
+        history={props.history}
+      />
+      <TapBar selected="list" />
+    </>
+  );
 }

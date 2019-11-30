@@ -18,32 +18,41 @@ function renderTags(props) {
     </span>
   ));
 }
-export default function ViewPage (props) {
-    const {isSearch, cardList, sort,dataTags, handleClickTag, handleClickCard} = props;
-    function handleClickUpdateSortModal(){
-
-    }
-    return (
-        <Layout className={cx("page")} >
-            <Layout.Header className={cx("header")}>
-            <ListHeader />
-                <div className={cx("tags")} >
-    {isSearch && <span className={cx("tag","tag--clicked")} onClick={handleClickUpdateSortModal} >{sort.text}</span>}
-                    {isSearch && renderTags({dataTags, handleClickTag})}
-                </div>
-            </Layout.Header>
-            <Layout.Content>
-                <div className={cx("list")} >
-                        {
-                         cardList.map(el => (
-                            <div onClick={handleClickCard.bind(this, el.idx)} >
-                                <CardView {...el} />
-                            </div>
-                        ))
-                        }
-                </div>
-                 
-            </Layout.Content>
-        </Layout>
-    )
+export default function ViewPage(props) {
+  const {
+    isSearch,
+    cardList,
+    sort,
+    dataTags,
+    handleClickTag,
+    handleClickCard
+  } = props;
+  function handleClickUpdateSortModal() {}
+  return (
+    <Layout className={cx("page")}>
+      <Layout.Header className={cx("header")}>
+        <ListHeader history={props.history} />
+        <div className={cx("tags")}>
+          {isSearch && (
+            <span
+              className={cx("tag", "tag--clicked")}
+              onClick={handleClickUpdateSortModal}
+            >
+              {sort.text}
+            </span>
+          )}
+          {isSearch && renderTags({ dataTags, handleClickTag })}
+        </div>
+      </Layout.Header>
+      <Layout.Content>
+        <div className={cx("list")}>
+          {cardList.map(el => (
+            <div onClick={handleClickCard.bind(this, el.idx)}>
+              <CardView {...el} />
+            </div>
+          ))}
+        </div>
+      </Layout.Content>
+    </Layout>
+  );
 }
