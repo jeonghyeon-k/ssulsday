@@ -14,6 +14,7 @@ import styles from "./CardView.scss";
 import classNames from "classnames/bind";
 import Icon from "../Icon/Icon";
 import PropTypes from "prop-types";
+<<<<<<< HEAD
 const cx = classNames.bind(styles);
 
 function CardView({
@@ -29,6 +30,35 @@ function CardView({
 }) {
 
 
+=======
+import {ApiPostLike} from "../../../repository/LikeRepository"
+
+const cx = classNames.bind(styles);
+let id = localStorage.getItem('userid');
+function CardView({ ...props }) {
+  const [like, setLike] = useState(props.islike);
+  const onLike = () => {
+    ApiPostLike({
+      user_id: id,
+      post_id: props.post_id
+    }).then(data => {
+      if (data.data.retMsg == "OK") {
+      localStorage.login = true;
+      localStorage.setItem('userid', id);
+       window.location.reload();
+      } else {
+      }
+    });
+    setLike(!like);
+    
+  };
+  let now = new Date();
+  let old = new Date(props.date);
+  let gap = now.getTime()-old.getTime();
+  let sec_gap = gap / 10000000;
+  let set_gap=Math.floor(sec_gap);
+  console.log(props.hashtags);
+>>>>>>> d1f958d... feate. 좋아요 api 추가
   return (
     <div className={cx("card_container")}>
       <div className={cx("card_head")}>
