@@ -23,20 +23,18 @@ const Detailspage = ({ ...props }) => {
   };
 
   const [card, setCard] = useState(null);
-  const [comment, setComment] = useState(null);
+  const [comment, setComment] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   useEffect(() => {
-    const fetchUsers = async () => {
+    async function fetchUsers () {
       try {
-        getCardById({ postId: postid }).then(data => {
-          const response = data.data;
-          setCard(response);
-        });
-        getCommentById({ id: postid }).then(data => {
-          const response = data.data;
-          setComment(response);
-        });
+        const resCard = await getCardById({ postId: postid });
+        const dataCard = resCard.data;
+        setCard(dataCard);
+        const resComment = await getCommentById({ id: postid })
+        const dataComment = resComment.data;
+        setComment(dataComment);
       } catch (e) {
         setError(e);
       }
