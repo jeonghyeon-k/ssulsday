@@ -15,6 +15,7 @@ import classNames from "classnames/bind";
 import Icon from "../Icon/Icon";
 import PropTypes from "prop-types";
 <<<<<<< HEAD
+<<<<<<< HEAD
 const cx = classNames.bind(styles);
 
 function CardView({
@@ -32,9 +33,12 @@ function CardView({
 
 =======
 import {ApiPostLike} from "../../../repository/LikeRepository"
+=======
+import { ApiPostLike } from "../../../repository/LikeRepository";
+>>>>>>> e2f8617... master/fix
 
 const cx = classNames.bind(styles);
-let id = localStorage.getItem('userid');
+let id = localStorage.getItem("userid");
 function CardView({ ...props }) {
   const [like, setLike] = useState(props.islike);
   const onLike = () => {
@@ -43,19 +47,26 @@ function CardView({ ...props }) {
       post_id: props.post_id
     }).then(data => {
       if (data.data.retMsg == "OK") {
-      localStorage.login = true;
-      localStorage.setItem('userid', id);
-       window.location.reload();
+        localStorage.login = true;
+        localStorage.setItem("userid", id);
+        window.location.reload();
       } else {
       }
     });
     setLike(!like);
   };
+<<<<<<< HEAD
+  let now = new Date();
+  let old = new Date(props.date);
+  let gap = now.getTime() - old.getTime();
+=======
 
   let now = new Date("YYYY/MM/DD");
   let old = new Date(props.date.replace("-","/"));
   let gap = now.getTime()-old.getTime();
+>>>>>>> 8948c3df38bcebd81ef30c185a7b5d3bbb4f0082
   let sec_gap = gap / 10000000;
+<<<<<<< HEAD
   let set_gap=Math.floor(sec_gap);
   console.log(props.hashtags);
 >>>>>>> d1f958d... feate. 좋아요 api 추가
@@ -68,6 +79,25 @@ function CardView({ ...props }) {
         <button className={cx("card_commentbutton")}>
           <Icon type="test"/>
         </button>
+=======
+<<<<<<< HEAD
+  let set_gap = Math.floor(sec_gap);
+  console.log(set_gap);
+  return (
+    <div className={cx("card")}>
+      <div className={cx("header")}>
+        <div className={cx("header__title")}>{props.title}</div>
+        <Ellipse>{props.category_id}</Ellipse>
+      </div>
+      <div className={cx("contents")}>{props.contents} </div>
+      {props.hashtags && <div className={cx("hash")}>{props.hashtags}</div>}
+      <div className={cx("info")}>
+        <Icon type="location" size="xsm" />
+
+        <div className={cx("info__place")}>{props.spot}</div>
+
+        <div className={cx("info__date")}>{set_gap}시간전</div>
+>>>>>>> e2f8617... master/fix
 =======
     <div className={cx("card")}>
       <div className={cx("header")}>
@@ -87,6 +117,7 @@ function CardView({ ...props }) {
 
         <div className={cx("info__date")}>{set_gap}시간전</div>
 >>>>>>> b55434a... no message
+>>>>>>> 8948c3df38bcebd81ef30c185a7b5d3bbb4f0082
       </div>
 <<<<<<< HEAD
       {type ? false : <div className={cx("card_content")}>{Contents}</div>}
@@ -109,15 +140,19 @@ function CardView({ ...props }) {
       <div className={cx("bottom")}>
         <div className={cx("bottom__comentcount")}>{props.comentcounte}</div>
         <div className={cx("bottom__commenticon")}>
-          <Icon type='message' />
+          <Icon type="message" />
         </div>
         <div className={cx("bottom__likeicon")} onClick={onLike}>
-          {like ? <Icon type='heart' /> : <Icon type='heart-dimmed' />}
+          {like ? <Icon type="heart" /> : <Icon type="heart-dimmed" />}
         </div>
         <div className={cx("bottom__likecount")}>{props.likecount}</div>
         <div className={cx("bottom__viewicon")}>
+<<<<<<< HEAD
           <Icon type='viewer' />
 >>>>>>> e907aec... style. assets에 로그인 로고 추가 docs. 마이페이지
+=======
+          <Icon type="viewer" />
+>>>>>>> e2f8617... master/fix
         </div>
       </div>
     </div>

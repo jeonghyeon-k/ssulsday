@@ -24,10 +24,17 @@ $font-size: 14px;
   font-family: "NotoSans";
   font-style: normal;
   font-weight: normal;
+<<<<<<< HEAD:src/views/components/Card/CardView.scss
 }
 .header__hash {
   float: right;
+=======
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+>>>>>>> e2f8617... master/fix:src/views/components/Card/CardView.module.scss
 }
+
 .contents {
   @extend .padding;
   max-height: 64px;
