@@ -1,0 +1,58 @@
+@import "../../style/index.scss";
+
+.header {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.header-back {
+  display: inline-block;
+}
+.header-title {
+  display: inline-block;
+  margin-left: 96px;
+  font-size: 18px;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: normal;
+}
+.header-btn {
+  display: inline-block;
+  margin-left: 89px;
+  font-size: 16px;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: normal;
+  color: $main-butterscotch;
+}
+.updateform {
+  margin-top: 40px;
+  padding-left: 16px;
+  padding-right: 15.5px;
+}
+.update__title {
+  font-size: 16px;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: normal;
+}
+.update__box {
+  margin-top: 10px;
+  border-bottom: 1px solid $main-black-4;
+  color: $main-black-4;
+  &-focus {
+    border-bottom: 1px solid #000000;
+    color: $main-black-1;
+  }
+}
+.update__box__input {
+  font-size: 14px;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 300;
+  outline: none;
+}
+.update__box__icon {
+  float: right;
+}
