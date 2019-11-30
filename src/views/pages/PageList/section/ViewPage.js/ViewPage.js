@@ -26,7 +26,7 @@ export default function ViewPage (props) {
     return (
         <Layout className={cx("page")} >
             <Layout.Header className={cx("header")}>
-                <h1>bar</h1>
+            <ListHeader />
                 <div className={cx("tags")} >
     {isSearch && <span className={cx("tag","tag--clicked")} onClick={handleClickUpdateSortModal} >{sort.text}</span>}
                     {isSearch && renderTags({dataTags, handleClickTag})}
