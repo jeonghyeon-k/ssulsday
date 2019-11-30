@@ -66,7 +66,7 @@ const Detailspage = ({ ...props }) => {
 >>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
       <Ellipse />
       <div className={cx("pageblock")}>
-        <div className={cx("title")}>{card.card_title}</div>
+        <div className={cx("title")}>{card.post_title}</div>
         <div className={cx("head")}>
           <div className={cx("head__username")}>{card.username}</div>
           <div className={cx("head__date")}>{props.date}</div>
@@ -80,7 +80,7 @@ const Detailspage = ({ ...props }) => {
           <div className={cx("head__viewcount")}>{card.viewcount}</div>
         </div>
         <hr className={cx("hrbar")} />
-        <div className={cx("cardcontent")}>{card.card_content}</div>
+        <div className={cx("cardcontent")}>{card.post_content}</div>
         <div className={cx("hashtag")}>{card.hashtags}</div>
         <div className={cx("placeicon")}>
           <Icon type="location" />
