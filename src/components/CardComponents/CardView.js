@@ -52,7 +52,6 @@ function CardView({ ...props }) {
   let gap = now.getTime()-old.getTime();
   let sec_gap = gap / 10000000;
   let set_gap=Math.floor(sec_gap);
-  console.log(props.hashtags);
   return (
     <div className={cx("card")}>
       <div className={cx("header")}>
