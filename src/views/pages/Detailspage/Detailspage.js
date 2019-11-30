@@ -96,13 +96,14 @@ const Detailspage = ({ ...props }) => {
           comment={comment.comment_content}
         />
       ))}
-      <CommnetCreate postId={props.cardid} userId={props.userId} />
+      <CommnetCreate postId={postid} userId={props.user_id} />
     </div>
   );
 };
 
 Detailspage.prototype = {
   title: PropTypes.string,
+  user_id: PropTypes.string,
   username: PropTypes.string,
   date: PropTypes.string,
   viewcount: PropTypes.string,
@@ -110,7 +111,7 @@ Detailspage.prototype = {
   contents: PropTypes.string,
   hashtags: PropTypes.string,
   spot: PropTypes.string.isRequired,
-  comentcounte: PropTypes.string,
+  commentcount: PropTypes.string,
   commentlist: PropTypes.func
 };
 
