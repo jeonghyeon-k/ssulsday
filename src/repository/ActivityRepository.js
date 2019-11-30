@@ -22,9 +22,11 @@ export const ApiGetActivityMyCommentListList = async (param) => {
     });
 }
 export const ApiGetActivityMyListCount = async (param) => {
+    console.log(param);
     return await api({
         url: `/cms/activity/mycount.do`,
         type: "get",
         param
+        
     });
 }

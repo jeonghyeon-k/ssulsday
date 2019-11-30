@@ -9,7 +9,7 @@ export const getCardList = async param => {
 };
 export const getCardById = async param => {
   return await api({
-    url: `/cms/card/view.do/${param.postId}`,
+    url: `/cms/post/view.do/${param.postId}`,
     type: "get",
     param
   });
