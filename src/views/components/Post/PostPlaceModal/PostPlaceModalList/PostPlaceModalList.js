@@ -21,7 +21,7 @@ const PostPlaceModalList = ({ ...props }) => {
   return (
     <>
       <div className={cx("around")}>
-        <Icon type="location-3" className="location-3" />
+        <Icon type="location-3" className="location-icon3" />
         <span className={cx("around__text")}>현재 위치 근처 장소</span>
       </div>
       {props.places.map((place, index) => (

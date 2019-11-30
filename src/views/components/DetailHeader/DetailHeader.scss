@@ -1,0 +1,16 @@
+@import "../../style/index.scss";
+
+.detail__header {
+  width: 95%;
+  height: 30pt;
+  margin: 0 auto;
+  margin-top: 5pt;
+  &-back {
+    float: left;
+    width: 30px;
+  }
+  &-share {
+    float: right;
+    width: 30px;
+  }
+}
