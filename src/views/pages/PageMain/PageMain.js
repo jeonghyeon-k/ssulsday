@@ -65,16 +65,13 @@ export default function PageMain(props) {
   }
   function handleClickLocation() {}
   return (
-    <>
-      <ViewPage
-        userLocation={userLocation}
-        locationList={locationList}
-        handleClickSearch={handleClickSearch}
-        handleClickLocationItem={handleClickLocationItem}
-        handleClickSsulItem={handleClickSsulItem}
-        handleClickMoreSsul={handleClickMoreSsul}
-      />
-      <TapBar selected="home" />
-    </>
+    <ViewPage
+      userLocation={userLocation}
+      locationList={locationList}
+      handleClickSearch={handleClickSearch}
+      handleClickLocationItem={handleClickLocationItem}
+      handleClickSsulItem={handleClickSsulItem}
+      handleClickMoreSsul={handleClickMoreSsul}
+    />
   );
 }
