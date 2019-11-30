@@ -5,6 +5,7 @@ import {
   NotFoundPage,
   PostPage,
   SearchPage,
+  PageList,
   DetailsPage,
   SignUpPage,
   FindPasswordPage,
@@ -29,6 +30,7 @@ const Main = () => {
       <Route path="/post" component={PostPage} />
       <Route path="/search" component={SearchPage} />
       <Route path="/details/:postid" component={DetailsPage} />
+      <Route path="/list" component={PageList} />
       <Route path="/signup" component={SignUpPage} />
       <Route path="/find-password" component={FindPasswordPage} />
       <Route exact path="/mypage/" component={Mypage} />
