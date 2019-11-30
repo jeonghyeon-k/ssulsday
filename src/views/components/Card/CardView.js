@@ -24,8 +24,9 @@ function CardView({ ...props }) {
     });
     setLike(!like);
   };
-  let now = new Date();
-  let old = new Date(props.date);
+
+  let now = new Date("YYYY/MM/DD");
+  let old = new Date(props.date.replace("-", "/"));
   let gap = now.getTime() - old.getTime();
   let sec_gap = gap / 10000000;
   let set_gap = Math.floor(sec_gap);
