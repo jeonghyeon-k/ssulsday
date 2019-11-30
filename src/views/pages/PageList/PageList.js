@@ -118,7 +118,7 @@ export default function PageList(props) {
         setTags(sortTags)
     }
     function handleClickCard(id) {
-        props.history.push()
+        props.history.push(`/details/${id}`)
     }
     function updateSort(sortId) {
         setSort(sort[sortId])
