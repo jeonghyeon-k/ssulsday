@@ -51,8 +51,13 @@ const LoginPage = (props) => {
     });
   };
   const onSignUp = () => {
-    window.location.reload("/signup");
+    window.location.assign("/signup");
   }
+
+const findpwd=()=>{
+  window.location.assign("/find-password");
+}
+
 
   return (
     <div className={cx("loginpage")}>
@@ -92,9 +97,9 @@ const LoginPage = (props) => {
           <span className={cx("bottom__Autologin__span")}>자동로그인</span>
         </div>
 
-        <a href='/' className={cx("bottom__forgotpassword")}>
+        <div onClick={findpwd}className={cx("bottom__forgotpassword")}>
           비밀번호 찾기
-        </a>
+        </div>
         <button className={cx("bottom__signupbutton")} onClick={onSignUp}>회원가입</button>
       </div>
     </div>

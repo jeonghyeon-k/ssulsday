@@ -1,7 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import {
-  SamplePage,
   NotFoundPage,
   PostPage,
   SearchPage,
@@ -39,8 +38,7 @@ const Main = () => {
       <Route path="/signup" component={SignUpPage} />
       <Route exact path="/mypage/" component={Mypage} />
       <Route path="/mypage/question" component={question} />
-      <Route path="/mypage" component={Mypage} />
-      <Route path="/updateuser" component={UpdatePage} />
+      <Route path="/mypage/updateuser" component={UpdatePage} />
       <Route component={NotFoundPage} />
     </Switch>
   );
