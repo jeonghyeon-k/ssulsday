@@ -52,9 +52,10 @@ const LoginPage = ({ isCookie }) => {
       });
   };
   const onSignUp = () => {
-    window.location.reload("/signup");
+    window.location.assign("/signup");
   }
 
+<<<<<<< HEAD
   if (isCookie != null) {
     return <span>자동로그인</span>;
   } else {
@@ -84,6 +85,39 @@ const LoginPage = ({ isCookie }) => {
           <button className={cx("bottom__loginbutton")} onClick={onClick}>
             로그인
           </button>
+=======
+const findpwd=()=>{
+  window.location.assign("/find-password");
+}
+
+
+  return (
+    <div className={cx("loginpage")}>
+      <div className={cx("header")}>
+        <img className={cx("header__logo")} src={logo} alt='logo' />
+      </div>
+      <div className={cx("input")}>
+        <input
+          className={cx("input__email")}
+          name='id'
+          placeholder='이메일 주소'
+          onChange={onChange}
+          value={id}
+        />
+        <input
+          className={cx("input__password")}
+          name='pwd'
+          placeholder='비밀번호'
+          type='password'
+          onChange={onChange}
+          value={pwd}
+        />
+      </div>
+      <div className={cx("bottom")}>
+        <button className={cx("bottom__loginbutton")} onClick={onClick}>
+          로그인
+        </button>
+>>>>>>> 738cf39... fix. error
 
           <div className={cx("bottom__Autologin")} onClick={onCheck}>
             <div className={cx("bottom__Autologin__icon")}>
@@ -97,6 +131,7 @@ const LoginPage = ({ isCookie }) => {
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           <a href='/' className={cx("bottom__forgotpassword")}>
             비밀번호 찾기
           </a>
@@ -104,8 +139,11 @@ const LoginPage = ({ isCookie }) => {
         </div>
 =======
         <a href='/' className={cx("bottom__forgotpassword")}>
+=======
+        <div onClick={findpwd}className={cx("bottom__forgotpassword")}>
+>>>>>>> 738cf39... fix. error
           비밀번호 찾기
-        </a>
+        </div>
         <button className={cx("bottom__signupbutton")} onClick={onSignUp}>회원가입</button>
 >>>>>>> 6111460... feat.회원가입
       </div>

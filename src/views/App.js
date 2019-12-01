@@ -1,7 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import {
-  SamplePage,
   NotFoundPage,
 <<<<<<< HEAD
   PostPage,
@@ -89,10 +88,16 @@ const Main = () => {
       <Route exact path="/mypage/" component={Mypage} />
       <Route path="/mypage/question" component={question} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bc0949e... feat. 마이페이지- 문의하기
 =======
 <<<<<<< HEAD
 >>>>>>> bc0949e... feat. 마이페이지- 문의하기
+=======
+<<<<<<< HEAD
+      <Route path="/details" component={DetailsPage} />
+      <Route path="/find-password" component={FindPasswordPage} />
+>>>>>>> 3c72d1f... fix. starcount error
 =======
       <Route path="/details" component={DetailsPage} />
       <Route path="/find-password" component={FindPasswordPage} />
@@ -100,8 +105,14 @@ const Main = () => {
 >>>>>>> 84a06a7... 리베이스 커밋
 =======
       <Route path="/mypage" component={Mypage} />
+<<<<<<< HEAD
 >>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
+=======
+=======
+      <Route path="/mypage/updateuser" component={UpdatePage} />
+>>>>>>> 738cf39... fix. error
+>>>>>>> 3c72d1f... fix. starcount error
       <Route component={NotFoundPage} />
     </Switch>
 =======

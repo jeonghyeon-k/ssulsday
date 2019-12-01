@@ -11,17 +11,37 @@ const cx = classNames.bind(styles);
 const Mypage = ({ ...props }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 3c72d1f... fix. starcount error
   const { userid } = props.match.params;
 >>>>>>> 84a06a7... 리베이스 커밋
 
 =======
+<<<<<<< HEAD
 >>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
+=======
+>>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
+=======
+  let id = localStorage.getItem("userid");
+
+  const onUpdate = () => {
+    window.location.assign("/mypage/updateuser");
+  };
+
+  const onLogout = () => {
+    localStorage.login = false;
+    window.location.assign("/");
+  };
+>>>>>>> 738cf39... fix. error
+>>>>>>> 3c72d1f... fix. starcount error
   return (
     <div className={cx("template")}>
       <Navbar />
       <div className={cx("header")}>
         <div className={cx("header__usericon")}>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Icon type='test' />
 =======
@@ -40,6 +60,12 @@ const Mypage = ({ ...props }) => {
         <hr />
 =======
         <div className={cx("header__editicon")}>수정</div>
+=======
+          <Icon type='location-2' />
+        </div>
+        <div className={cx("header__username")}>{id}</div>
+        <div onClick={onUpdate} className={cx("header__editicon")}>수정</div>
+>>>>>>> 3c72d1f... fix. starcount error
         <hr className={cx("header__hr")} />
       </div>
       <div className={cx("box")}>
@@ -59,13 +85,15 @@ const Mypage = ({ ...props }) => {
       </div>
       <div className={cx("support")}>
         <div className={cx("item__title")}>지원</div>
-        <Item title="문의하기" />
+        <Item title='문의하기' />
       </div>
       <div className={cx("account")}>
         <div className={cx("item__title")}>계정</div>
-        <Item title="로그아웃" />
+        <div onClick={onLogout}>
+          <Item title='로그아웃' />
+        </div>
       </div>
-      <TapBar selected="mypage" />
+      <TapBar selected='mypage' />
     </div>
   );
 };
