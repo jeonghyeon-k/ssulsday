@@ -10,19 +10,32 @@ const cx = classNames.bind(styles);
 
 const Mypage = ({ ...props }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { userid } = props.match.params;
 
 =======
 >>>>>>> c5630b6bfce9eb77102c80f487f797567862585a
+=======
+  let id = localStorage.getItem("userid");
+
+  const onUpdate = () => {
+    window.location.assign("/mypage/updateuser");
+  };
+
+  const onLogout = () => {
+    localStorage.login = false;
+    window.location.assign("/");
+  };
+>>>>>>> 738cf39... fix. error
   return (
     <div className={cx("template")}>
       <Navbar />
       <div className={cx("Mypageheader")}>
         <div className={cx("header__usericon")}>
-          <Icon type="location-2" />
+          <Icon type='location-2' />
         </div>
-        <div className={cx("header__username")}>{props.name}</div>
-        <div className={cx("header__editicon")}>수정</div>
+        <div className={cx("header__username")}>{id}</div>
+        <div onClick={onUpdate} className={cx("header__editicon")}>수정</div>
         <hr className={cx("header__hr")} />
       </div>
       <div className={cx("box")}>
@@ -41,13 +54,15 @@ const Mypage = ({ ...props }) => {
       </div>
       <div className={cx("support")}>
         <div className={cx("item__title")}>지원</div>
-        <Item title="문의하기" />
+        <Item title='문의하기' />
       </div>
       <div className={cx("account")}>
         <div className={cx("item__title")}>계정</div>
-        <Item title="로그아웃" />
+        <div onClick={onLogout}>
+          <Item title='로그아웃' />
+        </div>
       </div>
-      <TapBar selected="mypage" />
+      <TapBar selected='mypage' />
     </div>
   );
 };

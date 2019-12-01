@@ -1,7 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import {
-  SamplePage,
   NotFoundPage,
 <<<<<<< HEAD
   PostPage,
@@ -49,6 +48,7 @@ const Main = () => {
       <Route exact path="/mypage/" component={Mypage} />
       <Route path="/mypage/question" component={question} />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Route path="/details" component={DetailsPage} />
       <Route path="/find-password" component={FindPasswordPage} />
 =======
@@ -59,6 +59,9 @@ const Main = () => {
 =======
 >>>>>>> 3acf100... 비밀번호 찾기 마무리
       <Route path="/mypage" component={Mypage} />
+=======
+      <Route path="/mypage/updateuser" component={UpdatePage} />
+>>>>>>> 738cf39... fix. error
       <Route component={NotFoundPage} />
     </Switch>
 =======

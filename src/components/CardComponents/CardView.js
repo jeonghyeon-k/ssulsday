@@ -34,12 +34,14 @@ function CardView({ ...props }) {
   const [like, setLike] = useState(props.islike);
   const[likecount, setCount] = useState(props.likecount);
   const onLike = () => {
-    if(likecount){
-      likecount+=1;
-      setCount(likecount);
+    if(!likecount){
+      let getcount = Number(likecount)+1;
+      setCount(getcount);
+      setLike(!like);
     }else{ 
-      likecount-=1;
+      let getcount = Number(likecount)-1;
       setCount(likecount);
+      setLike(!like);
     }
     setLike(like)
     ApiPostLike({
@@ -92,7 +94,7 @@ function CardView({ ...props }) {
         <div className={cx("bottom__likeicon")} onClick={onLike}>
           {like ? <Icon type="heart" /> : <Icon type="heart-dimmed" />}
         </div>
-        <div className={cx("bottom__likecount")}>{props.likecount}</div>
+        <div className={cx("bottom__likecount")}>{likecount}</div>
         <div className={cx("bottom__viewicon")}>
           <Icon type="viewer" />
         </div>
