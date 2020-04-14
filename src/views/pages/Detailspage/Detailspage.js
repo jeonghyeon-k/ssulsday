@@ -15,7 +15,11 @@ import Modal from "../../components/Modal/PostModal/PostModal"
 import { getCardById } from "../../../repository/CardRepository";
 import DetailHeader from "../../components/DetailHeader";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
+>>>>>>> e64739f19fef7d351189f5b3d74376d10bf1fd04
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 =======
 import place from "../../../assets/images/invalidName.png";
 >>>>>>> a619475... feat. 장소사진 추가
@@ -71,7 +75,11 @@ const Detailspage = ({ ...props }) => {
       <Navbar />
 =======
       <DetailHeader history={props.history} />
+<<<<<<< HEAD
 >>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
+>>>>>>> e64739f19fef7d351189f5b3d74376d10bf1fd04
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
       <Ellipse />
       <div className={cx("pageblock")}>
         <div className={cx("title")}>{card.post_title}</div>
@@ -117,8 +125,13 @@ const Detailspage = ({ ...props }) => {
       <CommnetCreate postId={props.cardid} userId={props.userId} />
 =======
       <CommnetCreate postId={props.cardid} />
+<<<<<<< HEAD
 >>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
 >>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
+>>>>>>> c5630b6bfce9eb77102c80f487f797567862585a
+>>>>>>> e64739f19fef7d351189f5b3d74376d10bf1fd04
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 =======
       <CommnetCreate postId={postid} userId={props.user_id} />
 >>>>>>> c31fc0e... feat. 댓글 수정

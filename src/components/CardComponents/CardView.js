@@ -61,7 +61,11 @@ function CardView({ ...props }) {
   let now = new Date("YYYY/MM/DD");
   let old = new Date(props.date.replace("-","/"));
   let gap = now.getTime()-old.getTime();
+<<<<<<< HEAD
 >>>>>>> 70aaeb3c7696578a7b73856cf49739ec4d8dcb8e
+=======
+>>>>>>> eb7ecdd4ce0044ebfb1c4e4246fb583a7e26b054
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
   let sec_gap = gap / 10000000;
   let set_gap = Math.floor(sec_gap);
   console.log(set_gap);
@@ -82,7 +86,11 @@ function CardView({ ...props }) {
         <Icon type='location' size='xsm' />
        
           <div className={cx("info__place")}>{props.spot}</div>
+<<<<<<< HEAD
 >>>>>>> 70aaeb3c7696578a7b73856cf49739ec4d8dcb8e
+=======
+>>>>>>> eb7ecdd4ce0044ebfb1c4e4246fb583a7e26b054
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 
         <div className={cx("info__date")}>{set_gap}시간전</div>
       </div>
