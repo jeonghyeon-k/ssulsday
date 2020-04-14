@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 import Icon from "../../components/Icon/Icon";
 import { getCommentById } from "../../../repository/CommentRepository";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {getCardById} from "../../../repository/CardRepository";
 import Modal from "../../components/Modal/PostModal/PostModal"
 =======
@@ -27,6 +28,17 @@ import place from "../../../assets/images/invalidName.png";
 const cx = classNames.bind(styles);
 
 const Detailspage = ({ ...props }, { commentlist }) => {
+=======
+import { getCardById } from "../../../repository/CardRepository";
+import DetailHeader from "../../components/DetailHeader";
+import place from "../../../assets/images/invalidName.png";
+
+const cx = classNames.bind(styles);
+
+const Detailspage = ({ ...props }) => {
+  const { postid } = props.match.params;
+  console.log(postid);
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
   const [like, setLike] = useState(props.islike);
   const[likecount, setCount] = useState(postid);
   const [isModal, setModal] = useState(true);
@@ -49,6 +61,7 @@ const Detailspage = ({ ...props }, { commentlist }) => {
     async function fetchUsers () {
       try {
 <<<<<<< HEAD
+<<<<<<< HEAD
         getCardById({ postId: props.cardid }).then(data => {
           const response = data.data;
           console.log(response);
@@ -60,13 +73,18 @@ const Detailspage = ({ ...props }, { commentlist }) => {
           setComment(response);
         });
 =======
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
         const resCard = await getCardById({ postId: postid });
         const dataCard = resCard.data;
         setCard(dataCard);
         const resComment = await getCommentById({ id: postid })
         const dataComment = resComment.data;
         setComment(dataComment);
+<<<<<<< HEAD
 >>>>>>> db81a76... [master]/fix detailPage UPdate
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
       } catch (e) {
         setError(e);
       }
@@ -82,11 +100,15 @@ const Detailspage = ({ ...props }, { commentlist }) => {
   return (
     <div className={cx("Template")}>
 <<<<<<< HEAD
+<<<<<<< HEAD
      
       <Navbar />
 =======
       <DetailHeader history={props.history} />
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
+=======
+      <DetailHeader history={props.history} />
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
       <Ellipse />
       <div className={cx("pageblock")}>
         <div className={cx("title")}>{card.post_title}</div>
@@ -127,6 +149,7 @@ const Detailspage = ({ ...props }, { commentlist }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <CommnetCreate postId= {props.cardid} />
 =======
 =======
@@ -151,6 +174,9 @@ const Detailspage = ({ ...props }, { commentlist }) => {
       <CommnetCreate postId={postid} userId={props.user_id} />
 >>>>>>> c31fc0e... feat. 댓글 수정
 >>>>>>> 8241650... feat. 좋아요
+=======
+      <CommnetCreate postId={postid} userId={props.user_id} />
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
     </div>
   );
 };

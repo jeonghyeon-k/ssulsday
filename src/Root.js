@@ -6,7 +6,11 @@ import Update from "./views/pages/UpdateUserpage/UpdateUser"
 const Root = () => {
   return (
     <BrowserRouter>
+<<<<<<< HEAD
       <Update/>
+=======
+      <App/>
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
     </BrowserRouter>
   );
 };

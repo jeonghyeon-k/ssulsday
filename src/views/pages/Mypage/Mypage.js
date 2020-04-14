@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import styles from "./Mypage.scss";
+=======
+import styles from "./Mypage.module.scss";
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 import classNames from "classnames/bind";
 import Navbar from "../../components/Navbar/Navbar";
 import Icon from "../../components/Icon/Icon";
@@ -9,6 +13,7 @@ import TapBar from "../../components/TapBar/TapBar";
 const cx = classNames.bind(styles);
 
 const Mypage = ({ ...props }) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +29,8 @@ const Mypage = ({ ...props }) => {
 =======
 >>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
 =======
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
   let id = localStorage.getItem("userid");
 
   const onUpdate = () => {
@@ -34,6 +41,7 @@ const Mypage = ({ ...props }) => {
     localStorage.login = false;
     window.location.assign("/");
   };
+<<<<<<< HEAD
 >>>>>>> 738cf39... fix. error
 >>>>>>> 3c72d1f... fix. starcount error
   return (
@@ -61,17 +69,30 @@ const Mypage = ({ ...props }) => {
 =======
         <div className={cx("header__editicon")}>수정</div>
 =======
+=======
+  return (
+    <div className={cx("template")}>
+      <Navbar />
+      <div className={cx("Mypageheader")}>
+        <div className={cx("header__usericon")}>
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
           <Icon type='location-2' />
         </div>
         <div className={cx("header__username")}>{id}</div>
         <div onClick={onUpdate} className={cx("header__editicon")}>수정</div>
+<<<<<<< HEAD
 >>>>>>> 3c72d1f... fix. starcount error
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
         <hr className={cx("header__hr")} />
       </div>
       <div className={cx("box")}>
         <div className={cx("box__count")}>{props.mycontentcount}</div>
         <div className={cx("box__title")}>작성한 글</div>
+<<<<<<< HEAD
 >>>>>>> e907aec... style. assets에 로그인 로고 추가 docs. 마이페이지
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
       </div>
 
       <div className={cx("box")}>
@@ -98,6 +119,7 @@ const Mypage = ({ ...props }) => {
   );
 };
 
+<<<<<<< HEAD
 Mypage.prototype = {
 
 };
@@ -105,6 +127,13 @@ Mypage.defaultProps = {
   mycontentcount: 0,
   mycommentcount:0,
   mylikecount:0
+=======
+Mypage.prototype = {};
+Mypage.defaultProps = {
+  mycontentcount: 0,
+  mycommentcount: 0,
+  mylikecount: 0
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 };
 
 export default Mypage;

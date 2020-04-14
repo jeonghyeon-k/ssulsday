@@ -15,7 +15,11 @@ const PostHeader = ({ ...props }) => {
       <div className="header__back" onClick={handleBack}>
         <Icon type="arrow" />
       </div>
+<<<<<<< HEAD
       <span className={cx("header__title")}>새로운썰</span>
+=======
+      <span className={cx("header__title")}>새로운 썰</span>
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
       <span className={cx("post__finish")} onClick={props.handlePost}>
         완료
       </span>

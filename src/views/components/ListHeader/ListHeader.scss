@@ -1,0 +1,25 @@
+@import "../../style/index.scss";
+
+.list {
+  &__wrapper {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 8pt;
+    padding: 5px;
+    border: 1px solid $main-white;
+    border-radius: 8px;
+    background: $main-white;
+  }
+  &__arrow {
+    flex: 1;
+  }
+  &__input {
+    flex: 8;
+    border: none;
+    outline: none;
+  }
+  &__search {
+    flex: 1;
+  }
+}
