@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 import Icon from "../../components/Icon/Icon";
 import { getCommentById } from "../../../repository/CommentRepository";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {getCardById} from "../../../repository/CardRepository";
 import Modal from "../../components/Modal/PostModal/PostModal"
 =======
@@ -19,6 +20,11 @@ import DetailHeader from "../../components/DetailHeader";
 =======
 import place from "../../../assets/images/invalidName.png";
 >>>>>>> a619475... feat. 장소사진 추가
+=======
+import { getCardById } from "../../../repository/CardRepository";
+import DetailHeader from "../../components/DetailHeader";
+import place from "../../../assets/images/invalidName.png";
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 
 const cx = classNames.bind(styles);
 
@@ -67,11 +73,15 @@ const Detailspage = ({ ...props }) => {
   return (
     <div className={cx("Template")}>
 <<<<<<< HEAD
+<<<<<<< HEAD
      
       <Navbar />
 =======
       <DetailHeader history={props.history} />
 >>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
+      <DetailHeader history={props.history} />
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
       <Ellipse />
       <div className={cx("pageblock")}>
         <div className={cx("title")}>{card.post_title}</div>
@@ -111,6 +121,7 @@ const Detailspage = ({ ...props }) => {
       ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {isModal ? <Modal type='post'/> : <CommnetCreate postId= {props.cardid} userId={props.userId} />}
 =======
 <<<<<<< HEAD
@@ -122,6 +133,9 @@ const Detailspage = ({ ...props }) => {
 =======
       <CommnetCreate postId={postid} userId={props.user_id} />
 >>>>>>> c31fc0e... feat. 댓글 수정
+=======
+      <CommnetCreate postId={postid} userId={props.user_id} />
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
     </div>
   );
 };

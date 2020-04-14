@@ -1,6 +1,7 @@
 import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Spinner from "../components/Spinner/Spinner";
 <<<<<<< HEAD
 import LoginPage from "./LoginPage/LoginPage";
@@ -38,6 +39,16 @@ const SamplePage = () => {
   )
 
 >>>>>>> 2e450f4... [#20]/feat main, geoFunc,proxy,icon
+=======
+
+import PageMain from "./PageMain";
+
+const SamplePage = () => {
+  return (
+    <h1>asdfsf</h1>
+  )
+
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 };
 
 export default SamplePage;

@@ -1,16 +1,25 @@
 import React from "react";
 import styles from "./ViewPage.module.scss";
 import classNames from "classnames/bind";
+<<<<<<< HEAD
 import {Layout, Icon} from "../../../../components"
 import CardView from "../../../../components/Card/CardView";
+=======
+import { Layout, Icon } from "../../../../components";
+import CardView from "../../../../components/Card/CardView";
+import ListHeader from "../../../../components/ListHeader";
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 
 const cx = classNames.bind(styles);
 
 function renderTags(props) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const {dataTags, handleClickTag} = props;
 return dataTags.map(el => <span className={cx("tag", {"tag--clicked":el.isSelected})} onClick={handleClickTag.bind(this, el.id)}>{el.text}</span>)
 =======
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
   const { dataTags, handleClickTag } = props;
   return dataTags.map(el => (
     <span
@@ -21,6 +30,7 @@ return dataTags.map(el => <span className={cx("tag", {"tag--clicked":el.isSelect
     </span>
   ));
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ViewPage (props) {
     const {isSearch, cardList, sort,dataTags, handleClickTag, handleClickCard} = props;
@@ -52,6 +62,8 @@ export default function ViewPage (props) {
     )
 >>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
 =======
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 export default function ViewPage(props) {
   const {
     isSearch,
@@ -89,6 +101,7 @@ export default function ViewPage(props) {
       </Layout.Content>
     </Layout>
   );
+<<<<<<< HEAD
 >>>>>>> 8404724... 검색 뒤로가기 키 활성화
 }
 export default function ViewPage (props) {
@@ -120,3 +133,6 @@ export default function ViewPage (props) {
         </Layout>
     )
 }
+=======
+}
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455

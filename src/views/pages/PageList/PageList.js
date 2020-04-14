@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from "react";
 import ViewPage from "./section/ViewPage.js/ViewPage";
 <<<<<<< HEAD
@@ -8,11 +9,16 @@ import { isS } from "xmlchars/xml/1.0/ed5";
 =======
 import { getCardList, ApiCardByHashTag } from "../../../repository/CardRepository";
 =======
+=======
+import React, { useState, useEffect } from "react";
+import ViewPage from "./section/ViewPage.js/ViewPage";
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 import { convertGeoToAddress } from "../../../context/serverContext";
 import {
   getCardList,
   ApiCardByHashTag
 } from "../../../repository/CardRepository";
+<<<<<<< HEAD
 >>>>>>> 8404724... 검색 뒤로가기 키 활성화
 import TapBar from "../../components/TapBar/TapBar";
 >>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
@@ -149,6 +155,39 @@ export default function PageList(props) {
         <ViewPage
 =======
 =======
+=======
+import TapBar from "../../components/TapBar/TapBar";
+
+const dataTags = [
+  { id: 1, text: "고백썰", categoryId: 1, isSelected: false },
+  { id: 2, text: "이별썰", categoryId: 2, isSelected: false },
+  { id: 3, text: "이상형썰", categoryId: 3, isSelected: false }
+];
+
+const sortList = [
+  {
+    text: "조회수순",
+    key: "isView",
+    id: 1
+  },
+  {
+    text: "좋아요순",
+    key: "isLike",
+    id: 2
+  },
+  {
+    text: "댓글순",
+    key: "isComment",
+    id: 3
+  },
+  {
+    text: "최신순",
+    key: "isNew",
+    id: 4
+  }
+];
+export default function PageList(props) {
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
   const [tags, setTags] = useState(dataTags);
   const [category, setCategory] = useState(1);
   const [isSearch, setIsSearch] = useState(false);
@@ -189,7 +228,10 @@ export default function PageList(props) {
       } catch (e) {
         console.log(e);
       }
+<<<<<<< HEAD
 >>>>>>> 8404724... 검색 뒤로가기 키 활성화
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
     }
     async function fetchDataWithSearch(search) {
       try {
@@ -257,6 +299,7 @@ export default function PageList(props) {
       <ViewPage
         isSearch={isSearch}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
          cardList={cardList}
          sort={sort}
@@ -272,6 +315,8 @@ export default function PageList(props) {
         </>
     )
 =======
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
         cardList={cardList}
         sort={sort}
         dataTags={tags}
@@ -282,6 +327,10 @@ export default function PageList(props) {
       <TapBar selected="list" />
     </>
   );
+<<<<<<< HEAD
 >>>>>>> 8404724... 검색 뒤로가기 키 활성화
 }
 >>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
+=======
+}
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455

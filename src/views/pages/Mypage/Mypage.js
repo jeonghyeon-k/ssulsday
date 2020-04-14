@@ -11,11 +11,14 @@ const cx = classNames.bind(styles);
 const Mypage = ({ ...props }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { userid } = props.match.params;
 
 =======
 >>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
 =======
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
   let id = localStorage.getItem("userid");
 
   const onUpdate = () => {
@@ -26,7 +29,10 @@ const Mypage = ({ ...props }) => {
     localStorage.login = false;
     window.location.assign("/");
   };
+<<<<<<< HEAD
 >>>>>>> 738cf39... fix. error
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
   return (
     <div className={cx("template")}>
       <Navbar />
