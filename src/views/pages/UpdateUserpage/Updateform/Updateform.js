@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import styles from "./Updateform.scss";
 =======
 import styles from "./Updateform.module.scss";
+<<<<<<< HEAD
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 import classNames from "classnames/bind";
 import PropTypes from "prop-types";
 import Icon from "../../../components/Icon/Icon";
@@ -16,6 +20,10 @@ const SignUpForm = ({ ...props }) => {
   const handleChange = e => {
     const { value } = e.target;
     setValue(value);
+<<<<<<< HEAD
+=======
+    props.setContent(value);
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
   };
   const handleFocus = () => {
     setIsFocus(true);

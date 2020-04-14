@@ -3,7 +3,11 @@ import React, { useState, useEffect } from "react";
 import styles from "./LoginPage.scss";
 =======
 import styles from "./LoginPage.module.scss";
+<<<<<<< HEAD
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 import classNames from "classnames/bind";
 import Icon from "../../components/Icon/Icon";
 import PropTypes from "prop-types";
@@ -13,7 +17,11 @@ import logo from "../../../assets/images/logo.png";
 
 const cx = classNames.bind(styles);
 
+<<<<<<< HEAD
 const LoginPage = ({ isCookie }) => {
+=======
+const LoginPage = (props) => {
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
   const [loading, setLoading] = useState(false);
   const [check, setCheck] = useState(false);
   const [inputs, setInputs] = useState({
@@ -41,6 +49,7 @@ const LoginPage = ({ isCookie }) => {
   const onClick = () => {
     if (id === "") return LoginPage;
     if (pwd === "") return LoginPage;
+<<<<<<< HEAD
       ApiLogin({
         "isCookie": check,
         "user_id": id,
@@ -54,11 +63,26 @@ const LoginPage = ({ isCookie }) => {
 
         }
       });
+=======
+    ApiLogin({
+      isCookie: check,
+      user_id: id,
+      user_pwd: pwd
+    }).then(data => {
+      if (data.data.retMsg == "OK") {
+      localStorage.login = true;
+      localStorage.setItem('userid', id);
+       window.location.reload();
+      } else {
+      }
+    });
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
   };
   const onSignUp = () => {
     window.location.assign("/signup");
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (isCookie != null) {
     return <span>자동로그인</span>;
@@ -90,6 +114,8 @@ const LoginPage = ({ isCookie }) => {
             로그인
           </button>
 =======
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 const findpwd=()=>{
   window.location.assign("/find-password");
 }
@@ -121,6 +147,7 @@ const findpwd=()=>{
         <button className={cx("bottom__loginbutton")} onClick={onClick}>
           로그인
         </button>
+<<<<<<< HEAD
 >>>>>>> 738cf39... fix. error
 
           <div className={cx("bottom__Autologin")} onClick={onCheck}>
@@ -153,6 +180,27 @@ const findpwd=()=>{
       </div>
     );
   }
+=======
+
+        <div className={cx("bottom__Autologin")} onClick={onCheck}>
+          <div className={cx("bottom__Autologin__icon")}>
+            {check ? (
+              <Icon type='check--color' />
+            ) : (
+              <Icon type='check--color-dimmed' />
+            )}
+          </div>
+          <span className={cx("bottom__Autologin__span")}>자동로그인</span>
+        </div>
+
+        <div onClick={findpwd}className={cx("bottom__forgotpassword")}>
+          비밀번호 찾기
+        </div>
+        <button className={cx("bottom__signupbutton")} onClick={onSignUp}>회원가입</button>
+      </div>
+    </div>
+  );
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 };
 
 LoginPage.prototype = {

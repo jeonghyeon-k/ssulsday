@@ -9,14 +9,19 @@ import PropTypes from "prop-types";
 import Icon from "../../components/Icon/Icon";
 import { getCommentById } from "../../../repository/CommentRepository";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {getCardById} from "../../../repository/CardRepository";
 import Modal from "../../components/Modal/PostModal/PostModal"
 =======
+<<<<<<< HEAD
 import { getCardById } from "../../../repository/CardRepository";
 import DetailHeader from "../../components/DetailHeader";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
 =======
 <<<<<<< HEAD
@@ -31,6 +36,7 @@ const cx = classNames.bind(styles);
 const Detailspage = ({ ...props }, { commentlist }) => {
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
 =======
 >>>>>>> 02a28b3d49241f9e5a868ef7549465835021e13c
@@ -39,13 +45,32 @@ const Detailspage = ({ ...props }, { commentlist }) => {
 =======
 import place from "../../../assets/images/invalidName.png";
 >>>>>>> a619475... feat. 장소사진 추가
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+import { getCardById } from "../../../repository/CardRepository";
+import DetailHeader from "../../components/DetailHeader";
+<<<<<<< HEAD
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
+import place from "../../../assets/images/invalidName.png";
+>>>>>>> a619475... feat. 장소사진 추가
+=======
+import { getCardById } from "../../../repository/CardRepository";
+import DetailHeader from "../../components/DetailHeader";
+import place from "../../../assets/images/invalidName.png";
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 const cx = classNames.bind(styles);
 
 const Detailspage = ({ ...props }) => {
   const { postid } = props.match.params;
   console.log(postid);
+<<<<<<< HEAD
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
   const [like, setLike] = useState(props.islike);
   const[likecount, setCount] = useState(postid);
   const [isModal, setModal] = useState(true);
@@ -81,7 +106,11 @@ const Detailspage = ({ ...props }) => {
         });
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
         const resCard = await getCardById({ postId: postid });
         const dataCard = resCard.data;
         setCard(dataCard);
@@ -91,7 +120,11 @@ const Detailspage = ({ ...props }) => {
 <<<<<<< HEAD
 >>>>>>> db81a76... [master]/fix detailPage UPdate
 =======
+<<<<<<< HEAD
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
       } catch (e) {
         setError(e);
       }
@@ -107,10 +140,12 @@ const Detailspage = ({ ...props }) => {
   return (
     <div className={cx("Template")}>
 <<<<<<< HEAD
+<<<<<<< HEAD
      
       <Navbar />
 =======
       <DetailHeader history={props.history} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
@@ -120,6 +155,15 @@ const Detailspage = ({ ...props }) => {
 =======
 >>>>>>> e64739f19fef7d351189f5b3d74376d10bf1fd04
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> f073f03f245d74ab977ac426c282360a8173967e
+=======
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+=======
+      <DetailHeader history={props.history} />
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
       <Ellipse />
       <div className={cx("pageblock")}>
         <div className={cx("title")}>{card.post_title}</div>
@@ -161,6 +205,10 @@ const Detailspage = ({ ...props }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
+<<<<<<< HEAD
       <CommnetCreate postId= {props.cardid} />
 =======
 =======
@@ -179,11 +227,23 @@ const Detailspage = ({ ...props }) => {
 >>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
 =======
+<<<<<<< HEAD
+=======
+=======
+      {isModal ? <Modal type='post'/> : <CommnetCreate postId= {props.cardid} userId={props.userId} />}
+=======
+<<<<<<< HEAD
+      <CommnetCreate postId={props.cardid} userId={props.userId} />
+=======
+      <CommnetCreate postId={props.cardid} />
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 >>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
 >>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
 =======
       <CommnetCreate postId={postid} userId={props.user_id} />
 >>>>>>> c31fc0e... feat. 댓글 수정
+<<<<<<< HEAD
 >>>>>>> 8241650... feat. 좋아요
 =======
       {isModal ? <Modal type='post'/> : <CommnetCreate postId= {props.cardid} userId={props.userId} />}
@@ -203,6 +263,15 @@ const Detailspage = ({ ...props }) => {
       <CommnetCreate postId={postid} userId={props.user_id} />
 >>>>>>> c31fc0e... feat. 댓글 수정
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+<<<<<<< HEAD
+>>>>>>> 8241650... feat. 좋아요
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+=======
+      <CommnetCreate postId={postid} userId={props.user_id} />
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
     </div>
   );
 };

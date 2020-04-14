@@ -775,6 +775,11 @@
 "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.0":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.4.tgz#b23a856751e4bf099262f867767889c0e3fe175b"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -784,6 +789,10 @@
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.4.tgz#b23a856751e4bf099262f867767889c0e3fe175b"
   integrity sha512-r24eVUUr0QqNZa+qrImUk8fn5SPhHq+IfYvIoIMg0do3GdK9sMdiLKP3GYVVaxpPKORgm8KRKaNTEhAjgIpLMw==
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -1658,6 +1667,11 @@ axios@^0.19.0:
   dependencies:
     follow-redirects "1.5.10"
     is-buffer "^2.0.2"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 <<<<<<< HEAD
 =======
@@ -1668,6 +1682,10 @@ axios@^0.19.0:
   dependencies:
     follow-redirects "1.5.10"
     is-buffer "^2.0.2"
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 axobject-query@^2.0.2:
@@ -2822,6 +2840,11 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.8, debug@^2.6.
 debug@=3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
   dependencies:
     ms "2.0.0"
 
@@ -2831,6 +2854,10 @@ debug@=3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
   dependencies:
     ms "2.0.0"
 
@@ -3733,9 +3760,13 @@ follow-redirects@1.5.10:
 =======
 <<<<<<< HEAD
 >>>>>>> 875e6cd87312f9362fa3545933cee0e0cdc95c35
+<<<<<<< HEAD
 =======
 >>>>>>> 503233b55230afd95137e1c5e2607611fc18e090
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
   dependencies:
     debug "=3.1.0"
 
@@ -4010,6 +4041,11 @@ growly@^1.3.0:
 gud@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 <<<<<<< HEAD
 =======
@@ -4017,6 +4053,10 @@ gud@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
   integrity sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 gzip-size@5.1.1:
@@ -4138,6 +4178,11 @@ history@^4.9.0:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
     value-equal "^1.0.1"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 <<<<<<< HEAD
 =======
@@ -4152,6 +4197,10 @@ history@^4.9.0:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
     value-equal "^1.0.1"
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 hmac-drbg@^1.0.0:
@@ -4172,9 +4221,13 @@ hoist-non-react-statics@^3.1.0:
 =======
 <<<<<<< HEAD
 >>>>>>> 875e6cd87312f9362fa3545933cee0e0cdc95c35
+<<<<<<< HEAD
 =======
 >>>>>>> 503233b55230afd95137e1c5e2607611fc18e090
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
   dependencies:
     react-is "^16.7.0"
 
@@ -4559,6 +4612,11 @@ is-buffer@^1.0.2, is-buffer@^1.1.5:
 is-buffer@^2.0.2:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.4.tgz#3e572f23c8411a5cfd9557c849e3665e0b290623"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 <<<<<<< HEAD
 =======
@@ -4566,6 +4624,10 @@ is-buffer@^2.0.2:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.4.tgz#3e572f23c8411a5cfd9557c849e3665e0b290623"
   integrity sha512-Kq1rokWXOPXWuaMAqZiJW4XxsmD9zGx9q4aePabbn3qCRGedtH7Cm+zV8WETitMfu1wdh+Rvd6w5egwSngUX2A==
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 is-callable@^1.1.4:
@@ -4768,6 +4830,11 @@ is-wsl@^1.1.0:
 isarray@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 <<<<<<< HEAD
 =======
@@ -4775,6 +4842,10 @@ isarray@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
   integrity sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
@@ -5741,6 +5812,11 @@ mini-create-react-context@^0.3.0:
     "@babel/runtime" "^7.4.0"
     gud "^1.0.0"
     tiny-warning "^1.0.2"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 <<<<<<< HEAD
 =======
@@ -5752,6 +5828,10 @@ mini-create-react-context@^0.3.0:
     "@babel/runtime" "^7.4.0"
     gud "^1.0.0"
     tiny-warning "^1.0.2"
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 mini-css-extract-plugin@0.8.0:
@@ -6027,9 +6107,13 @@ node-sass@^4.13.0:
 =======
 <<<<<<< HEAD
 >>>>>>> 875e6cd87312f9362fa3545933cee0e0cdc95c35
+<<<<<<< HEAD
 =======
 >>>>>>> 503233b55230afd95137e1c5e2607611fc18e090
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
   dependencies:
     async-foreach "^0.1.3"
     chalk "^1.1.1"
@@ -6500,6 +6584,11 @@ path-to-regexp@^1.7.0:
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-1.8.0.tgz#887b3ba9d84393e87a0a0b9f4cb756198b53548a"
   dependencies:
     isarray "0.0.1"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 <<<<<<< HEAD
 =======
@@ -6509,6 +6598,10 @@ path-to-regexp@^1.7.0:
   integrity sha512-n43JRhlUKUAlibEJhPeir1ncUID16QnEjNpwzNdO3Lm4ywrBpBZ5oLD0I6br9evr1Y9JTqwRtAh7JLoOzAQdVA==
   dependencies:
     isarray "0.0.1"
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 path-type@^1.0.0:
@@ -7492,9 +7585,13 @@ react-is@^16.6.0, react-is@^16.7.0:
 =======
 <<<<<<< HEAD
 >>>>>>> 875e6cd87312f9362fa3545933cee0e0cdc95c35
+<<<<<<< HEAD
 =======
 >>>>>>> 503233b55230afd95137e1c5e2607611fc18e090
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 react-is@^16.8.1, react-is@^16.8.4:
   version "16.10.2"
@@ -7526,6 +7623,11 @@ react-router@5.1.2, react-router@^5.1.2:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 <<<<<<< HEAD
 =======
@@ -7557,6 +7659,10 @@ react-router@5.1.2, react-router@^5.1.2:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 react-scripts@3.1.2:
@@ -7895,6 +8001,11 @@ resolve-from@^4.0.0:
 resolve-pathname@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/resolve-pathname/-/resolve-pathname-3.0.0.tgz#99d02224d3cf263689becbb393bc560313025dcd"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 <<<<<<< HEAD
 =======
@@ -7902,6 +8013,10 @@ resolve-pathname@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/resolve-pathname/-/resolve-pathname-3.0.0.tgz#99d02224d3cf263689becbb393bc560313025dcd"
   integrity sha512-C7rARubxI8bXFNB/hqcp/4iUeIXJhJZvFPFPiSPRnhU5UPxzMFIl+2E6yY6c4k9giDJAhtV+enfA+G89N6Csng==
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 resolve-url-loader@3.1.0:
@@ -8778,6 +8893,11 @@ tiny-invariant@^1.0.2:
 tiny-warning@^1.0.0, tiny-warning@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 <<<<<<< HEAD
 =======
@@ -8790,6 +8910,10 @@ tiny-warning@^1.0.0, tiny-warning@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
   integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 tmp@^0.0.33:
@@ -9113,9 +9237,13 @@ value-equal@^1.0.1:
 =======
 <<<<<<< HEAD
 >>>>>>> 875e6cd87312f9362fa3545933cee0e0cdc95c35
+<<<<<<< HEAD
 =======
 >>>>>>> 503233b55230afd95137e1c5e2607611fc18e090
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 vary@~1.1.2:
   version "1.1.2"
@@ -9627,6 +9755,10 @@ yarn@^1.19.1:
 =======
 <<<<<<< HEAD
 >>>>>>> 875e6cd87312f9362fa3545933cee0e0cdc95c35
+<<<<<<< HEAD
 =======
 >>>>>>> 503233b55230afd95137e1c5e2607611fc18e090
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742

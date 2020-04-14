@@ -13,7 +13,11 @@ import styles from "./CommentCreate.scss";
 =======
 import styles from "./CommentCreate.module.scss";
 >>>>>>> 4c8ca83... feat. 상세페이지 라우터설정:src/views/components/CommentCreate/commentCreate.js
+<<<<<<< HEAD
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 import PropTypes from "prop-types";
 import {ApiPostComment} from "../../../repository/CommentRepository";
 >>>>>>> 58cbadf... feat. Api 설정:src/views/components/CommentCreate/commentCreate.js
@@ -67,12 +71,21 @@ CommentCreate.prototype = {
 
 CommentCreate.defaultProps = {
   userId : "redhd0410@gmail.com"
+<<<<<<< HEAD
+=======
+
+};
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 
 =======
 CommentCreate.defaultProps = {
   userId : "redhd0410@gmail.com"
+<<<<<<< HEAD
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
+>>>>>>> 30eb86ba6d791d236d98eb973ac55f802711e742
 };
 
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 
 export default CommentCreate;
