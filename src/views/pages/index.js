@@ -2,6 +2,11 @@ export { default as SamplePage } from "./SamplePage";
 export { default as NotFoundPage } from "./NotFoundPage";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 export { default as PostPage } from "./PostPage";
 export { default as SearchPage } from "./SearchPage";
 <<<<<<< HEAD
@@ -9,10 +14,15 @@ export { default as SearchPage } from "./SearchPage";
 // export { default as ListPage } from "./Listpage";
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
 export { default as DetailsPage } from "./Detailspage";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 =======
 >>>>>>> b6afb40b4204f1913abea27efaee8bb1e2fb0f0c
 export { default as SignUpPage } from "./SignUpPage";
 export { default as FindPasswordPage } from "./FindPasswordPage";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -42,6 +52,15 @@ export { default as PostPage } from "./PostPage";
 export { default as SearchPage } from "./SearchPage";
 // export { default as ListPage } from "./Listpage";
 export { default as DetailsPage } from "./Detailspage";
+=======
+export {default as PageMain} from "./PageMain";
+export {default as Mypage} from "./Mypage/Mypage";
+export {default as question} from "./Mypage/question/question";
+export {default as UpdateUser} from "./UpdateUserpage/UpdateUser";
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 export { default as SignUpPage } from "./SignUpPage";
 export { default as FindPasswordPage } from "./FindPasswordPage";
 >>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
@@ -49,6 +68,14 @@ export { default as PageMain } from "./PageMain";
 export { default as Mypage } from "./Mypage/Mypage";
 export { default as question } from "./Mypage/question/question";
 export { default as PageList } from "./PageList";
+<<<<<<< HEAD
+=======
+export { default as Mypage } from "./Mypage";
+export { default as PageMain } from "./PageMain";
+>>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
+export { default as LoginPage } from "./LoginPage";
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
 export { default as LoginPage } from "./LoginPage";
 <<<<<<< HEAD
 >>>>>>> 84a06a7... 리베이스 커밋

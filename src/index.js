@@ -18,7 +18,11 @@ import Root from "./Root";
 >>>>>>> e3910b9... no message
 =======
 import "./views/style/index.scss";
+<<<<<<< HEAD
 >>>>>>> f1a538dd6a98e1b05ab5b14b45e077283a46c6b8
+=======
+>>>>>>> 173ceda0b59f26db26f362598e820949d246b455
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 
 ReactDOM.render(<Root />, document.getElementById("root"));
 

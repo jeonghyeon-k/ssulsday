@@ -17,6 +17,7 @@ const Mypage = ({ ...props }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 3c72d1f... fix. starcount error
@@ -27,6 +28,11 @@ const Mypage = ({ ...props }) => {
 <<<<<<< HEAD
 >>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
 =======
+=======
+  const { userid } = props.match.params;
+
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 >>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
 =======
 =======
@@ -43,6 +49,7 @@ const Mypage = ({ ...props }) => {
   };
 <<<<<<< HEAD
 >>>>>>> 738cf39... fix. error
+<<<<<<< HEAD
 >>>>>>> 3c72d1f... fix. starcount error
   return (
     <div className={cx("template")}>
@@ -70,6 +77,10 @@ const Mypage = ({ ...props }) => {
         <div className={cx("header__editicon")}>수정</div>
 =======
 =======
+=======
+=======
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
   return (
     <div className={cx("template")}>
       <Navbar />

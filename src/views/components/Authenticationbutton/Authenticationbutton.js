@@ -28,7 +28,11 @@ const Authenticationbutton = ({ ...props }) => {
       onClick={handleAuthButton}
     >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d7e7b2f50f3814acf5340074ad219a8535826ddf
+=======
+>>>>>>> 22ca58d55e2eb09bcbf6da40d39d0a98d9d440c9
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 =======
 >>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
       인증코드받기
@@ -39,11 +43,16 @@ const Authenticationbutton = ({ ...props }) => {
 Authenticationbutton.propTypes = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   done: PropTypes.required
 =======
   done: PropTypes.bool
 >>>>>>> d7e7b2f50f3814acf5340074ad219a8535826ddf
 =======
+=======
+  done: PropTypes.required
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
   done: PropTypes.bool
 >>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 };

@@ -3,10 +3,16 @@ import React, {useState, useEffect} from "react";
 import ViewPage from "./section/ViewPage.js/ViewPage";
 <<<<<<< HEAD
 import {convertGeoToAddress} from "../../../context/serverContext";
+<<<<<<< HEAD
 import { getCardList } from "../../../repository/CardRepository";
 import { isS } from "xmlchars/xml/1.0/ed5";
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+import { getCardList } from "../../../repository/CardRepository";
+import { isS } from "xmlchars/xml/1.0/ed5";
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 =======
 import { getCardList, ApiCardByHashTag } from "../../../repository/CardRepository";
 =======
@@ -23,7 +29,10 @@ import {
 >>>>>>> 8404724... 검색 뒤로가기 키 활성화
 import TapBar from "../../components/TapBar/TapBar";
 >>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
+<<<<<<< HEAD
 >>>>>>> e2f8617... master/fix
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 
 const dataTags = [
     { id: 1, text: "고백썰", categoryId: 1, isSelected: false},
@@ -57,6 +66,13 @@ export default function PageList(props) {
 <<<<<<< HEAD
     const [tags, setTags] = useState(dataTags);
     const [category, setCategory] = useState(1);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    const [isSearch, setIsSearch] = useState(false);
+>>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
     const [sort, setSort] = useState(sortList[0]);
     const [cardList, setCardList] = useState([]);
     useEffect(() => {
@@ -87,7 +103,51 @@ export default function PageList(props) {
                 console.log(e);
             } 
         }
+<<<<<<< HEAD
         fetchData();
+=======
+<<<<<<< HEAD
+        fetchData();
+=======
+        async function fetchDataWithSearch(search) {
+            try {
+                const res = await ApiCardByHashTag({searchKeyword: search});
+                const resCardList = res.data;
+                const dataCardList = await Promise.all(resCardList.map(async (el) => {
+                    let dataSpot = "위치를 찾을 수 없습니다.";
+                    if(el.longitude !== 0 && el.latitude !== 0) {
+                        const resSpot = await convertGeoToAddress(el.longitude, el.latitude);
+                        dataSpot = await resSpot.data.documents[0].address.address_name;
+                    } 
+                    return ({
+                        idx: el.post_id,
+                        title: el.card_title,
+                        contents: el.card_content,
+                        hashTags: el.hashTags,
+                        spot: dataSpot,
+                        date: el.time_created,
+                        comentcounte: el.commentcount,
+                        likecount: el.likecount,
+                        viewcount: el.viewcount
+                    })
+                }));
+                setCardList(dataCardList);
+            } catch (e){
+                console.log(e);
+            } 
+        }
+        const search = props.location.search;
+        const keyword = search.split("=")[1];
+        if(keyword) {
+            setIsSearch(true);
+            fetchDataWithSearch(keyword);
+        } else {
+            setIsSearch(false);
+            fetchData();
+        }
+        
+>>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
     }, [tags, sort]);
     function handleClickTag (id) {
         const tempTags = tags.map(el => {
@@ -102,11 +162,17 @@ export default function PageList(props) {
         })
         setTags(sortTags)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     }
     function handleClickCard(id) {
         props.history.push(`/details/${id}`)
+=======
+    }
+    function handleClickCard(id) {
+        props.history.push()
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
     }
     function updateSort(sortId) {
         setSort(sort[sortId])
@@ -190,7 +256,10 @@ export default function PageList(props) {
       }
 <<<<<<< HEAD
 >>>>>>> 8404724... 검색 뒤로가기 키 활성화
+<<<<<<< HEAD
 >>>>>>> e2f8617... master/fix
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 =======
 >>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
     }
@@ -269,17 +338,30 @@ export default function PageList(props) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
+<<<<<<< HEAD
 >>>>>>> e2f8617... master/fix
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
          cardList={cardList}
          sort={sort}
          dataTags={tags}
          handleClickTag={handleClickTag}
          handleClickCard={handleClickCard}
          />
+<<<<<<< HEAD
     )
 <<<<<<< HEAD
 }
 =======
+=======
+<<<<<<< HEAD
+    )
+}
+=======
+         <TapBar selected="list" />
+        </>
+    )
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 =======
 =======
 >>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
@@ -297,7 +379,10 @@ export default function PageList(props) {
 >>>>>>> 8404724... 검색 뒤로가기 키 활성화
 }
 >>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
+<<<<<<< HEAD
 >>>>>>> e2f8617... master/fix
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 =======
 }
 >>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455

@@ -14,10 +14,16 @@ const cx = classNames.bind(styles);
 
 function renderTags(props) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const {dataTags, handleClickTag} = props;
 return dataTags.map(el => <span className={cx("tag", {"tag--clicked":el.isSelected})} onClick={handleClickTag.bind(this, el.id)}>{el.text}</span>)
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+    const {dataTags, handleClickTag} = props;
+return dataTags.map(el => <span className={cx("tag", {"tag--clicked":el.isSelected})} onClick={handleClickTag.bind(this, el.id)}>{el.text}</span>)
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 =======
 =======
 >>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
@@ -34,8 +40,11 @@ return dataTags.map(el => <span className={cx("tag", {"tag--clicked":el.isSelect
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8948c3df38bcebd81ef30c185a7b5d3bbb4f0082
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 export default function ViewPage (props) {
     const {isSearch, cardList, sort,dataTags, handleClickTag, handleClickCard} = props;
     function handleClickUpdateSortModal(){
@@ -66,6 +75,9 @@ export default function ViewPage (props) {
     )
 >>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 =======
 =======
 >>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
@@ -108,10 +120,13 @@ export default function ViewPage(props) {
   );
 <<<<<<< HEAD
 >>>>>>> 8404724... 검색 뒤로가기 키 활성화
+<<<<<<< HEAD
 >>>>>>> e2f8617... master/fix
 =======
 >>>>>>> 3e18268... master/fix
 >>>>>>> 8948c3df38bcebd81ef30c185a7b5d3bbb4f0082
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 }
 export default function ViewPage (props) {
     const {cardList, sort,dataTags, handleClickTag, handleClickCard} = props;

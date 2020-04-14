@@ -13,6 +13,7 @@ import { getCommentById } from "../../../repository/CommentRepository";
 import {getCardById} from "../../../repository/CardRepository";
 import Modal from "../../components/Modal/PostModal/PostModal"
 =======
+<<<<<<< HEAD
 import { getCardById } from "../../../repository/CardRepository";
 import DetailHeader from "../../components/DetailHeader";
 <<<<<<< HEAD
@@ -29,9 +30,20 @@ const cx = classNames.bind(styles);
 
 const Detailspage = ({ ...props }, { commentlist }) => {
 =======
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
+import { getCardById } from "../../../repository/CardRepository";
+import DetailHeader from "../../components/DetailHeader";
+<<<<<<< HEAD
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
+import place from "../../../assets/images/invalidName.png";
+>>>>>>> a619475... feat. 장소사진 추가
+=======
 import { getCardById } from "../../../repository/CardRepository";
 import DetailHeader from "../../components/DetailHeader";
 import place from "../../../assets/images/invalidName.png";
+>>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 
 const cx = classNames.bind(styles);
 
@@ -105,7 +117,11 @@ const Detailspage = ({ ...props }) => {
       <Navbar />
 =======
       <DetailHeader history={props.history} />
+<<<<<<< HEAD
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
+=======
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 =======
       <DetailHeader history={props.history} />
 >>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
@@ -150,6 +166,7 @@ const Detailspage = ({ ...props }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <CommnetCreate postId= {props.cardid} />
 =======
 =======
@@ -168,12 +185,23 @@ const Detailspage = ({ ...props }) => {
 >>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
 =======
+=======
+      {isModal ? <Modal type='post'/> : <CommnetCreate postId= {props.cardid} userId={props.userId} />}
+=======
+<<<<<<< HEAD
+      <CommnetCreate postId={props.cardid} userId={props.userId} />
+=======
+      <CommnetCreate postId={props.cardid} />
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 >>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
 >>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
 =======
       <CommnetCreate postId={postid} userId={props.user_id} />
 >>>>>>> c31fc0e... feat. 댓글 수정
+<<<<<<< HEAD
 >>>>>>> 8241650... feat. 좋아요
+=======
+>>>>>>> 0dc6a91f2b4c9402774476c37cfb10ffbd2e5ad7
 =======
       <CommnetCreate postId={postid} userId={props.user_id} />
 >>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
