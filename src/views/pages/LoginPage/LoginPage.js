@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
 import styles from "./LoginPage.scss";
+=======
+import styles from "./LoginPage.module.scss";
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 import classNames from "classnames/bind";
 import Icon from "../../components/Icon/Icon";
 import PropTypes from "prop-types";

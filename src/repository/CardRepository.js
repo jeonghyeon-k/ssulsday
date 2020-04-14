@@ -1,4 +1,4 @@
-import { api } from "../utils/api"
+import { api } from "../context/serverContext";
 
 export const getCardList = async param => {
   return await api({

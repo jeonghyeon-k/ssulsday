@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React from "react";
 <<<<<<< HEAD:src/components/CardComponents/CardView.js
+=======
+<<<<<<< HEAD:src/components/CardComponents/CardView.js
+import React from "react";
+<<<<<<< HEAD:src/components/CardComponents/CardView.js
+<<<<<<< HEAD:src/components/CardComponents/CardView.js
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 import {
   MdFavorite,
   MdFavoriteBorder,
@@ -9,6 +16,7 @@ import {
 import styles from "./Card.scss";
 =======
 
+<<<<<<< HEAD
 import styles from "./CardView.scss";
 >>>>>>> b5bd9fe... no message:src/views/components/Card/CardView.js
 import classNames from "classnames/bind";
@@ -36,6 +44,24 @@ import {ApiPostLike} from "../../../repository/LikeRepository"
 =======
 import { ApiPostLike } from "../../../repository/LikeRepository";
 >>>>>>> e2f8617... master/fix
+=======
+=======
+>>>>>>> 3cb7984... style. 사이즈 px 변경, 색상 변경 docs. 최종으로 변경된 디자인으로 수정:src/views/components/Card/CardView.js
+=======
+import React, { useState } from "react";
+<<<<<<< HEAD:src/components/CardComponents/CardView.js
+>>>>>>> e8e4316... feat. mypage style. 아이콘 추가:src/views/components/Card/CardView.js
+import styles from "./CardView.scss";
+>>>>>>> b5bd9fe... no message:src/views/components/Card/CardView.js
+=======
+import styles from "./CardView.module.scss";
+>>>>>>> 4c8ca83... feat. 상세페이지 라우터설정:src/views/components/Card/CardView.js
+import classNames from "classnames/bind";
+import Icon from "../Icon/Icon";
+import Ellipse from "../Ellipse/Ellipse";
+import PropTypes from "prop-types";
+import { ApiPostLike } from "../../../repository/LikeRepository";
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 
 const cx = classNames.bind(styles);
 let id = localStorage.getItem("userid");
@@ -70,6 +96,7 @@ function CardView({ ...props }) {
   let now = new Date("YYYY/MM/DD");
   let old = new Date(props.date.replace("-","/"));
   let gap = now.getTime()-old.getTime();
+<<<<<<< HEAD
 >>>>>>> 8948c3df38bcebd81ef30c185a7b5d3bbb4f0082
   let sec_gap = gap / 10000000;
 <<<<<<< HEAD
@@ -87,6 +114,10 @@ function CardView({ ...props }) {
         </button>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> eb7ecdd4ce0044ebfb1c4e4246fb583a7e26b054
+  let sec_gap = gap / 10000000;
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
   let set_gap = Math.floor(sec_gap);
   console.log(set_gap);
   return (
@@ -98,6 +129,7 @@ function CardView({ ...props }) {
       <div className={cx("contents")}>{props.contents} </div>
       {props.hashtags && <div className={cx("hash")}>{props.hashtags}</div>}
       <div className={cx("info")}>
+<<<<<<< HEAD
         <Icon type="location" size="xsm" />
 
         <div className={cx("info__place")}>{props.spot}</div>
@@ -143,6 +175,20 @@ function CardView({ ...props }) {
             {done ? <Icon type="test"  /> : <Icon />}
           </button>
 =======
+=======
+<<<<<<< HEAD
+        <Icon type="location" size="xsm" />
+
+        <div className={cx("info__place")}>{props.spot}</div>
+=======
+        <Icon type='location' size='xsm' />
+       
+          <div className={cx("info__place")}>{props.spot}</div>
+>>>>>>> eb7ecdd4ce0044ebfb1c4e4246fb583a7e26b054
+
+        <div className={cx("info__date")}>{set_gap}시간전</div>
+      </div>
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
       <div className={cx("bottom")}>
         <div className={cx("bottom__comentcount")}>{props.comentcounte}</div>
         <div className={cx("bottom__commenticon")}>
@@ -154,18 +200,25 @@ function CardView({ ...props }) {
         <div className={cx("bottom__likecount")}>{likecount}</div>
         <div className={cx("bottom__viewicon")}>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Icon type='viewer' />
 >>>>>>> e907aec... style. assets에 로그인 로고 추가 docs. 마이페이지
 =======
           <Icon type="viewer" />
 >>>>>>> e2f8617... master/fix
         </div>
+=======
+          <Icon type="viewer" />
+        </div>
+        <div className={cx("bottom__viewcount")}>{props.viewcount}</div>
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
       </div>
     </div>
   );
 }
 
 CardView.prototype = {
+<<<<<<< HEAD
   type: PropTypes.string,
   done: PropTypes.bool,
   title: PropTypes.string,
@@ -191,13 +244,34 @@ CardView.defaultProps = {
   contents: "내용 없음",
   spot: "강남역",
   hashtags: "null hashtags",
+=======
+  title: PropTypes.string,
+  contents: PropTypes.string,
+  spot: PropTypes.string.isRequired,
+  hashtags: PropTypes.string,
+  date: PropTypes.string,
+  comentcounte: PropTypes.string,
+  viewcount: PropTypes.string,
+  likecount: PropTypes.string,
+  ellipse: PropTypes.string,
+  islike: PropTypes.isRequired
+};
+
+CardView.defaultProps = {
+  title: "제목 없음",
+  contents: "내용 없음",
+  spot: "강남역",
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
   date: "0시간 전",
   comentcounte: "0",
   viewcount: "0",
   likecount: "0",
   ellipse: "고백썰",
   islike: false
+<<<<<<< HEAD
 >>>>>>> e907aec... style. assets에 로그인 로고 추가 docs. 마이페이지
+=======
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 };
 
 export default CardView;

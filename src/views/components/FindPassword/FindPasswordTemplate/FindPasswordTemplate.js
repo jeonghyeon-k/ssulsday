@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./FindPasswordTemplate.scss";
 import Authenticationbutton from "../../Authenticationbutton";
+<<<<<<< HEAD
 
+=======
+import FindPasswordHeader from "../FindPasswordHeader";
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 import InputBox from "../../InputBox";
 
 const cx = classNames.bind(styles);
 
-const FindPasswordTemplate = () => {
+const FindPasswordTemplate = ({ ...props }) => {
   const [isValidation, setIsValidation] = useState(false);
   const [getAuth, setGetAuth] = useState(false);
   const [isAuth, setIsAuth] = useState(false);
@@ -21,6 +25,15 @@ const FindPasswordTemplate = () => {
   };
   return (
     <>
+<<<<<<< HEAD
+=======
+      <FindPasswordHeader
+        history={props.history}
+        setIsAuth={setIsAuth}
+        getAuth={getAuth}
+        isAuth={isAuth}
+      />
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
       <div className={cx("sign-up")}>
         <span className={cx("sign-up__title")}>이메일주소</span>
         <div className={cx("sign-up__input")}>
@@ -59,13 +72,6 @@ const FindPasswordTemplate = () => {
               </div>
               <div className={cx("sign-up__return")}>인증코드 다시받기</div>
             </div>
-            <button
-              onClick={() => {
-                setIsAuth(true);
-              }}
-            >
-              다음
-            </button>
           </>
         ))}
     </>

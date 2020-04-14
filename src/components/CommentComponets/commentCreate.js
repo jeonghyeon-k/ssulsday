@@ -1,9 +1,19 @@
 import React, {useState} from "react";
 import classNames from "classnames/bind";
 <<<<<<< HEAD:src/components/CommentComponets/commentCreate.js
+<<<<<<< HEAD
 import styles from "./Comment.scss";
 =======
 import styles from "./CommentCreate.scss";
+=======
+<<<<<<< HEAD:src/components/CommentComponets/commentCreate.js
+import styles from "./Comment.scss";
+=======
+import styles from "./CommentCreate.scss";
+=======
+import styles from "./CommentCreate.module.scss";
+>>>>>>> 4c8ca83... feat. 상세페이지 라우터설정:src/views/components/CommentCreate/commentCreate.js
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 import PropTypes from "prop-types";
 import {ApiPostComment} from "../../../repository/CommentRepository";
 >>>>>>> 58cbadf... feat. Api 설정:src/views/components/CommentCreate/commentCreate.js
@@ -53,10 +63,15 @@ CommentCreate.prototype = {
   postId :PropTypes.int,
   userId :PropTypes.int
 };
+<<<<<<< HEAD
 
 CommentCreate.defaultProps = {
   userId : "redhd0410@gmail.com"
 
+=======
+CommentCreate.defaultProps = {
+  userId : "redhd0410@gmail.com"
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 };
 
 

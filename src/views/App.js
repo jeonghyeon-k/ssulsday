@@ -6,13 +6,18 @@ import {
   PostPage,
   SearchPage,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   PageList,
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
+=======
+  PageList,
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
   DetailsPage,
 =======
 >>>>>>> b6afb40b4204f1913abea27efaee8bb1e2fb0f0c
   SignUpPage,
+<<<<<<< HEAD
 <<<<<<< HEAD
   FindPasswordPage
 =======
@@ -45,6 +50,18 @@ import {
 >>>>>>> b7a3397... 헤더 마무리
 >>>>>>> a949e3845704c9639f343fbfe1b2757af112d8ef
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
+=======
+  FindPasswordPage,
+<<<<<<< HEAD
+  PageMain,
+  Mypage,
+  question,
+=======
+  Mypage,
+  PageMain,
+>>>>>>> c5630b6bfce9eb77102c80f487f797567862585a
+  LoginPage
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 } from "./pages";
 
 const Login = () => {
@@ -52,6 +69,10 @@ const Login = () => {
     <Switch>
       <Route exact path="/" component={LoginPage} />
       <Route path="/signup" component={SignUpPage} />
+<<<<<<< HEAD
+=======
+      <Route path="/find-password" component={FindPasswordPage} />
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
       <Route component={NotFoundPage} />
     </Switch>
   );
@@ -61,6 +82,7 @@ const Main = () => {
   return (
 <<<<<<< HEAD
     <Switch>
+<<<<<<< HEAD
       <Route exact path="/" component={SamplePage} />
       <Route path="/post" component={PostPage} />
       <Route path="/search" component={SearchPage} />
@@ -85,8 +107,19 @@ const Main = () => {
       <Route path="/mypage/" component={Mypage} />
 >>>>>>> 47e641a... feat. 마이페이지 라우터
 =======
+=======
+      <Route exact path="/" component={PageMain} />
+      <Route path="/post" component={PostPage} />
+      <Route path="/search" component={SearchPage} />
+<<<<<<< HEAD
+      <Route path="/details/:postid" component={DetailsPage} />
+      <Route path="/details" component={DetailsPage} />
+      <Route path="/list" component={PageList} />
+      <Route path="/signup" component={SignUpPage} />
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
       <Route exact path="/mypage/" component={Mypage} />
       <Route path="/mypage/question" component={question} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> bc0949e... feat. 마이페이지- 문의하기
@@ -113,6 +146,21 @@ const Main = () => {
       <Route path="/mypage/updateuser" component={UpdatePage} />
 >>>>>>> 738cf39... fix. error
 >>>>>>> 3c72d1f... fix. starcount error
+=======
+      <Route path="/details" component={DetailsPage} />
+      <Route path="/find-password" component={FindPasswordPage} />
+=======
+      <Route path="/list" component={ListPage} />
+      <Route path="/details" component={DetailsPage} />
+      <Route path="/find-password" component={FindPasswordPage} />
+>>>>>>> c5630b6bfce9eb77102c80f487f797567862585a
+=======
+>>>>>>> 3acf100... 비밀번호 찾기 마무리
+      <Route path="/mypage" component={Mypage} />
+=======
+      <Route path="/mypage/updateuser" component={UpdatePage} />
+>>>>>>> 738cf39... fix. error
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
       <Route component={NotFoundPage} />
     </Switch>
 =======

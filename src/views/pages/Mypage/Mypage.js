@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import styles from "./Mypage.scss";
+=======
+import styles from "./Mypage.module.scss";
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 import classNames from "classnames/bind";
 import Navbar from "../../components/Navbar/Navbar";
 import Icon from "../../components/Icon/Icon";
@@ -9,6 +13,7 @@ import TapBar from "../../components/TapBar/TapBar";
 const cx = classNames.bind(styles);
 
 const Mypage = ({ ...props }) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +29,12 @@ const Mypage = ({ ...props }) => {
 =======
 >>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
 =======
+  const { userid } = props.match.params;
+
+=======
+>>>>>>> c5630b6bfce9eb77102c80f487f797567862585a
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
+=======
   let id = localStorage.getItem("userid");
 
   const onUpdate = () => {
@@ -35,6 +46,7 @@ const Mypage = ({ ...props }) => {
     window.location.assign("/");
   };
 >>>>>>> 738cf39... fix. error
+<<<<<<< HEAD
 >>>>>>> 3c72d1f... fix. starcount error
   return (
     <div className={cx("template")}>
@@ -61,17 +73,30 @@ const Mypage = ({ ...props }) => {
 =======
         <div className={cx("header__editicon")}>수정</div>
 =======
+=======
+  return (
+    <div className={cx("template")}>
+      <Navbar />
+      <div className={cx("Mypageheader")}>
+        <div className={cx("header__usericon")}>
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
           <Icon type='location-2' />
         </div>
         <div className={cx("header__username")}>{id}</div>
         <div onClick={onUpdate} className={cx("header__editicon")}>수정</div>
+<<<<<<< HEAD
 >>>>>>> 3c72d1f... fix. starcount error
+=======
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
         <hr className={cx("header__hr")} />
       </div>
       <div className={cx("box")}>
         <div className={cx("box__count")}>{props.mycontentcount}</div>
         <div className={cx("box__title")}>작성한 글</div>
+<<<<<<< HEAD
 >>>>>>> e907aec... style. assets에 로그인 로고 추가 docs. 마이페이지
+=======
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
       </div>
 
       <div className={cx("box")}>
@@ -98,6 +123,7 @@ const Mypage = ({ ...props }) => {
   );
 };
 
+<<<<<<< HEAD
 Mypage.prototype = {
 
 };
@@ -105,6 +131,13 @@ Mypage.defaultProps = {
   mycontentcount: 0,
   mycommentcount:0,
   mylikecount:0
+=======
+Mypage.prototype = {};
+Mypage.defaultProps = {
+  mycontentcount: 0,
+  mycommentcount: 0,
+  mylikecount: 0
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 };
 
 export default Mypage;

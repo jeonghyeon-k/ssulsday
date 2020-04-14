@@ -1,0 +1,41 @@
+@import "../../style/index.scss";
+@import "../../style/variable.scss";
+
+<<<<<<< HEAD
+
+.Authenticationbutton{
+    width: 343px;
+    border: 1px solid $authentication-button;
+    border-radius: 25px;
+    font-size: 18px;
+    padding-top:10px;
+    padding-bottom: 11px;
+    outline: none;
+    color: $main-black-3;
+    background-color: #ffffff;
+    text-align: center;
+    &.done{
+        color: $main-black-1;
+    }
+=======
+.Authenticationbutton {
+  background-color: #ffffff;
+  border: 1px solid $authentication-button;
+  border-radius: 25px;
+  font-size: 18px;
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  margin: 0 auto;
+  margin-top: 30pt;
+  outline: none;
+  color: $main-black-3;
+  text-align: center;
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: normal;
+  &.done {
+    color: $main-black-1;
+  }
+>>>>>>> 303696e9bff3eba3a4854d3b6281eeb9861cd24d
+}

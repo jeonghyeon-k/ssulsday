@@ -1,0 +1,142 @@
+$font-color : rgb(51,51,51);
+$point-color : rgb(251, 179, 59);
+.pageMain {
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    .header {
+        margin: 0 auto;
+        height: 37px;
+        width: 100%;
+        .logo{
+            height: 37px;
+            background-image: url("../../../../../assets/images/logo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    .location {
+            margin-top: 31px;
+            margin-bottom: 12px;
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .text{
+            display: inline-block;
+            font-size: 14px;
+            color: $font-color;         
+        }
+    }
+    .search {
+        position: relative;
+        margin-bottom: 43px;
+        .head {}
+        .row {
+            position: relative;
+        }
+        .text{
+            display: inline-block;
+            font-size: 21px;
+            color: $font-color;
+        }
+        .select {
+            position: relative;
+            display: inline-block;
+            margin-right: 12px;
+            width: 132px;
+            border-bottom: 1px solid rgb(189, 189, 189);
+            &__text {
+                font-weight: bold;
+                font-size: 26px;
+                color: $font-color;  
+            }
+            &__icon {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-25%);
+            }
+        }
+        .button {
+            position: absolute;
+            left: 301px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+    }
+    .tags {
+        margin-bottom: 43px;
+        .text {
+            margin-bottom: 12px;
+            font-size: 18px;
+            font-weight: normal;
+            color: $font-color;
+        }
+        .list {}
+    }
+    .locationList {
+        .title {
+            margin-bottom: 21px;
+            color: $font-color;
+            font-size: 18px;
+            font-weight: normal;
+        
+            .color {
+                font-size: 21px;
+                color: $point-color;
+            }
+        }
+        .list {
+            overflow-x: scroll;
+            display: flex;
+-ms-overflow-style: none; // IE에서 스크롤바 감춤
+&::-webkit-scrollbar { 
+  display: none !important; // 윈도우 크롬 등
+}            
+padding-bottom: 53px;
+            & > * {
+                margin-right: 23px;
+            }
+        }
+    }
+    .ssulList {
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .title {
+                .logo {
+                    display: inline-block;
+                    height: 26px;
+                    width: 76px;
+                    background-image: url("../../../../../assets/images/logo.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .text{
+                    display: inline-block;
+                    color: $font-color;
+                    font-size: 18px;
+                    font-weight: normal;
+                
+                    .color {
+                        font-size: 21px;
+                        color: $point-color;
+                    }
+                }
+            }
+            .more {
+                font-size: 14px;
+                color: $font-color;
+                font-weight: 300;
+            }
+        }
+        
+        .list {}
+    }
+}

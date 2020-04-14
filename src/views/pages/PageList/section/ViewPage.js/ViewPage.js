@@ -7,10 +7,16 @@ import CardView from "../../../../components/Card/CardView";
 const cx = classNames.bind(styles);
 
 function renderTags(props) {
+<<<<<<< HEAD
     const {dataTags, handleClickTag} = props;
 return dataTags.map(el => <span className={cx("tag", {"tag--clicked":el.isSelected})} onClick={handleClickTag.bind(this, el.id)}>{el.text}</span>)
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+    const {dataTags, handleClickTag} = props;
+return dataTags.map(el => <span className={cx("tag", {"tag--clicked":el.isSelected})} onClick={handleClickTag.bind(this, el.id)}>{el.text}</span>)
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 =======
   const { dataTags, handleClickTag } = props;
   return dataTags.map(el => (
@@ -24,8 +30,11 @@ return dataTags.map(el => <span className={cx("tag", {"tag--clicked":el.isSelect
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8948c3df38bcebd81ef30c185a7b5d3bbb4f0082
+=======
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 export default function ViewPage (props) {
     const {isSearch, cardList, sort,dataTags, handleClickTag, handleClickCard} = props;
     function handleClickUpdateSortModal(){
@@ -56,6 +65,9 @@ export default function ViewPage (props) {
     )
 >>>>>>> 8d548a6... [#40]/feat pagemain, list 헨들러 및 페이지 수정
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 =======
 export default function ViewPage(props) {
   const {
@@ -95,10 +107,13 @@ export default function ViewPage(props) {
     </Layout>
   );
 >>>>>>> 8404724... 검색 뒤로가기 키 활성화
+<<<<<<< HEAD
 >>>>>>> e2f8617... master/fix
 =======
 >>>>>>> 3e18268... master/fix
 >>>>>>> 8948c3df38bcebd81ef30c185a7b5d3bbb4f0082
+=======
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 }
 export default function ViewPage (props) {
     const {cardList, sort,dataTags, handleClickTag, handleClickCard} = props;

@@ -1,0 +1,250 @@
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+// size
+.xsm {
+  width: 24px;
+  height: 24px;
+}
+.sm {
+  width: 27px;
+  height: 27px;
+}
+.md {
+  width: 36px;
+  height: 36px;
+}
+.lmd {
+  width: 40px;
+  height: 40px;
+}
+.lg {
+  width: 58px;
+  height: 58px;
+}
+
+@mixin xsm {
+  width: 24px;
+  height: 24px;
+}
+@mixin sm {
+  width: 27px;
+  height: 27px;
+}
+@mixin md {
+  width: 36px;
+  height: 36px;
+}
+@mixin lmd {
+  width: 40px;
+  height: 40px;
+}
+@mixin lg {
+  width: 58px;
+  height: 58px;
+}
+.icon {
+  background-image: url("./../../../assets/images/1771@2x.png");
+  background-size: 291px 189px;
+}
+@mixin spreadIcon($type) {
+  background: url("./../../../assets/images/1771@2x.png");
+  background-size: 291px 189px;
+
+  @if $type == "message" {
+    @include xsm();
+    background-position: 0 0;
+  } @else if $type == "location" {
+    @include xsm();
+    background-position: -38px 0;
+  } @else if $type == "viewer" {
+    @include xsm();
+    background-position: -76px 0;
+  } @else if $type == "heart-dimmed" {
+    @include xsm();
+    background-position: -114px 0;
+  } @else if $type == "tab-home" {
+    @include xsm();
+    background-position: -151px 0;
+  } @else if $type == "tab-location" {
+    @include xsm();
+    background-position: -189px 0;
+  } @else if $type == "tab-write" {
+    @include xsm();
+    background-position: -227px 0;
+  } @else if $type == "tab-mypage" {
+    @include xsm();
+    background-position: -265px 0;
+  } @else if $type == "location-2" {
+    @include xsm();
+    background-position: -1px -36px;
+  } @else if $type == "location-3" {
+    @include xsm();
+    background-position: -39px -36px;
+  } @else if $type == "navi" {
+    @include xsm();
+    background-position: -77px -36px;
+  } @else if $type == "heart" {
+    @include xsm();
+    background-position: -115px -36px;
+  } @else if $type == "tab-home-black" {
+    @include xsm();
+    background-position: -153px -36px;
+  } @else if $type == "tab-location-black" {
+    @include xsm();
+    background-position: -191px -36px;
+  } @else if $type == "tab-write-black" {
+    @include xsm();
+    background-position: -228px -36px;
+  } @else if $type == "tab-mypage-black" {
+    @include xsm();
+    background-position: -266px -36px;
+  } @else if $type == "arrow" {
+    @include xsm();
+    background-position: -1px -72px;
+  } @else if $type == "close" {
+    @include xsm();
+    background-position: -39px -72px;
+  } @else if $type == "check-dimmed" {
+    @include xsm();
+    background-position: -77px -72px;
+  } @else if $type == "check" {
+    @include xsm();
+    background-position: -115px -72px;
+  } @else if $type == "check--color" {
+    @include xsm();
+    background-position: -153px -72px;
+  } @else if $type == "search" {
+    @include xsm();
+    background-position: -191px -72px;
+  } @else if $type == "arrow-small" {
+    @include xsm();
+    background-position: -229px -72px;
+  } @else if $type == "arrow-small-right" {
+    @include xsm();
+    background-position: -267px -72px;
+  } @else if $type == "location-icon-hash" {
+    @include md();
+    background-position: -1px -108px;
+  } @else if $type == "location-icon" {
+    @include lmd();
+    background-position: -53px -108px;
+  } @else if $type == "big-search" {
+    @include lg();
+    background-position: -101px -108px;
+  } @else if $type == "spin" {
+    @include sm();
+    background-position: -180px -115px;
+  } @else if $type == "share" {
+    @include xsm();
+    background-position: -228px -115px;
+  } @else if $type == "more" {
+    @include xsm();
+    background-position: -267px -115px;
+  } @else if $type == "check--color-dimmed" {
+    @include xsm();
+    background-position: -5px -165px;
+  }
+}
+// type
+.test {
+  background-color: rgb(243, 85, 60);
+}
+
+//type {
+.message {
+  @include spreadIcon("message");
+}
+.location {
+  @include spreadIcon("location");
+}
+.viewer {
+  @include spreadIcon("viewer");
+}
+.heart-dimmed {
+  @include spreadIcon("heart-dimmed");
+}
+.tab-home {
+  @include spreadIcon("tab-home");
+}
+.tab-location {
+  @include spreadIcon("tab-location");
+}
+.tab-write {
+  @include spreadIcon("tab-write");
+}
+.tab-mypage {
+  @include spreadIcon("tab-mypage");
+}
+.location-2 {
+  @include spreadIcon("location-2");
+}
+.location-3 {
+  @include spreadIcon("location-3");
+}
+.navi {
+  @include spreadIcon("navi");
+}
+.heart {
+  @include spreadIcon("heart");
+}
+.tab-home-black {
+  @include spreadIcon("tab-home-black");
+}
+.tab-location-black {
+  @include spreadIcon("tab-location-black");
+}
+.tab-write-black {
+  @include spreadIcon("tab-write-black");
+}
+.tab-mypage-black {
+  @include spreadIcon("tab-mypage-black");
+}
+.arrow {
+  @include spreadIcon("arrow");
+}
+.close {
+  @include spreadIcon("close");
+}
+.check-dimmed {
+  @include spreadIcon("check-dimmed");
+}
+.check {
+  @include spreadIcon("check");
+}
+.check--color {
+  @include spreadIcon("check--color");
+}
+.search {
+  @include spreadIcon("search");
+}
+.arrow-small {
+  @include spreadIcon("arrow-small");
+}
+.arrow-small-right {
+  @include spreadIcon("arrow-small-right");
+}
+.location-icon-hash {
+  @include spreadIcon("location-icon-hash");
+}
+.location-icon {
+  @include spreadIcon("location-icon");
+}
+.big-search {
+  @include spreadIcon("big-search");
+}
+.spin {
+  @include spreadIcon("spin");
+}
+.share {
+  @include spreadIcon("share");
+}
+.more {
+  @include spreadIcon("more");
+}
+.check--color-dimmed {
+  @include spreadIcon("check--color-dimmed");
+}
