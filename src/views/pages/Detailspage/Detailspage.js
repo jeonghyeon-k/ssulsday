@@ -16,6 +16,7 @@ import { getCardById } from "../../../repository/CardRepository";
 import DetailHeader from "../../components/DetailHeader";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
 =======
 <<<<<<< HEAD
@@ -29,7 +30,12 @@ const cx = classNames.bind(styles);
 
 const Detailspage = ({ ...props }, { commentlist }) => {
 =======
+=======
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
+>>>>>>> 02a28b3d49241f9e5a868ef7549465835021e13c
 >>>>>>> e64739f19fef7d351189f5b3d74376d10bf1fd04
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 =======
 import place from "../../../assets/images/invalidName.png";
 >>>>>>> a619475... feat. 장소사진 추가
@@ -106,7 +112,11 @@ const Detailspage = ({ ...props }) => {
 =======
       <DetailHeader history={props.history} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f073f03f245d74ab977ac426c282360a8173967e
+=======
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+>>>>>>> 02a28b3d49241f9e5a868ef7549465835021e13c
 =======
 >>>>>>> e64739f19fef7d351189f5b3d74376d10bf1fd04
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
@@ -182,8 +192,13 @@ const Detailspage = ({ ...props }) => {
       <CommnetCreate postId={props.cardid} userId={props.userId} />
 =======
       <CommnetCreate postId={props.cardid} />
+<<<<<<< HEAD
+>>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
 >>>>>>> c5630b6bfce9eb77102c80f487f797567862585a
 >>>>>>> e64739f19fef7d351189f5b3d74376d10bf1fd04
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 =======
       <CommnetCreate postId={postid} userId={props.user_id} />
 >>>>>>> c31fc0e... feat. 댓글 수정

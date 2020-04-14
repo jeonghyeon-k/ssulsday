@@ -15,7 +15,11 @@ import Root from "./Root";
 =======
 import "./views/style/index.scss";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f1a538dd6a98e1b05ab5b14b45e077283a46c6b8
+=======
+>>>>>>> 173ceda0b59f26db26f362598e820949d246b455
+>>>>>>> 02a28b3d49241f9e5a868ef7549465835021e13c
 =======
 >>>>>>> 1c65f4593452d1c3056fb2eb63403c8bd5079e32
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5

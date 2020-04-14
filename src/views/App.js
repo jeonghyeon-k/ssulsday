@@ -59,7 +59,11 @@ import {
 =======
   Mypage,
   PageMain,
+<<<<<<< HEAD
+>>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
+=======
 >>>>>>> c5630b6bfce9eb77102c80f487f797567862585a
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
   LoginPage
 >>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 } from "./pages";
@@ -153,7 +157,11 @@ const Main = () => {
       <Route path="/list" component={ListPage} />
       <Route path="/details" component={DetailsPage} />
       <Route path="/find-password" component={FindPasswordPage} />
+<<<<<<< HEAD
+>>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
+=======
 >>>>>>> c5630b6bfce9eb77102c80f487f797567862585a
+>>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
 =======
 >>>>>>> 3acf100... 비밀번호 찾기 마무리
       <Route path="/mypage" component={Mypage} />

@@ -68,6 +68,11 @@ export { default as LoginPage } from "./LoginPage";
 =======
 export { default as Mypage } from "./Mypage";
 export { default as PageMain } from "./PageMain";
+<<<<<<< HEAD
+>>>>>>> b7a33972f3cc18e8ac567d1a402c7ea9368a0583
+export { default as LoginPage } from "./LoginPage";
+>>>>>>> 448991ea63b96fb93ffaa84389d22ccae3ac6869
+=======
 >>>>>>> c5630b6bfce9eb77102c80f487f797567862585a
 export { default as LoginPage } from "./LoginPage";
 >>>>>>> e64739f19fef7d351189f5b3d74376d10bf1fd04

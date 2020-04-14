@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-//=============카드 뷰==================
-
-.card_container {
-  border-radius: 10px;
-  display: block;
-  border: 3px solid #e9ecef;
-  width: 80%;
-  margin: 5% auto;
-  text-align: left;
-}
-
-.card_head {
-  display: block;
-  margin: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.card_title {
-  display: inline-block;
-  font-weight: bold;
-}
-
-.card_commentcount {
-  margin-left: 0.5rem;
-  display: inline-block;
-}
-
-.card_commentbutton {
-  display: inline-block;
-  border: none;
-  background: none;
-  font-size: 1rem;
-}
-=======
-=======
->>>>>>> 02a28b3d49241f9e5a868ef7549465835021e13c
 <<<<<<< HEAD:src/components/CardComponents/Card.scss
 //=============카드 뷰==================
 =======
@@ -80,10 +42,6 @@ $font-size: 14px;
 }
 <<<<<<< HEAD:src/components/CardComponents/Card.scss
 <<<<<<< HEAD:src/components/CardComponents/Card.scss
-<<<<<<< HEAD
->>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
-=======
->>>>>>> 02a28b3d49241f9e5a868ef7549465835021e13c
 
 .card_content {
   margin: auto 1rem;
@@ -108,34 +66,6 @@ $font-size: 14px;
   &.main-card {
     background-color: white;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-.card_bottom_box {
-  float: right;
-}
-
-.card_date {
-  display: inline-block;
-  color: #616161;
-}
-
-.card_button {
-  display: inline-block;
-  border: none;
-  background: none;
-  padding: 0.5rem;
-  font-size: 1rem;
-
-  &.true {
-    color: red;
-  }
-}
-
-=======
-=======
->>>>>>> 02a28b3d49241f9e5a868ef7549465835021e13c
 =======
 .header__hash{
 =======
@@ -196,10 +126,6 @@ $font-size: 14px;
 
 <<<<<<< HEAD:src/components/CardComponents/Card.scss
 <<<<<<< HEAD:src/components/CardComponents/Card.scss
-<<<<<<< HEAD
->>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
-=======
->>>>>>> 02a28b3d49241f9e5a868ef7549465835021e13c
 .card_conut {
   display: inline-block;
   color: #616161;
@@ -210,11 +136,6 @@ $font-size: 14px;
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: #616161;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 02a28b3d49241f9e5a868ef7549465835021e13c
 =======
 .bottom__comentcount{
 =======
@@ -245,8 +166,4 @@ $font-size: 14px;
 .bottom__likeicon {
   @extend .bottom__icon;
   float: right;
-<<<<<<< HEAD
->>>>>>> f25040b2071d69a125aec6f6920229b1ed02e1b5
-=======
->>>>>>> 02a28b3d49241f9e5a868ef7549465835021e13c
 }
