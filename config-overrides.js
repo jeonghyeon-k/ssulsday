@@ -2,7 +2,7 @@ var path = require("path");
 module.exports = function override(config, env) {
     config.devServer={
         contentBase: path.resolve(__dirname, './src'),
-        host: 'ssulsday-app.herokuapp.com/',
+        host: '0.0.0.0',
         disableHostCheck: true
     }
     return config;

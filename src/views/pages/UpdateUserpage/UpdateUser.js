@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useRef } from "react";
-=======
 import React, { useState} from "react";
->>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
 import PropTypes from "prop-types";
 import Updateform from "./Updateform/Updateform";
 import styles from "./UpdateUser.module.scss";
@@ -12,25 +8,6 @@ import { Icon } from "../../components";
 
 const UpdateUser = ({ ...props }) => {
   const cx = classNames.bind(styles);
-<<<<<<< HEAD
-  const [nickname, setnickname] = useState();
-  const [pwd, setpwd] = useState();
-  const [newpwd, setnewpwd] = useState();
-  const [renewpwd, setrenewpwd] = useState();
-
-
-  const onClick = () => {
-    console.log()
-    ApiPutUser({
-      "user_id" : "redhd0410@gmail.com",
-      "user_": "123",
-      "user_pwd" : 4321,
-      "user_new_pwd" : 1234
- 
-    }).then(data => {
-      console.log(data.data.retMsg);
-    });
-=======
   const [nickname, setnickname] = useState("");
   const [pwd, setpwd] = useState("");
   const [newpwd, setnewpwd] = useState("");
@@ -55,7 +32,6 @@ const UpdateUser = ({ ...props }) => {
         console.log(data.data.retMsg);
       });
     }
->>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
   };
 
   return (
@@ -70,12 +46,6 @@ const UpdateUser = ({ ...props }) => {
         </div>
       </div>
       <Updateform type='Fix' title='이메일' />
-<<<<<<< HEAD
-      <Updateform title='닉네임' id="nickname" value={nickname} />
-      <Updateform title='기존 비밀번호' id="pwd" hoder="현재 비밀번호를 입력해주세요." value={pwd} />
-      <Updateform title='신규 비밀번호' id="newpwd" hoder="신규 비밀번호를 입력해주세요." value={newpwd} />
-      <Updateform title='신규 비밀번호 재확인' id="renewpwd"hoder="신규 비밀번호를 재입력해주세요."  value={renewpwd}  />
-=======
       <Updateform
         title='닉네임'
         setContent={setnickname}
@@ -103,7 +73,6 @@ const UpdateUser = ({ ...props }) => {
         hoder='신규 비밀번호를 재입력해주세요.'
         value={renewpwd}
       />
->>>>>>> fff5b4d097368a31b51ca3978e071f61c3c1a455
     </div>
   );
 };

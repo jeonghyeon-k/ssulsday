@@ -1,17 +1,9 @@
+
 import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./Root";
 import * as serviceWorker from "./serviceWorker";
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
 import "./views/style/index.scss";
-import * as serviceWorker from './serviceWorker';
-import Root from "./Root";
-
-import "./views/style/index.scss";
-
 
 ReactDOM.render(<Root />, document.getElementById("root"));
 
