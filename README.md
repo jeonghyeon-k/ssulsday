@@ -1,15 +1,19 @@
 
 
 
-![설명사진1](./ssulsday.jpeg)
+
 # 썰's Day
-
-
+<p align="center">
+<img src="https://github.com/jeonghyeon-k/ssulsday/blob/master/ssulsday.jpeg?raw=true" width = "450">
+</p>
 <br/>
 
-### Progressive Web Application
+## Progressive Web Application
 <br/>
-<img src="/pulic/pwa.gif">
+<p align="center">
+<img src="https://github.com/jeonghyeon-k/ssulsday/blob/master/public/pwa.gif?raw=true" width = "250">
+</p>
+
 
 <br/>
 <br/>
