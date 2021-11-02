@@ -37,6 +37,7 @@ const LoginPage = (props) => {
   const onClick = () => {
     if (id === "") return LoginPage;
     if (pwd === "") return LoginPage;
+    /* 로그인 기능
     ApiLogin({
       isCookie: check,
       user_id: id,
@@ -45,14 +46,18 @@ const LoginPage = (props) => {
       if (data.data.retMsg == "OK") {
       localStorage.login = true;
       localStorage.setItem('userid', id);
-       window.location.reload();
-      } else {
+      window.location.reload();
       }
     });
-  };
-  const onSignUp = () => {
-    window.location.assign("/signup");
-  }
+    */
+    //임의로 로그인 가능
+    localStorage.login = true;
+    window.location.reload();
+};
+  
+const onSignUp = () => {
+  window.location.assign("/signup");
+}
 
 const findpwd=()=>{
   window.location.assign("/find-password");

@@ -39,6 +39,5 @@
   "main": "index.js",
   "repository": "git@github.com/jeonghyeon-k/ssulsday",
   "author": "jeonghyeon - k <rlawjd147@naver.com>",
-  "license": "MIT",
-  "proxy": "http://15.164.218.21:8080"
+  "license": "MIT"
 }

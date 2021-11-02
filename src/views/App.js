@@ -14,6 +14,9 @@ import {
   LoginPage,
   UpdatePage
 } from "./pages";
+import styles from "./App.module.scss";
+import classNames from "classnames/bind";
+const cx = classNames.bind(styles);
 
 const Login = () => {
   return (
@@ -28,24 +31,26 @@ const Login = () => {
 
 const Main = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={PageMain} />
-      <Route path="/post" component={PostPage} />
-      <Route path="/search" component={SearchPage} />
-      <Route path="/details/:postid" component={DetailsPage} />
-      <Route path="/details" component={DetailsPage} />
-      <Route path="/list" component={PageList} />
-      <Route path="/signup" component={SignUpPage} />
-      <Route exact path="/mypage/" component={Mypage} />
-      <Route path="/mypage/question" component={question} />
-      <Route path="/mypage/updateuser" component={UpdatePage} />
-      <Route component={NotFoundPage} />
-    </Switch>
+    <div className={cx("container")}>
+      <Switch>
+        <Route exact path="/" component={PageMain} />
+        <Route path="/post" component={PostPage} />
+        <Route path="/search" component={SearchPage} />
+        <Route path="/details/:postid" component={DetailsPage} />
+        <Route path="/details" component={DetailsPage} />
+        <Route path="/list" component={PageList} />
+        <Route path="/signup" component={SignUpPage} />
+        <Route exact path="/mypage/" component={Mypage} />
+        <Route path="/mypage/question" component={question} />
+        <Route path="/mypage/updateuser" component={UpdatePage} />
+        <Route component={NotFoundPage} />
+      </Switch>
+    </div>
   );
 };
 
 const App = () => {
-  return localStorage.getItem("login") === "true" ? <Main /> : <Login />;
+  return localStorage.getItem("login") === "true" ? <Main /> : <Login />  ;
 };
 
 export default App;
